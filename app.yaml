@@ -8,4 +8,5 @@ handlers:
 - url: /static
   static_dir: static
 - url: /.*
-  script: main.app
+  static_files: static/html/index.html
+  upload: /.*
