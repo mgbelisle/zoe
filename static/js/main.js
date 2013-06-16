@@ -19,3 +19,24 @@ zoeApp.controller('MainCtrl', ['$rootScope', '$route', function($rootScope, $rou
 	return tab == $route.current.tab;
     }
 }]);
+
+zoeApp.controller('MapCtrl', [function() {
+    google.load('maps', '3', {
+	other_params: $.param({key: 'AIzaSyA0jsk5irIPWBUSAcW2WHQqNxsoqtJy5sU', sensor: false}),
+	callback : function() {
+	    var position = new google.maps.LatLng(45.663960, -111.055158);
+    	    var mapOptions = {
+    		center: position,
+    		zoom: 16,
+    		mapTypeId: google.maps.MapTypeId.ROADMAP
+    	    };
+    	    var map = new google.maps.Map(document.getElementById('map-canvas'),
+    					  mapOptions);
+	    // var infoWindow = new google.maps.InfoWindow({content: '1216 W. Lincoln St. C<br />Bozeman, MT 59715'});
+	    var marker = new google.maps.Marker({
+		position: position,
+		map: map,
+	    });
+	    // infoWindow.open(map, marker);
+	}});
+}]);
