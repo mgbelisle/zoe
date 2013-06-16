@@ -24,11 +24,11 @@
 	  <a class="brand" href="/">ZoeCare</a>
 	  <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="#/home">Home</a></li>
-              <li><a href="#/services">Services</a></li>
-              <li><a href="#/about">About Us</a></li>
-              <li><a href="#/newsletter">Newsletter</a></li>
-              <li><a href="#/contact">Contact Us</a></li>
+              <li ng-class="{active: isActiveTab('home')}"><a href="#/home">Home</a></li>
+              <li ng-class="{active: isActiveTab('services')}"><a href="#/services">Services</a></li>
+              <li ng-class="{active: isActiveTab('about')}"><a href="#/about">About Us</a></li>
+              <li ng-class="{active: isActiveTab('newsletter')}"><a href="#/newsletter">Newsletter</a></li>
+              <li ng-class="{active: isActiveTab('contact')}"><a href="#/contact">Contact Us</a></li>
             </ul>
 	  </div>
 	</div>
