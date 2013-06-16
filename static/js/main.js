@@ -32,11 +32,9 @@ zoeApp.controller('MapCtrl', [function() {
     	    };
     	    var map = new google.maps.Map(document.getElementById('map-canvas'),
     					  mapOptions);
-	    // var infoWindow = new google.maps.InfoWindow({content: '1216 W. Lincoln St. C<br />Bozeman, MT 59715'});
 	    var marker = new google.maps.Marker({
 		position: position,
 		map: map,
 	    });
-	    // infoWindow.open(map, marker);
 	}});
 }]);
