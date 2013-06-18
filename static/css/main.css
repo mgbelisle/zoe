@@ -32,10 +32,10 @@ section {
     padding-bottom: 24px;
 }
 
-#navbar li {
+.navbar li {
     font-size: 16px;
 }
 
-#navbar .brand {
+.navbar .brand {
     font-size: 22px;
 }

@@ -18,6 +18,9 @@ zoeApp.controller('MainCtrl', ['$rootScope', '$route', function($rootScope, $rou
     $rootScope.isActiveTab = function(tab) {
 	return tab == $route.current.tab;
     }
+    $('ul.nav li a').click(function() {
+	$("button.btn-navbar").click();
+    });
 }]);
 
 zoeApp.controller('MapCtrl', [function() {
