@@ -3,15 +3,19 @@
 /* App Module */
 
 var zoeApp = angular.module('zoe', []);
-    
+
 zoeApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-	when('/home', {templateUrl: '/static/html/home.html', controller: 'MainCtrl', tab: 'home'}).
+	when('/', {templateUrl: '/static/html/home.html', controller: 'MainCtrl', tab: 'home'}).
 	when('/services', {templateUrl: '/static/html/services.html', controller: 'MainCtrl', tab: 'services'}).
 	when('/about', {templateUrl: '/static/html/about.html', controller: 'MainCtrl', tab: 'about'}).
 	when('/resources', {templateUrl: '/static/html/resources.html', controller: 'MainCtrl', tab: 'resources'}).
 	when('/contact', {templateUrl: '/static/html/contact.html', controller: 'MainCtrl', tab: 'contact'}).
-	otherwise({redirectTo: '/home'});
+	otherwise({redirectTo: '/'});
+}]);
+
+zoeApp.config(['$locationProvider', function($locationProvider) {
+    $locationProvider.html5Mode(true);
 }]);
 
 zoeApp.controller('MainCtrl', ['$rootScope', '$route', function($rootScope, $route) {
@@ -19,7 +23,7 @@ zoeApp.controller('MainCtrl', ['$rootScope', '$route', function($rootScope, $rou
 	return tab == $route.current.tab;
     }
     $('ul.nav li a').click(function() {
-	$("button.btn-navbar").click();
+	$('button.btn-navbar').click();
     });
 }]);
 
