@@ -22,6 +22,11 @@ body {
     }
 }
 
+.accordion-heading a {
+    font-size: 18px;
+    margin: 6px;
+}
+
 .icon {
     width: 32px;
     height: 32px;
