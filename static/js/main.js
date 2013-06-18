@@ -38,3 +38,7 @@ zoeApp.controller('MapCtrl', [function() {
 	    });
 	}});
 }]);
+
+zoeApp.controller('HomeCarouselCtrl', [function() {
+    $('#home-carousel').carousel();
+}]);
