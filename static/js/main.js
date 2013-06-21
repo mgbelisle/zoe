@@ -47,5 +47,5 @@ zoeApp.controller('MapCtrl', [function() {
 }]);
 
 zoeApp.controller('HomeCarouselCtrl', [function() {
-    $('#home-carousel').carousel();
+    $('#home-carousel').carousel({interval: 10000});
 }]);
