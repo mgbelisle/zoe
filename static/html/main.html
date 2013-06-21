@@ -15,16 +15,6 @@
     <script src="/static/js/main.js"></script>
   </head>
   <body>
-    <div id="fb-root"></div>
-    <script>
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
 	<div class="container-fluid">
@@ -33,18 +23,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
 	  </button>
-	  <a href="/" class="brand hidden-desktop">ZoeCare</a>
+	  <a class="brand hidden-desktop" href="/">ZoeCare</a>
 	  <div class="nav-collapse collapse">
 	    <div class="row-fluid" style="margin-top: 8px;">
-	      <div class="span1">
+	      <div class="span1 visible-desktop">
 		<a href="/"><img src="/static/img/logo.svg" alt="logo.svg" style="width: 100%;"/></a>
 	      </div>
-	      <div class="span5" style="padding-top: 12px;">
+	      <div class="span5 visible-desktop" style="padding-top: 12px;">
 		<a href="/" style="color: white; font-size: 24px;">ZoeCare</a><br />
 		<a href="/" style="color: white;">Pregnancy and STI Testing Center</a>
 	      </div>
 	      <div class="span6" style="color: white;">
-		<p class="pull-right navbar-text">
+		<p class="pull-right">
 		  <a href="http://facebook.com"><img class="social-icon" src="/static/img/facebook.png" alt="facebook.png" /></a>
 		  <a href="http://twitter.com"><img class="social-icon" src="/static/img/twitter.png" alt="twitter.png" /></a>
 		  <a href="http://pinterest.com"><img class="social-icon" src="/static/img/pinterest.png" alt="pinterest.png" /></a>
