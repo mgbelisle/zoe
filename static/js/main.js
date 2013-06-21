@@ -8,8 +8,11 @@ zoeApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
 	when('/', {templateUrl: '/static/html/home.html', controller: 'MainCtrl', tab: 'home'}).
 	when('/pregnancy', {templateUrl: '/static/html/pregnancy.html', controller: 'MainCtrl', tab: 'pregnancy'}).
+	when('/sti', {templateUrl: '/static/html/sti.html', controller: 'MainCtrl', tab: 'sti'}).
+	when('/help', {templateUrl: '/static/html/help.html', controller: 'MainCtrl', tab: 'help'}).
 	when('/about', {templateUrl: '/static/html/about.html', controller: 'MainCtrl', tab: 'about'}).
-	when('/resources', {templateUrl: '/static/html/resources.html', controller: 'MainCtrl', tab: 'resources'}).
+	when('/help', {templateUrl: '/static/html/help.html', controller: 'MainCtrl', tab: 'help'}).
+	when('/news', {templateUrl: '/static/html/news.html', controller: 'MainCtrl', tab: 'news'}).
 	when('/contact', {templateUrl: '/static/html/contact.html', controller: 'MainCtrl', tab: 'contact'}).
 	otherwise({redirectTo: '/'});
 }]);
