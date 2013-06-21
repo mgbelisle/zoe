@@ -7,7 +7,7 @@ var zoeApp = angular.module('zoe', []);
 zoeApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
 	when('/', {templateUrl: '/static/html/home.html', controller: 'MainCtrl', tab: 'home'}).
-	when('/services', {templateUrl: '/static/html/services.html', controller: 'MainCtrl', tab: 'services'}).
+	when('/pregnancy', {templateUrl: '/static/html/pregnancy.html', controller: 'MainCtrl', tab: 'pregnancy'}).
 	when('/about', {templateUrl: '/static/html/about.html', controller: 'MainCtrl', tab: 'about'}).
 	when('/resources', {templateUrl: '/static/html/resources.html', controller: 'MainCtrl', tab: 'resources'}).
 	when('/contact', {templateUrl: '/static/html/contact.html', controller: 'MainCtrl', tab: 'contact'}).
