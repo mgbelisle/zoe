@@ -13,3 +13,9 @@ body {
     height: 32px;
     padding-right: 8px;
 }
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    padding-right: 12px;
+}
