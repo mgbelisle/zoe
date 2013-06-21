@@ -19,3 +19,23 @@ body {
     height: 24px;
     padding-left: 12px;
 }
+
+.zoe-title {
+    font-size: 24px;
+}    
+
+.navbar a.zoe-title {
+    color: #333333;
+}
+
+.navbar a.zoe-subtitle {
+    color: #777777;
+}
+
+.navbar-inverse a.zoe-title {
+    color: white;
+}
+
+.navbar-inverse a.zoe-subtitle {
+    color: #999999;
+}
