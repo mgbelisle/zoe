@@ -28,12 +28,16 @@ body {
     font-size: 24px;
 }    
 
-.navbar a.zoe-title {
+a.zoe-title {
     color: #333333;
 }
 
-.navbar a.zoe-subtitle {
+a.zoe-subtitle {
     color: #777777;
+}
+
+a.zoe-title:hover, a.zoe-subtitle:hover {
+    text-decoration: none;
 }
 
 .navbar-inverse a.zoe-title {
