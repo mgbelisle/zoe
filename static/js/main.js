@@ -8,7 +8,7 @@ zoeApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
 	when('/', {templateUrl: '/static/html/home.html', controller: 'MainCtrl'}).
 	when('/pregnancy', {templateUrl: '/static/html/pregnancy.html', controller: 'MainCtrl'}).
-	when('/sti', {templateUrl: '/static/html/sti.html', controller: 'MainCtrl'}).
+	when('/sti', {templateUrl: '/static/html/sti/home.html', controller: 'MainCtrl'}).
 	when('/sti/faq', {templateUrl: '/static/html/sti/faq.html', controller: 'MainCtrl'}).
 	when('/sti/symptoms', {templateUrl: '/static/html/sti/symptoms.html', controller: 'MainCtrl'}).
 	when('/help', {templateUrl: '/static/html/help.html', controller: 'MainCtrl'}).
