@@ -24,8 +24,11 @@ zoeApp.config(['$locationProvider', function($locationProvider) {
 }]);
 
 zoeApp.controller('MainCtrl', ['$rootScope', '$location', function($rootScope, $location) {
-    $rootScope.isActiveTab = function(url) {
-	return $location.path().indexOf(url) == 0;
+    $rootScope.pathEquals = function(url) {
+	return $location.path() == url;
+    }
+    $rootScope.pathStartsWith = function(url) {
+	return $rootScope.pathEquals(url) || $location.path().indexOf(url + '/') == 0;
     }
     $('ul.nav li a').click(function() {
 	$('button.btn-navbar').click();
