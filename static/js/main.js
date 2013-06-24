@@ -1,6 +1,6 @@
 'use strict';
 
-/* App Module */
+// App config
 
 var zoeApp = angular.module('zoe', []);
 
@@ -22,6 +22,8 @@ zoeApp.config(['$routeProvider', function($routeProvider) {
 zoeApp.config(['$locationProvider', function($locationProvider) {
     $locationProvider.html5Mode(true);
 }]);
+
+// Controllers
 
 zoeApp.controller('MainCtrl', ['$rootScope', '$location', function($rootScope, $location) {
     $rootScope.pathEquals = function(url) {
@@ -60,9 +62,9 @@ zoeApp.controller('HomeCarouselCtrl', [function() {
 
 zoeApp.controller('EmailGodCtrl', [function() {
     $('#email-god').click(function() {
-	var el = $('#alert-info');
-	el.text("Internal server error - Instead of emailing God, please pray for us and our patients!");
-	el.parent('div').fadeIn('slow');
+	showAlert(
+	    'Internal server error :-)  Instead of emailing God, please pray for us and our patients!',
+	'warning');
     });
 }]);
 
@@ -72,10 +74,23 @@ zoeApp.controller('NewsletterCtrl', [function() {
 	$.post('/api/newsletter',
 	       form.serialize(),
 	       function() {
-		   var el = $('#alert-info');
-		   el.text('Thanks for signing up!');
-		   el.parent('div').fadeIn('slow');
+		   showAlert('Thanks for signing up!', 'info');
 	       });
 	form.serializeArray();
     });
 }]);
+
+// Lib
+
+function showAlert(msg, type) {
+    var div = $('<div>', {class: 'alert hide alert-' + type});
+    var span = $('<span>', {text: msg});
+    div.append(span);
+    var anchor = $('<a>', {class: 'close', html: '&times;'});
+    div.append(anchor);
+    $('#alerts').append(div);
+    div.fadeIn('slow');
+    setTimeout(function() {
+	div.fadeOut('slow');
+    }, 4000);
+}
