@@ -57,3 +57,15 @@ zoeApp.controller('MapCtrl', [function() {
 zoeApp.controller('HomeCarouselCtrl', [function() {
     $('#home-carousel').carousel({interval: 10000});
 }]);
+
+zoeApp.controller('NewsCtrl', [function() {
+    var form = $('form#newsletter');
+    form.submit(function() {
+	$.post('/api/newsletter',
+	       form.serialize(),
+	       function() {
+		   console.log('signed up');
+	       });
+	form.serializeArray();
+    });
+}]);
