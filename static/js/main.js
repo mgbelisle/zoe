@@ -58,13 +58,23 @@ zoeApp.controller('HomeCarouselCtrl', [function() {
     $('#home-carousel').carousel({interval: 10000});
 }]);
 
-zoeApp.controller('NewsCtrl', [function() {
+zoeApp.controller('EmailGodCtrl', [function() {
+    $('#email-god').click(function() {
+	var el = $('#alert-info');
+	el.text("Internal server error - Instead of emailing God, please pray for us and our patients!");
+	el.parent('div').fadeIn('slow');
+    });
+}]);
+
+zoeApp.controller('NewsletterCtrl', [function() {
     var form = $('form#newsletter');
     form.submit(function() {
 	$.post('/api/newsletter',
 	       form.serialize(),
 	       function() {
-		   console.log('signed up');
+		   var el = $('#alert-info');
+		   el.text('Thanks for signing up!');
+		   el.parent('div').fadeIn('slow');
 	       });
 	form.serializeArray();
     });
