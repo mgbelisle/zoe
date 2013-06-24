@@ -10,16 +10,25 @@ func init() {
 	http.HandleFunc("/api/newsletter", newsletter)
 }
 
-func newsletter(w http.ResponseWriter, r *http.Request) {
-	c := appengine.NewContext(r)
+// Sends an email to Zoe that user x wants to recieve newsletters
+func newsletter(writer http.ResponseWriter, request *http.Request) {
+	if request.Method != "POST" {
+		http.Error(writer, "Not using POST", http.StatusMethodNotAllowed)
+	}
+	context := appengine.NewContext(request)
+	email := request.PostFormValue("email")
+	if len(email) < 1 {
+		http.Error(writer, "No email param", http.StatusBadRequest)
+	}
 	msg := &mail.Message{
 		Sender:  "mgbelisle@gmail.com",
-		To:      []string{"matthew.belisle@webfilings.com"},
-		Subject: "Test",
-		Body:    "Hello world",
+		To:      []string{"mgbelisle@gmail.com"},
+		Subject: "Newsletter signup",
+		Body:    email,
 	}
-	err := mail.Send(c, msg)
+	err := mail.Send(context, msg)
 	if err != nil {
-		c.Errorf("Couldn't send email: %v", err)
+		context.Errorf("%v", err)
+		http.Error(writer, "Could not send email", http.StatusInternalServerError)
 	}
 }
