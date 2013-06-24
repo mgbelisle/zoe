@@ -1,8 +1,9 @@
 package api
 
 import (
-    "fmt"
-    "net/http"
+	"appengine"
+	"appengine/mail"
+	"net/http"
 )
 
 func init() {
@@ -10,5 +11,15 @@ func init() {
 }
 
 func newsletter(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "newsletter")
+	c := appengine.NewContext(r)
+	msg := &mail.Message{
+		Sender:  "mgbelisle@gmail.com",
+		To:      []string{"matthew.belisle@webfilings.com"},
+		Subject: "Test",
+		Body:    "Hello world",
+	}
+	err := mail.Send(c, msg)
+	if err != nil {
+		c.Errorf("Couldn't send email: %v", err)
+	}
 }
