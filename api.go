@@ -18,7 +18,7 @@ func newsletter(writer http.ResponseWriter, request *http.Request) {
 	context := appengine.NewContext(request)
 	email := request.PostFormValue("email")
 	if len(email) < 1 {
-		http.Error(writer, "No email param", http.StatusBadRequest)
+		http.Error(writer, "No email specified", http.StatusBadRequest)
 	}
 	msg := &mail.Message{
 		Sender:  "mgbelisle@gmail.com",

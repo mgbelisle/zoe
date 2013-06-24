@@ -71,11 +71,15 @@ zoeApp.controller('EmailGodCtrl', [function() {
 zoeApp.controller('NewsletterCtrl', [function() {
     var form = $('form#newsletter');
     form.submit(function() {
-	$.post('/api/newsletter',
-	       form.serialize(),
-	       function() {
-		   showAlert('Thanks for signing up!', 'info');
-	       });
+	$.post(
+	    '/api/newsletter',
+	    form.serialize(),
+	    function() {
+		showAlert('Thanks for signing up!', 'info');
+	    }
+	).fail(function(data) {
+	    showAlert('Error: ' + data.responseText, 'error');
+	});
 	form.serializeArray();
     });
 }]);
