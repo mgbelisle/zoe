@@ -91,6 +91,7 @@ function showAlert(msg, type) {
     var span = $('<span>', {text: msg});
     div.append(span);
     var anchor = $('<a>', {class: 'close', html: '&times;'});
+    anchor.attr('data-dismiss', 'alert');
     div.append(anchor);
     $('#alerts').append(div);
     div.fadeIn('slow');
