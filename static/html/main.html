@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-responsive.min.css">
-    <script src="/static/js/angular.min.js"></script>
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/js/angular.min.js"></script>
+    <script src="/static/js/angular-strap.min.js"></script>
     <script src="https://www.google.com/jsapi"></script>
     <script src="/static/js/main.js"></script>
   </head>
   <body>
-    <div class="navbar">
+    <div class="navbar" bs-navbar>
       <div class="navbar-inner">
 	<div class="container-fluid">
 	  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -48,22 +49,22 @@
 		<!-- <input type="hidden" name="as_sitesearch" value="zoecarebzn.org" /> -->
               </form>
               <ul class="nav">
-		<li ng-class="{active: pathEquals('/pregnancy')}">
+		<li data-match-route="/pregnancy(/.*)?">
 		  <a href="/pregnancy">Pregnancy</a>
 		</li>
-		<li ng-class="{active: pathStartsWith('/sti')}">
+		<li data-match-route="/sti(/.*)?">
 		  <a href="/sti">STI/STD Testing</a>
 		</li>
-		<li ng-class="{active: pathEquals('/about')}">
+		<li data-match-route="/about(/.*)?">
 		  <a href="/about">About Us</a>
 		</li>
-		<li ng-class="{active: pathEquals('/help')}">
+		<li data-match-route="/help">
 		  <a href="/help">Ways to Help</a>
 		</li>
-		<li ng-class="{active: pathEquals('/news')}">
+		<li data-match-route="/news">
 		  <a href="/news">News</a>
 		</li>
-		<li ng-class="{active: pathEquals('/contact')}">
+		<li data-match-route="/contact">
 		  <a href="/contact">Contact Us</a>
 		</li>
               </ul>

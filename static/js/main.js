@@ -2,20 +2,20 @@
 
 // App config
 
-var zoeApp = angular.module('zoe', []);
+var zoeApp = angular.module('zoe', ['$strap.directives']);
 
 zoeApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-	when('/', {templateUrl: '/static/html/home.html', controller: 'MainCtrl'}).
-	when('/pregnancy', {templateUrl: '/static/html/pregnancy.html', controller: 'MainCtrl'}).
-	when('/sti', {templateUrl: '/static/html/sti/home.html', controller: 'MainCtrl'}).
-	when('/sti/faq', {templateUrl: '/static/html/sti/faq.html', controller: 'MainCtrl'}).
-	when('/sti/symptoms', {templateUrl: '/static/html/sti/symptoms.html', controller: 'MainCtrl'}).
-	when('/help', {templateUrl: '/static/html/help.html', controller: 'MainCtrl'}).
-	when('/about', {templateUrl: '/static/html/about.html', controller: 'MainCtrl'}).
-	when('/help', {templateUrl: '/static/html/help.html', controller: 'MainCtrl'}).
-	when('/news', {templateUrl: '/static/html/news.html', controller: 'MainCtrl'}).
-	when('/contact', {templateUrl: '/static/html/contact.html', controller: 'MainCtrl'}).
+	when('/', {templateUrl: '/static/html/home.html'}).
+	when('/pregnancy', {templateUrl: '/static/html/pregnancy.html'}).
+	when('/sti', {templateUrl: '/static/html/sti/home.html'}).
+	when('/sti/faq', {templateUrl: '/static/html/sti/faq.html'}).
+	when('/sti/symptoms', {templateUrl: '/static/html/sti/symptoms.html'}).
+	when('/help', {templateUrl: '/static/html/help.html'}).
+	when('/about', {templateUrl: '/static/html/about.html'}).
+	when('/help', {templateUrl: '/static/html/help.html'}).
+	when('/news', {templateUrl: '/static/html/news.html'}).
+	when('/contact', {templateUrl: '/static/html/contact.html'}).
 	otherwise({redirectTo: '/'});
 }]);
 
@@ -24,19 +24,6 @@ zoeApp.config(['$locationProvider', function($locationProvider) {
 }]);
 
 // Controllers
-
-zoeApp.controller('MainCtrl', ['$rootScope', '$location', function($rootScope, $location) {
-    $rootScope.pathEquals = function(url) {
-	return $location.path() == url;
-    }
-    $rootScope.pathStartsWith = function(url) {
-	return $rootScope.pathEquals(url) || $location.path().indexOf(url + '/') == 0;
-    }
-    $('ul.nav li a').click(function() {
-	$('button.btn-navbar').click();
-    });
-}]);
-
 zoeApp.controller('MapCtrl', [function() {
     google.load('maps', '3', {
 	other_params: $.param({key: 'AIzaSyA0jsk5irIPWBUSAcW2WHQqNxsoqtJy5sU', sensor: false}),
@@ -80,22 +67,5 @@ zoeApp.controller('NewsletterCtrl', [function() {
 	).fail(function(data) {
 	    showAlert('Error: ' + data.responseText, 'error');
 	});
-	form.serializeArray();
     });
 }]);
-
-// Lib
-
-function showAlert(msg, type) {
-    var div = $('<div>', {class: 'alert hide alert-' + type});
-    var span = $('<span>', {text: msg});
-    div.append(span);
-    var anchor = $('<a>', {class: 'close', html: '&times;'});
-    anchor.attr('data-dismiss', 'alert');
-    div.append(anchor);
-    $('#alerts').append(div);
-    div.fadeIn('slow');
-    setTimeout(function() {
-	div.fadeOut('slow');
-    }, 4000);
-}
