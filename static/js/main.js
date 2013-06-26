@@ -53,12 +53,14 @@ zoeApp.controller('HomeCarouselCtrl', [function() {
     $('#home-carousel').carousel({interval: 10000});
 }]);
 
-zoeApp.controller('EmailGodCtrl', [function() {
-    $('#email-god').click(function() {
-	showAlert(
-	    'Internal server error :-)  Instead of emailing God, please pray for us and our patients!',
-	'warning');
-    });
+zoeApp.controller('EmailGodCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
+    $scope.alerts = [];
+    $scope.showAlert = function() {
+	$scope.alerts.push({
+	    type: "error",
+	    content: "Internal server error :-)  Instead of emailing God, please pray for us and our patients!"
+	});
+    };
 }]);
 
 zoeApp.controller('NewsletterCtrl', [function() {

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="test">
+  <head>
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-responsive.min.css" />
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/js/angular.min.js"></script>
+    <script src="/static/js/angular-strap.min.js"></script>
+    <script src="/static/test/test.js"></script>
+  </head>
+  <body>
+    <div class="alerts">
+      <div class="alert fade" ng-repeat="alert in alerts" bs-alert="alert"></div>
+    </div>
+    <a class="btn" href="#" ng-click="showAlert()" ng-controller="TestCtrl">Show Alert</a>
+  </body>
+</html>

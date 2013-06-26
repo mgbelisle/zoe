@@ -74,7 +74,9 @@
       </div>
     </div>
     <div class="container-fluid">
-      <div id="alerts"></div>
+      <div class="alerts">
+	<div class="alert fade" ng-repeat="alert in alerts" bs-alert="alert"></div>
+      </div>
       <div ng-view></div>
       <hr>
       <footer class="text-center">
