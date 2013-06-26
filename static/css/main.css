@@ -46,3 +46,11 @@ a.zoe-title:hover, a.zoe-subtitle:hover {
 .navbar-inverse a.zoe-subtitle {
     color: #999999;
 }
+
+img.staff {
+    height: 256px;
+}
+
+div.staff {
+    padding: 24px;
+}

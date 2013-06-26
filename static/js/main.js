@@ -15,7 +15,10 @@ zoeApp.config(['$routeProvider', function($routeProvider) {
 	when('/sti/faq', {templateUrl: '/static/html/sti/faq.html'}).
 	when('/sti/symptoms', {templateUrl: '/static/html/sti/symptoms.html'}).
 	when('/help', {templateUrl: '/static/html/help.html'}).
-	when('/about', {templateUrl: '/static/html/about.html'}).
+	when('/about', {templateUrl: '/static/html/about/home.html'}).
+	when('/about/staff', {templateUrl: '/static/html/about/staff.html'}).
+	when('/about/board', {templateUrl: '/static/html/about/board.html'}).
+	when('/about/mission', {templateUrl: '/static/html/about/mission.html'}).
 	when('/help', {templateUrl: '/static/html/help.html'}).
 	when('/news', {templateUrl: '/static/html/news.html'}).
 	when('/contact', {templateUrl: '/static/html/contact.html'}).
