@@ -7,7 +7,10 @@ var zoeApp = angular.module('zoe', ['$strap.directives']);
 zoeApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
 	when('/', {templateUrl: '/static/html/home.html'}).
-	when('/pregnancy', {templateUrl: '/static/html/pregnancy.html'}).
+	when('/pregnancy', {templateUrl: '/static/html/pregnancy/home.html'}).
+	when('/pregnancy/testing', {templateUrl: '/static/html/pregnancy/testing.html'}).
+	when('/pregnancy/faq', {templateUrl: '/static/html/pregnancy/faq.html'}).
+	when('/pregnancy/ultrasounds', {templateUrl: '/static/html/pregnancy/ultrasounds.html'}).
 	when('/sti', {templateUrl: '/static/html/sti/home.html'}).
 	when('/sti/faq', {templateUrl: '/static/html/sti/faq.html'}).
 	when('/sti/symptoms', {templateUrl: '/static/html/sti/symptoms.html'}).
