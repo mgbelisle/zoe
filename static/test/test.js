@@ -6,8 +6,7 @@ testApp.controller('TestCtrl', ['$scope', '$rootScope', function($scope, $rootSc
     $scope.alerts = [];
     $scope.showAlert = function() {
 	$scope.alerts.push({
-	    type: "error",
-	    content: "Alert"
+	    content: "Hello world"
 	});
     };
 }]);

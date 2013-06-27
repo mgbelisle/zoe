@@ -13,10 +13,10 @@
     <script src="/static/js/angular-strap.min.js"></script>
     <script src="/static/test/test.js"></script>
   </head>
-  <body>
+  <body ng-controller="TestCtrl">
     <div class="alerts">
       <div class="alert fade" ng-repeat="alert in alerts" bs-alert="alert"></div>
     </div>
-    <a class="btn" href="#" ng-click="showAlert()" ng-controller="TestCtrl">Show Alert</a>
+    <a class="btn" href="#" ng-click="showAlert()">Show Alert</a>
   </body>
 </html>

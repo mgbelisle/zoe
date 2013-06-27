@@ -54,9 +54,8 @@ zoeApp.controller('HomeCarouselCtrl', [function() {
 }]);
 
 zoeApp.controller('EmailGodCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
-    $scope.alerts = [];
     $scope.showAlert = function() {
-	$scope.alerts.push({
+	$rootScope.alerts.push({
 	    type: "error",
 	    content: "Internal server error :-)  Instead of emailing God, please pray for us and our patients!"
 	});

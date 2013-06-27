@@ -19,11 +19,8 @@
   <div class="span4">
     <h3>Email God <img src="/static/img/new.png" alt="new.png" style="width: 48px;" /></h3>
     <p>Following the death of Steve Jobs in October 2011, God the Father recieved a complimentary iPhone 5.  This means the Almighty can finally recieve email, and you can contact Him directly via the form below.</p>
-    <p ng-controller="EmailGodCtrl">
+    <div ng-controller="EmailGodCtrl">
       <a href="#" class="btn btn-primary" ng-click="showAlert()">Send an Email to God &raquo;</a>
-      <div class="alerts">
-	<div class="alert fade" ng-repeat="alert in alerts" bs-alert="alert"></div>
-      </div>
-    </p>
+    </div>
   </div>
 </div>
