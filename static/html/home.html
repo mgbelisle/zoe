@@ -1,7 +1,7 @@
 <div class="alert">
   <strong>Note:</strong> This site is under construction.  ZoeCare's real site is at <a href="http://www.gotozoe.org/">http://www.gotozoe.org/</a>.
 </div>
-<div class="container" style="width: 100%;">
+<div class="row-fluid" style="width: 100%;">
   <div id="home-carousel" class="carousel slide" ng-controller="HomeCarouselCtrl">
     <div class="carousel-inner">
       <div class="item active">
@@ -14,5 +14,30 @@
 	<img src="/static/img/hearth.jpg" alt="hearth.jpg">
       </div>
     </div>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span4">
+    <h3>Upcoming Events</h3>
+    <p>Info here ... not sure what to put.</p>
+    <p>Info here ... not sure what to put.</p>
+    <p>Info here ... not sure what to put.</p>
+  </div>
+  <div class="span4">
+    <h3>Story of the Month</h3>
+    <p>Info here ... not sure what to put.</p>
+    <p>Info here ... not sure what to put.</p>
+    <p>Info here ... not sure what to put.</p>
+    <p><a href="#" class="btn btn-primary">Read Full Article &raquo;</a></p>
+  </div>
+  <div class="span4">
+    <h3>Newsletter</h3>
+    <p>Sign up for our monthly newsletter!</p>
+    <p>
+      <form class="form-inline" id="newsletter" ng-controller="NewsletterCtrl">
+	<input type="text" placeholder="Email Address" name="email" />
+	<button class="btn btn-primary" ng-click="submit()">Sign me up &raquo;</button>
+      </form>  
+    </p>
   </div>
 </div>
