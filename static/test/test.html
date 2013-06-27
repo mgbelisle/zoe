@@ -10,12 +10,12 @@
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
     <script src="/static/js/angular.min.js"></script>
-    <script src="/static/js/angular-strap.min.js"></script>
+    <script src="/static/js/angular-strap.js"></script>
     <script src="/static/test/test.js"></script>
   </head>
   <body ng-controller="TestCtrl">
     <div class="alerts">
-      <div class="alert fade" ng-repeat="alert in alerts" bs-alert="alert"></div>
+      <div class="alert fade" ng-repeat="alert in alerts" bs-alert="alert" fade-out="5000"></div>
     </div>
     <a class="btn" href="#" ng-click="showAlert()">Show Alert</a>
   </body>

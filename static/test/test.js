@@ -10,3 +10,11 @@ testApp.controller('TestCtrl', ['$scope', '$rootScope', function($scope, $rootSc
 	});
     };
 }]);
+
+testApp.directive('fadeOut', function () {
+    return function(scope, element, attrs) {
+	setTimeout(function() {
+	    element.fadeOut('slow');
+	}, parseFloat(attrs.fadeOut));
+    };
+});

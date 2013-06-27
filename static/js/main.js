@@ -56,23 +56,40 @@ zoeApp.controller('HomeCarouselCtrl', [function() {
 zoeApp.controller('EmailGodCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
     $scope.showAlert = function() {
 	$rootScope.alerts.push({
-	    type: "error",
-	    content: "Internal server error :-)  Instead of emailing God, please pray for us and our patients!"
+	    type: 'error',
+	    content: 'Internal server error :-)  Instead of emailing God, please pray for us and our patients!'
 	});
     };
 }]);
 
-zoeApp.controller('NewsletterCtrl', [function() {
-    var form = $('form#newsletter');
-    form.submit(function() {
-	$.post(
-	    '/api/newsletter',
-	    form.serialize(),
-	    function() {
-		showAlert('Thanks for signing up!', 'info');
+zoeApp.controller('NewsletterCtrl', ['$http', '$scope', '$rootScope', function($http, $scope, $rootScope) {
+    $scope.submit = function() {
+	$http({
+	    method: 'POST',
+	    url: '/api/newsletter',
+	    data: $('form#newsletter').serialize(),
+	    headers: {
+		'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
 	    }
-	).fail(function(data) {
-	    showAlert('Error: ' + data.responseText, 'error');
+	}).success(function(data, status, headers, config) {
+	    $rootScope.alerts.push({
+		type: 'info',
+		content: 'Thanks for signing up!'
+	    });
+	}).error(function(data, status, headers, config) {
+	    console.log(data);
+	    $rootScope.alerts.push({
+		type: 'error',
+		content: 'Error: ' + data
+	    });
 	});
-    });
+    }
 }]);
+
+zoeApp.directive('fadeOut', function () {
+    return function(scope, element, attrs) {
+	setTimeout(function() {
+	    element.fadeOut('slow');
+	}, parseFloat(attrs.fadeOut));
+    };
+});
