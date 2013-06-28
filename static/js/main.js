@@ -30,6 +30,7 @@ zoeApp.config(['$locationProvider', function($locationProvider) {
 }]);
 
 // Controllers
+
 zoeApp.controller('NavbarCtrl', [function() {
     $('ul.nav li a').click(function() {
 	$('button.btn-navbar').click();

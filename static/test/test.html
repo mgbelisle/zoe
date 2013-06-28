@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="test">
+<html data-ng-app="test">
   <head>
     <title>Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,10 +13,10 @@
     <script src="/static/js/angular-strap.js"></script>
     <script src="/static/test/test.js"></script>
   </head>
-  <body ng-controller="TestCtrl">
+  <body data-ng-controller="TestCtrl">
     <div class="alerts">
-      <div class="alert fade" ng-repeat="alert in alerts" bs-alert="alert" fade-out="5000"></div>
+      <div class="alert fade" data-ng-repeat="alert in alerts" bs-alert="alert" fade-out="5000"></div>
     </div>
-    <a class="btn" href="#" ng-click="showAlert()">Show Alert</a>
+    <a class="btn" href="#" data-ng-click="showAlert()">Show Alert</a>
   </body>
 </html>
