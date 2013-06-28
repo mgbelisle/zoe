@@ -59,15 +59,8 @@
 		<li data-match-route="/help">
 		  <a href="/help">Ways to Help</a>
 		</li>
-		<li data-match-route="/about(/.*)?" class="dropdown">
-		  <!-- <a href="/about">About Us</a> -->
-		  <a href="/about" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
-		  <ul class="dropdown-menu">
-		    <li><a href="/about">Why We Care</a></li>
-		    <li><a href="/about/staff">Staff</a></li>
-		    <li><a href="/about/board">Board of Directors</a></li>
-		    <li><a href="/about/mission">Mission and Values</a></li>
-		  </ul>
+		<li data-match-route="/about(/.*)?">
+		  <a href="/about">About Us</a>
 		</li>
 		<li data-match-route="/news">
 		  <a href="/news">News</a>
@@ -85,7 +78,7 @@
       <div data-ng-view></div>
       <hr>
       <footer class="text-center">
-	<p>&copy; ZoeCare 2013 | 1216 W. Lincoln Suite C Bozeman MT</p>
+	<p>&copy; ZoeCare 2013 | 1216 W. Lincoln St. C Bozeman MT</p>
       </footer>
     </div>
   </body>
