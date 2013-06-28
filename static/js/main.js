@@ -59,6 +59,7 @@ zoeApp.controller('EmailGodCtrl', ['$scope', '$rootScope', function($scope, $roo
 	    type: 'error',
 	    content: 'Internal server error :-)  Instead of emailing God, please pray for us and our patients!'
 	});
+	_gaq.push(['_trackEvent', 'EmailGod']);
     };
 }]);
 
@@ -76,12 +77,14 @@ zoeApp.controller('NewsletterCtrl', ['$http', '$scope', '$rootScope', function($
 		type: 'info',
 		content: 'Thanks for signing up!'
 	    });
+	    _gaq.push(['_trackEvent', 'Newsletter', 'Success']);
 	}).error(function(data, status, headers, config) {
 	    console.log(data);
 	    $rootScope.alerts.push({
 		type: 'error',
 		content: 'Error: ' + data
 	    });
+	    _gaq.push(['_trackEvent', 'Newsletter', 'Error', data]);
 	});
     }
 }]);
