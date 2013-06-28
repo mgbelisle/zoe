@@ -53,9 +53,10 @@ zoeApp.controller('HomeCarouselCtrl', [function() {
     $('#home-carousel').carousel({interval: 10000});
 }]);
 
-zoeApp.controller('EmailGodCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
+zoeApp.controller('EmailGodCtrl', ['$scope', function($scope) {
+    $scope.alerts = [];
     $scope.showAlert = function() {
-	$rootScope.alerts.push({
+	$scope.alerts.push({
 	    type: 'error',
 	    content: 'Internal server error :-)  Instead of emailing God, please pray for us and our patients!'
 	});
@@ -63,7 +64,8 @@ zoeApp.controller('EmailGodCtrl', ['$scope', '$rootScope', function($scope, $roo
     };
 }]);
 
-zoeApp.controller('NewsletterCtrl', ['$http', '$scope', '$rootScope', function($http, $scope, $rootScope) {
+zoeApp.controller('NewsletterCtrl', ['$http', '$scope', function($http, $scope) {
+    $scope.alerts = [];
     $scope.submit = function() {
 	$http({
 	    method: 'POST',
@@ -73,14 +75,14 @@ zoeApp.controller('NewsletterCtrl', ['$http', '$scope', '$rootScope', function($
 		'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
 	    }
 	}).success(function(data, status, headers, config) {
-	    $rootScope.alerts.push({
+	    $scope.alerts.push({
 		type: 'info',
 		content: 'Thanks for signing up!'
 	    });
 	    _gaq.push(['_trackEvent', 'Newsletter', 'Success']);
 	}).error(function(data, status, headers, config) {
 	    console.log(data);
-	    $rootScope.alerts.push({
+	    $scope.alerts.push({
 		type: 'error',
 		content: 'Error: ' + data
 	    });
