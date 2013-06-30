@@ -105,3 +105,13 @@ zoeApp.directive('fadeOut', function () {
 	}, parseFloat(attrs.fadeOut));
     };
 });
+
+zoeApp.directive('clickTrack', function () {
+    return function(scope, element, attrs) {
+	element.click(function() {
+	    var args = eval(attrs.clickTrack);
+	    args.unshift('_trackEvent');
+	    _gaq.push(args);
+	});
+    };
+});
