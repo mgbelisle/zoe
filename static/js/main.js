@@ -67,7 +67,6 @@ zoeApp.controller('EmailGodCtrl', ['$scope', function($scope) {
 	    type: 'error',
 	    content: 'Internal server error :-)  Instead of emailing God, please pray for us and our patients!'
 	});
-	_gaq.push(['_trackEvent', 'EmailGod']);
     };
 }]);
 
