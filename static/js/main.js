@@ -11,6 +11,7 @@ zoeApp.config(['$routeProvider', function($routeProvider) {
 	when('/pregnancy/testing', {templateUrl: '/static/html/pregnancy/testing.html'}).
 	when('/pregnancy/faq', {templateUrl: '/static/html/pregnancy/faq.html'}).
 	when('/pregnancy/ultrasounds', {templateUrl: '/static/html/pregnancy/ultrasounds.html'}).
+	when('/pregnancy/abortion', {templateUrl: '/static/html/pregnancy/abortion.html'}).
 	when('/sti', {templateUrl: '/static/html/sti/home.html'}).
 	when('/sti/faq', {templateUrl: '/static/html/sti/faq.html'}).
 	when('/sti/symptoms', {templateUrl: '/static/html/sti/symptoms.html'}).
