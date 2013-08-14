@@ -13,17 +13,11 @@ zoeApp.config(['$routeProvider', function($routeProvider) {
 	when('/pregnancy/faq', {templateUrl: '/static/html/pregnancy/faq.html'}).
 	when('/pregnancy/ultrasounds', {templateUrl: '/static/html/pregnancy/ultrasounds.html'}).
 	when('/pregnancy/abortion', {templateUrl: '/static/html/pregnancy/abortion.html'}).
-	when('/sti', {templateUrl: '/static/html/sti/home.html'}).
+	when('/sti', {redirectTo: '/sti/testing'}).
+	when('/sti/testing', {templateUrl: '/static/html/sti/testing.html'}).
 	when('/sti/faq', {templateUrl: '/static/html/sti/faq.html'}).
 	when('/sti/symptoms', {templateUrl: '/static/html/sti/symptoms.html'}).
 	when('/services', {templateUrl: '/static/html/services.html'}).
-	// TODO: Add later
-	// when('/help', {templateUrl: '/static/html/help.html'}).
-	// when('/about', {templateUrl: '/static/html/about/home.html'}).
-	// when('/about/staff', {templateUrl: '/static/html/about/staff.html'}).
-	// when('/about/board', {templateUrl: '/static/html/about/board.html'}).
-	// when('/about/mission', {templateUrl: '/static/html/about/mission.html'}).
-	// when('/news', {templateUrl: '/static/html/news.html'}).
 	when('/contact', {templateUrl: '/static/html/contact.html'}).
 	otherwise({redirectTo: '/'});
 }]);
