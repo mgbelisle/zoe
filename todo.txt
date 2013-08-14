@@ -2,3 +2,5 @@
 2) Capital text at the top of pregnancy landing page looks like it's shouting at you.
 3) Copyright problems in pregnancy FAQ.
 4) Duplicate questions in pregnancy FAQ.
+5) STI FAQs have abortion info which belongs in the pregnancy FAQ.
+6) how-much-charge STI FAQ doesn't say anything about charge.
