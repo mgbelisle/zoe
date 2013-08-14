@@ -4,3 +4,4 @@
 4) Duplicate questions in pregnancy FAQ.
 5) STI FAQs have abortion info which belongs in the pregnancy FAQ.
 6) how-much-charge STI FAQ doesn't say anything about charge.
+7) The side bar info on ultrasounds is too long.
