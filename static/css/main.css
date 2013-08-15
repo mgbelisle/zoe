@@ -44,8 +44,6 @@ a.zoe-title {
 
 a.zoe-subtitle {
     color: #777777;
-    position: absolute;
-    bottom: 50px;
 }
 
 a.zoe-title:hover, a.zoe-subtitle:hover {
