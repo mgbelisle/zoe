@@ -106,3 +106,8 @@ div.contact-header {
     background-image: url(/static/img/headers/girl.jpg);
     color: white;
 }
+
+div.services-header {
+    background-image: url(/static/img/headers/pocket.jpg);
+    color: white;
+}
