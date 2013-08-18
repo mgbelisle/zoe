@@ -95,6 +95,13 @@ zoeApp.controller('NewsletterCtrl', ['$http', '$scope', function($http, $scope) 
     }
 }]);
 
+zoeApp.controller('FBShareCtrl', ['$location', function ($location) {
+    var href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent($location.absUrl());
+    $('#fb-share').attr('href', href);
+}]);
+
+// Directives
+
 zoeApp.directive('fadeOut', function () {
     return function(scope, element, attrs) {
 	setTimeout(function() {
@@ -118,7 +125,9 @@ zoeApp.directive('clickTrack', function () {
 zoeApp.directive('extHref', function () {
     return function(scope, element, attrs) {
 	element.click(function() {
-	    window.open(attrs.href, attrs.href, 'width=768,height=612');
+	    window.open(element.attr('href'),
+			element.attr('href'),
+			'width=768,height=612');
 	    return false;
 	});
     };
