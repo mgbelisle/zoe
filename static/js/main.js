@@ -125,7 +125,7 @@ zoeApp.directive('extHref', function () {
 			element.attr('href'),
 			'width=768,height=612');
             setTimeout(function() {
-		_gaq.push(['_trackEvent', 'ext-href', element.attr('href')]);
+		_gaq.push(['_trackEvent', 'ext-href', 'click', element.attr('href')]);
             });
 	    return false;
 	});
