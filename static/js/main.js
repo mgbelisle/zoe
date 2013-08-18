@@ -114,3 +114,12 @@ zoeApp.directive('clickTrack', function () {
 	});
     };
 });
+
+zoeApp.directive('extHref', function () {
+    return function(scope, element, attrs) {
+	element.click(function() {
+	    window.open(attrs.href, attrs.href, 'width=768,height=612');
+	    return false;
+	});
+    };
+});
