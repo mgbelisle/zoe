@@ -124,6 +124,9 @@ zoeApp.directive('extHref', function () {
 	    window.open(element.attr('href'),
 			element.attr('href'),
 			'width=768,height=612');
+            setTimeout(function() {
+		_gaq.push(['_trackEvent', 'ext-href', element.attr('href')]);
+            });
 	    return false;
 	});
     };
