@@ -4,7 +4,7 @@ This is the ZoeCare website.
 
 Hosting
 -------
-The site is hosted on http://zoecarebzn.appspot.com, owned by `zoecarebzn.webmaster@gmail.com`.
+The site is hosted on http://zoecarebzn.appspot.com, owned by [zoecarebzn.webmaster@gmail.com](mailto:zoecarebzn.webmaster@gmail.com).
 
 Tech Stack
 ----------
