@@ -96,3 +96,8 @@ div.campus-header {
     background-image: url(/static/img/headers/faces.jpg);
     color: white;
 }
+
+div.sti div.hero-unit {
+    background-image: url(/static/img/headers/feet.jpg);
+    color: white;
+}
