@@ -54,10 +54,6 @@ zoeApp.controller('MapCtrl', [function() {
 	}});
 }]);
 
-zoeApp.controller('HomeCarouselCtrl', [function() {
-    $('#home-carousel').carousel({interval: 10000});
-}]);
-
 zoeApp.controller('EmailGodCtrl', ['$scope', function($scope) {
     $scope.alerts = [];
     $scope.showAlert = function() {
@@ -130,5 +126,11 @@ zoeApp.directive('extHref', function () {
 			'width=768,height=612');
 	    return false;
 	});
+    };
+});
+
+zoeApp.directive('homeCarousel', function () {
+    return function(scope, element, attrs) {
+	element.carousel({interval: 10000});
     };
 });
