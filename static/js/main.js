@@ -29,12 +29,6 @@ zoeApp.config(['$locationProvider', function($locationProvider) {
 
 // Controllers
 
-zoeApp.controller('NavbarCtrl', [function() {
-    $('ul.nav li a').click(function() {
-	$('button.btn-navbar').click();
-    });
-}]);
-
 zoeApp.controller('MapCtrl', [function() {
     google.load('maps', '3', {
 	other_params: $.param({key: 'AIzaSyA0jsk5irIPWBUSAcW2WHQqNxsoqtJy5sU', sensor: false}),
@@ -97,6 +91,14 @@ zoeApp.controller('FBShareCtrl', ['$location', function ($location) {
 }]);
 
 // Directives
+
+zoeApp.directive('navbar', function () {
+    return function(scope, element, attrs) {
+	$('ul.nav li a').click(function() {
+	    $('button.btn-navbar').click();
+	});
+    };
+});
 
 zoeApp.directive('fadeOut', function () {
     return function(scope, element, attrs) {
