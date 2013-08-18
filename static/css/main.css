@@ -101,3 +101,8 @@ div.sti div.hero-unit {
     background-image: url(/static/img/headers/feet.jpg);
     color: white;
 }
+
+div.contact-header {
+    background-image: url(/static/img/headers/girl.jpg);
+    color: white;
+}
