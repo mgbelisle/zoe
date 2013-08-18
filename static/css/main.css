@@ -13,10 +13,6 @@
     }
 }
 
-.hero-unit {
-    padding: 40px;
-}
-
 .accordion-heading a {
     font-size: 18px;
     margin: 6px;
@@ -67,4 +63,15 @@ img.staff {
 
 div.staff {
     padding: 24px;
+}
+
+div.hero-unit {
+    padding: 60px 40px 1px 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div#pregnancy div.hero-unit {
+    background-image: url(/static/img/headers/pregnancy.jpg);
+    color: white;
 }
