@@ -8,6 +8,6 @@ The site is hosted on http://zoecarebzn.appspot.com, owned by [zoecarebzn.webmas
 
 Tech Stack
 ----------
-* AngularJS
-* Bootstrap
-* Go (server side)
+* [AngularJS](http://angularjs.org/)
+* [Bootstrap](http://getbootstrap.com/2.3.2/)
+* [Go](http://golang.org/)
