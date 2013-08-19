@@ -81,17 +81,6 @@ div.pregnancy div.hero-unit {
     color: white;
 }
 
-div#campus-nav {
-    position: relative;
-}
-
-div#campus-nav a {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    z-index: 1;
-}
-
 div.campus-header {
     background-image: url(/static/img/headers/faces.jpg);
     color: white;
