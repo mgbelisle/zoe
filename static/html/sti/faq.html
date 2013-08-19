@@ -2,20 +2,29 @@
   <div class="span3">
     <div data-ng-include="'/static/html/sti/nav.html'">
     </div>
-    <div class="well">
+    <div class="well sidebar-info">
       <h4>Did you know?</h4>
       <ul>
 	<li>20 million new STIs each year in the United States</li>
 	<li>One half of those new infections are among young people ages 14 to 23</li>
 	<li>1 in 3 non-monogamous (more than one partner) sexually active persons has an STI</li>
-	<li>STIs are often asymptomatic (without symptoms)</li>
-	<li>Most infected persons do not know they have an STI</li>
-	<li>Most infected persons do not know they have an STI</li>
-	<li>Untreated STIs can cause chronic diseases, infertility
-	  (inability to have children), birth complications, and could
-	  even affect your future children.</li>
-	<li>Having an STI could increase your risk of getting HIV or other STIs</li>
       </ul>
+      <div id="nausea-accordion">
+	<a class="accordion-toggle" data-toggle="collapse" data-parent="#more-accordion" data-target="#more-accordion-1" data-click-track="['sti', 'faq', 'more']">
+	  Read more ...
+	</a>
+	<div id="more-accordion-1" class="collapse">
+	  <ul>
+	    <li>STIs are often asymptomatic (without symptoms)</li>
+	    <li>Most infected persons do not know they have an STI</li>
+	    <li>Most infected persons do not know they have an STI</li>
+	    <li>Untreated STIs can cause chronic diseases, infertility
+	      (inability to have children), birth complications, and could
+	      even affect your future children.</li>
+	    <li>Having an STI could increase your risk of getting HIV or other STIs</li>
+	  </ul>
+	</div>
+      </div>
     </div>
   </div>
   <div class="span9">

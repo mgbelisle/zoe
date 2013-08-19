@@ -100,3 +100,7 @@ div.services-header {
     background-image: url(/static/img/headers/pocket.jpg);
     color: white;
 }
+
+div.sidebar-info {
+    border-color: #08C;
+}
