@@ -11,6 +11,10 @@
 	margin-left: auto;
 	border-radius: 4px;
     }
+    .social-media {
+	position: absolute;
+	right: 0; top: 0;
+    }
 }
 
 .accordion-heading a {
