@@ -3,44 +3,44 @@
   Our office is open Monday-Thursday 9am-5pm and Fridays by appointment.
 </div>
 <div class="container-fluid">
-  <div class="accordion" id="contact-accordion">
+  <div class="accordion">
     <div class="accordion-group">
       <div class="accordion-heading">
-	<a class="accordion-toggle" data-toggle="collapse" data-parent="#contact-accordion" data-target="#contact-accordion-phone" data-click-track="['contact', 'phone', 'toggle']">
+	<a class="accordion-toggle" data-toggle="collapse" data-target="#contact-phone" data-int-href>
 	  <img src="/static/img/phone.svg" alt="phone.svg" class="icon">
           Phone
 	</a>
       </div>
-      <div id="contact-accordion-phone" class="accordion-body collapse">
+      <div id="contact-phone" class="accordion-body collapse">
 	<div class="accordion-inner">
 	  <p>Office (open Mon-Thur 9-5)</p>
-	  <p><a href="tel:4065869444" class="btn btn-primary" data-click-track="['contact', 'phone', 'office']">406-586-9444</a></p>
+	  <p><a href="tel:4065869444" class="btn btn-primary" data-int-href="contact-phone-office">406-586-9444</a></p>
 	  <p>After Hours Call Line (open 24/7)</p>
-	  <p><a href="tel:4065793317" class="btn btn-danger" data-click-track="['contact', 'phone', 'after-hours']">406-579-3317</a></p>
+	  <p><a href="tel:4065793317" class="btn btn-danger" data-int-href="contact-phone-after-hours">406-579-3317</a></p>
 	</div>
       </div>
     </div>
     <div class="accordion-group">
       <div class="accordion-heading">
-	<a class="accordion-toggle" data-toggle="collapse" data-parent="#contact-accordion" data-target="#contact-accordion-email" data-click-track="['contact', 'email', 'toggle']">
+	<a class="accordion-toggle" data-toggle="collapse" data-target="#contact-email" data-int-href>
 	  <img src="/static/img/mail.svg" alt="mail.svg" class="icon">
           Email
 	</a>
       </div>
-      <div id="contact-accordion-email" class="accordion-body collapse">
+      <div id="contact-email" class="accordion-body collapse">
 	<div class="accordion-inner">
-          <p><a href="mailto:appt@gotozoe.org" class="btn btn-primary" data-click-track="['contact', 'email', 'appt']">Send an email to appt@gotozoe.org &raquo;</a></p>
+          <p><a href="mailto:appt@gotozoe.org" class="btn btn-primary" data-int-href>Send an email to appt@gotozoe.org &raquo;</a></p>
 	</div>
       </div>
     </div>
     <div class="accordion-group">
       <div class="accordion-heading">
-	<a class="accordion-toggle" data-toggle="collapse" data-parent="#contact-accordion" data-target="#contact-accordion-in-person" data-click-track="['contact', 'in-person', 'open']">
+	<a class="accordion-toggle" data-toggle="collapse" data-target="#contact-in-person" data-int-href>
 	  <img src="/static/img/location.svg" alt="location.svg" class="icon">
           In Person
 	</a>
       </div>
-      <div id="contact-accordion-in-person" class="accordion-body collapse">
+      <div id="contact-in-person" class="accordion-body collapse">
 	<div class="accordion-inner">
           <p style="text-align: center;"><a href="https://maps.google.com/maps?q=Zoe+Women's+Services,+West+Lincoln+Street,+Bozeman,+MT&hl=en&sll=46.679799,-110.044783&sspn=9.981117,23.181152&oq=Zoe+W&hq=Zoe+Women's+Services,&hnear=W+Lincoln+St,+Bozeman,+Gallatin,+Montana&t=m&z=16" data-ext-href>Go to 1216 W. Lincoln St. C, Bozeman, MT &raquo;</a></p>
 	  <p><div id="map-canvas" style="width: 100%; height: 400px;" data-ng-controller="MapCtrl"></div></p>

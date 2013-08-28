@@ -103,28 +103,26 @@ zoeApp.directive('fadeOut', function () {
     };
 });
 
-zoeApp.directive('clickTrack', function () {
-    return function(scope, element, attrs) {
-	element.click(function() {
-	    setTimeout(function() {
-		var args = eval(attrs.clickTrack);
-		args.unshift('_trackEvent');
-		_gaq.push(args);
-	    });
-	});
-    };
-});
-
 zoeApp.directive('extHref', function () {
     return function(scope, element, attrs) {
 	element.click(function() {
 	    window.open(element.attr('href'),
 			element.attr('href'),
 			'width=768,height=612');
-            setTimeout(function() {
-		_gaq.push(['_trackEvent', 'ext-href', 'click', element.attr('href')]);
-            });
+	    var href = element.attr('data-int-href') || element.attr('href');
+	    _gaq.push(['_trackEvent', 'ext-href', href]);
 	    return false;
+	});
+    };
+});
+
+zoeApp.directive('intHref', function () {
+    return function(scope, element, attrs) {
+	element.click(function() {
+	    var href = element.attr('data-int-href') ||
+		element.attr('data-target') ||
+		element.attr('href');
+	    _gaq.push(['_trackEvent', 'int-href', href]);
 	});
     };
 });
