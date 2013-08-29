@@ -17,6 +17,15 @@
     }
 }
 
+.nav {
+    padding-top: 6px;
+}
+
+.navbar .nav>li>a {
+    color: #00546b;
+    font-size: 18px;
+}
+
 .accordion-heading a {
     font-size: 18px;
     margin: 6px;
