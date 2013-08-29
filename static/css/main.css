@@ -1,6 +1,6 @@
 @media (min-width: 769px) {
     body {
-	background: url(/static/img/background.jpg) no-repeat center center fixed;
+	background: url(/static/img/background.jpg) no-repeat top center fixed;
 	background-size: cover;
     }
     #body {
@@ -124,4 +124,5 @@ div.about-header {
 
 div.sidebar-info {
     border-color: #08C;
+    background-color: #E8F6FF;
 }
