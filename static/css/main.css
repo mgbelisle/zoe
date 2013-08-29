@@ -17,6 +17,10 @@
     }
 }
 
+a, h1, h2, h3, h4, h5, h6 {
+    color: #00546b;
+}
+
 .nav {
     padding-top: 6px;
 }
@@ -87,6 +91,10 @@ div.hero-unit {
 div.hero-unit h2 {
     margin-bottom: 0px;
     padding-bottom: 0px;
+}
+
+div.hero-unit h1, div.hero-unit h2 {
+    color: white;
 }
 
 div.pregnancy div.hero-unit {
