@@ -1,14 +1,36 @@
 <div class="row-fluid pregnancy">
-  <div class="span3" data-ng-include="'/static/html/pregnancy/nav.html'">
+  <div class="span3">
+    <div data-ng-include="'/static/html/pregnancy/nav.html'">
+    </div>
+    <div class="well sidebar-info">
+      <h4>Points to Ponder</h4>
+      <p>There is a much to contemplate before you make a decision about
+	an unplanned pregnancy. ZoeCare can help you answer questions
+	you may have about your pregnancy and your options.</p>
+      <ul>
+	<li>Is the pregnancy viable (healthy)?</li>
+	<li>How far along are you?</li>
+	<li>
+	  <a class="accordion-toggle" data-toggle="collapse" data-target="#pregnancy-ectopic" data-int-href>
+	    Is the pregnancy in your uterus?
+	  </a>
+	  <div id="pregnancy-ectopic" class="collapse">
+	    A pregnancy can be located in a fallopian tube. This is known as
+	    an <a href="http://www.webmd.com/baby/guide/pregnancy-ectopic-pregnancy"
+		  data-ext-href>ectopic pregnancy</a>.
+	  </div>
+	</li>
+      </ul>
+    </div>
   </div>
   <div class="span9">
     <div class="hero-unit">
       <h2>Pregnancy</h2>
     </div>
     <p>
-      <i>We listen</i> to you.<br />
-      <i>We promise</i> the utmost privacy, respect, and quality medical care.<br />
-      <i>We are committed</i> to providing you with accurate information and options.
+      <em>We listen</em> to you.<br>
+      We promise <em>to treat you with compassion and respect</em>, to protect your privacy and provide you with quality medical care.<br>
+      We are committed to providing you with accurate, <em>current</em> information and options.
     </p>
     <h4>Am I Pregnant?</h4>
     <p>Missing your period can create some stress if you are not
@@ -21,38 +43,16 @@
       to review the <a href="/pregnancy/faq">FAQs page</a>
       and/or <a href="/contact">come into ZoeCare</a> for a FREE
       pregnancy test.</p>
-    <h4>I Am Pregnant!</h4>
-    <p>ZoeCare is here to help you confirm your pregnancy with a
-      medical quality pregnancy test and limited ultrasound. All
-      services provided by ZoeCare are FREE and your health
-      information is PRIVATE.</p>
     <div class="row-fluid" style="padding-bottom: 12px;">
-      <div class="span5">
+      <div class="span3">
 	<img src="/static/img/flower.jpg" alt="flower.jpg" class="img-rounded" />
       </div>
-      <div class="span7">
-	<h4>Points to Ponder</h4>
-	<p>There is a much to contemplate before you make a decision about
-	  an unplanned pregnancy. ZoeCare can help you answer questions
-	  you may have about your pregnancy and your options.</p>
-	<ul>
-	  <li>Is the pregnancy viable (healthy)?</li>
-	  <li>How far along are you?</li>
-	  <li>
-	    <div id="how-far-accordion">
-	      <a class="accordion-toggle" data-toggle="collapse" data-parent="#how-far-accordion" data-target="#how-far-accordion-1">
-		Is the pregnancy in your uterus?
-	      </a>
-	      <div id="how-far-accordion-1" class="collapse">
-		<div class="accordion-inner">
-		  A pregnancy can be located in a fallopian tube. This is known as
-		  an <a href="http://www.webmd.com/baby/guide/pregnancy-ectopic-pregnancy"
-			data-ext-href>ectopic pregnancy</a>.
-		</div>
-	      </div>
-	    </div>
-	  </li>
-	</ul>
+      <div class="span9">
+	<h4>I Am Pregnant!</h4>
+	<p>ZoeCare is here to help you confirm your pregnancy with a
+	  medical quality pregnancy test and limited ultrasound. All
+	  services provided by ZoeCare are FREE and your health
+	  information is PRIVATE.</p>
       </div>
     </div>
     <p><a href="/contact">Make an appointment</a> with ZoeCare for a

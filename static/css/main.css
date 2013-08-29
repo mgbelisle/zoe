@@ -21,6 +21,18 @@ a, h1, h2, h3, h4, h5, h6 {
     color: #00546b;
 }
 
+.extra-nav {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.slogan {
+    font-family: Zapf Chancery, Mistral;
+    font-size: 28px;
+    color: #00546b;
+    padding-bottom: 8px;
+}
+
 .nav {
     padding-top: 6px;
 }
@@ -51,26 +63,25 @@ a, h1, h2, h3, h4, h5, h6 {
     font-size: 36px;
 }    
 
-a.zoe-title {
+.zoe-title {
     color: #333333;
 }
 
-a.zoe-subtitle {
-    color: #00546b;
+.zoe-subtitle {
     vertical-align: bottom;
     padding-left: 12px;
     font-size: 32px;
 }
 
-a.zoe-title:hover, a.zoe-subtitle:hover {
+.zoe-title:hover, .zoe-subtitle:hover {
     text-decoration: none;
 }
 
-.navbar-inverse a.zoe-title {
+.navbar-inverse .zoe-title {
     color: white;
 }
 
-.navbar-inverse a.zoe-subtitle {
+.navbar-inverse .zoe-subtitle {
     color: #999999;
 }
 
@@ -78,51 +89,51 @@ img.staff {
     height: 256px;
 }
 
-div.staff {
+.staff {
     padding: 24px;
 }
 
-div.hero-unit {
+.hero-unit {
     padding: 60px 40px 1px 20px;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-div.hero-unit h2 {
+.hero-unit h2 {
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
 
-div.hero-unit h1, div.hero-unit h2 {
+.hero-unit h1, .hero-unit h2 {
     color: white;
 }
 
-div.pregnancy div.hero-unit {
+.pregnancy .hero-unit {
     background-image: url(/static/img/headers/pregnancy.jpg);
     color: white;
 }
 
-div.campus-header {
+.campus-header {
     background-image: url(/static/img/headers/faces.jpg);
     color: white;
 }
 
-div.sti div.hero-unit {
+.sti .hero-unit {
     background-image: url(/static/img/headers/feet.jpg);
     color: white;
 }
 
-div.contact-header {
+.contact-header {
     background-image: url(/static/img/headers/girl.jpg);
     color: white;
 }
 
-div.about-header {
+.about-header {
     background-image: url(/static/img/headers/pocket.jpg);
     color: white;
 }
 
-div.sidebar-info {
-    border-color: #08C;
+.sidebar-info {
+    border-color: #C8D6DF;
     background-color: #E8F6FF;
 }
