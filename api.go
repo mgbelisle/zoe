@@ -14,15 +14,17 @@ func init() {
 func newsletter(writer http.ResponseWriter, request *http.Request) {
 	if request.Method != "POST" {
 		http.Error(writer, "Not using POST", http.StatusMethodNotAllowed)
+		return
 	}
 	context := appengine.NewContext(request)
 	email := request.PostFormValue("email")
 	if len(email) < 1 {
 		http.Error(writer, "No email specified", http.StatusBadRequest)
+		return
 	}
 	msg := &mail.Message{
 		Sender:  "mgbelisle@gmail.com",
-		To:      []string{"mgbelisle@gmail.com"},
+		To:      []string{"mgbelisle@gmail.com", "cindy@gotozoe.org"},
 		Subject: "Newsletter signup",
 		Body:    email,
 	}
@@ -30,5 +32,6 @@ func newsletter(writer http.ResponseWriter, request *http.Request) {
 	if err != nil {
 		context.Errorf("%v", err)
 		http.Error(writer, "Could not send email", http.StatusInternalServerError)
+		return
 	}
 }
