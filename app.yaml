@@ -12,3 +12,11 @@ handlers:
 - url: /.*
   static_files: static/html/main.html
   upload: /
+
+skip_files:
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^img$
