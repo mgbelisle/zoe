@@ -142,3 +142,34 @@ zoeApp.directive('fbShare', function ($location) {
 	element.attr('href', href);
     };
 });
+
+zoeApp.directive('staffList', function() {
+    return {
+        restrict: 'A',
+        controller: function($scope, $rootScope, $http) {
+            var staff;
+            $http({
+                method: 'GET',
+                url: '/static/json/staff.json'
+            }).success(function(data) {
+                staff = data;
+                $scope.staff = staff;
+                $rootScope.$broadcast('STAFF_MEMBER_SET', staff[0]);
+            });
+            $scope.setMember = function(member) {
+                $rootScope.$broadcast('STAFF_MEMBER_SET', member);
+            }
+        }
+    }
+});
+
+zoeApp.directive('staffMember', function() {
+    return {
+        restrict: 'A',
+        controller: function($scope) {
+            $scope.$on('STAFF_MEMBER_SET', function(event, member) {
+                $scope.member = member;
+            });
+        }
+    }
+});
