@@ -4,7 +4,7 @@
     </div>
     <div class="row-fluid" data-staff-list>
       <div class="span4" ng-repeat="member in staff" style="margin: 0; padding: 4px;">
-        <a href="#" title="{{ member.name }} - {{ member.position }}" ng-click="setMember(member)">
+        <a title="{{ member.name }} - {{ member.position }}" ng-click="setMember(member)">
           <img ng-src="{{ member.photo }}" class="img-rounded" style="margin: 4px;">
         </a>
       </div>
