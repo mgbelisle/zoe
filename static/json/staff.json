@@ -6,18 +6,6 @@
         "bio": "/static/html/about/staff_bios/jeanne_brown.html"
     },
     {
-        "name": "Alyssa Bryant",
-        "position": "Administration",
-        "photo": "/static/img/staff/alyssa_bryant.jpg",
-        "bio": "/static/html/about/staff_bios/alyssa_bryant.html"
-    },
-    {
-        "name": "Ann Knick",
-        "position": "Patient Advocate and Reception",
-        "photo": "/static/img/staff/ann_knick.jpg",
-        "bio": "/static/html/about/staff_bios/ann_knick.html"
-    },
-    {
         "name": "Barbara Eckstein, FNP, BC",
         "position": "Nurse Manager",
         "photo": "/static/img/staff/barbara_eckstein.jpg",
@@ -30,22 +18,10 @@
         "bio": "/static/html/about/staff_bios/cindy_nelson.html"
     },
     {
-        "name": "Jackie Klompien",
-        "position": "Project Development & Program Coordinator",
-        "photo": "/static/img/staff/jackie_klompien.jpg",
-        "bio": "/static/html/about/staff_bios/jackie_klompien.html"
-    },
-    {
         "name": "Jane Phillips",
         "position": "RN",
         "photo": "/static/img/staff/jane_phillips.jpg",
         "bio": "/static/html/about/staff_bios/jane_phillips.html"
-    },
-    {
-        "name": "Kathy Webster",
-        "position": "Client Advocate, Volunteer Coordinator & Trainer",
-        "photo": "/static/img/staff/kathy_webster.jpg",
-        "bio": "/static/html/about/staff_bios/kathy_webster.html"
     },
     {
         "name": "Robin Cory",
@@ -54,9 +30,51 @@
         "bio": "/static/html/about/staff_bios/robin_cory.html"
     },
     {
+        "name": "Kathy Webster",
+        "position": "Client Advocate, Volunteer Coordinator & Trainer",
+        "photo": "/static/img/staff/kathy_webster.jpg",
+        "bio": "/static/html/about/staff_bios/kathy_webster.html"
+    },
+    {
+        "name": "Jackie Klompien",
+        "position": "Project Development & Program Coordinator",
+        "photo": "/static/img/staff/jackie_klompien.jpg",
+        "bio": "/static/html/about/staff_bios/jackie_klompien.html"
+    },
+    {
+        "name": "Alyssa Bryant",
+        "position": "Administration",
+        "photo": "/static/img/staff/alyssa_bryant.jpg",
+        "bio": "/static/html/about/staff_bios/alyssa_bryant.html"
+    },
+    {
+        "name": "Ann Knick",
+        "position": "Patient Advocate and Reception",
+        "photo": "/static/img/staff/ann_knick.jpg",
+        "bio": "/static/html/about/staff_bios/ann_knick.html"
+    },
+    {
         "name": "Deanne Fisher",
         "position": "Volunteer, Client Advocate and Reception",
         "photo": "/static/img/staff/deanne_fisher.jpg",
         "bio": "/static/html/about/staff_bios/deanne_fisher.html"
+    },
+    {
+        "name": "Mary Springer",
+        "position": "Patient Care",
+        "photo": "/static/img/staff/mary_springer.jpg",
+        "bio": "/static/html/about/staff_bios/mary_springer.html"
+    },
+    {
+        "name": "Lisa Doerksen",
+        "position": "",
+        "photo": "/static/img/staff/lisa_doerksen.jpg",
+        "bio": "/static/html/about/staff_bios/lisa_doerksen.html"
+    },
+    {
+        "name": "Quinn Pruett",
+        "position": "",
+        "photo": "/static/img/staff/quinn_pruett.jpg",
+        "bio": "/static/html/about/staff_bios/quinn_pruett.html"
     }
 ]
