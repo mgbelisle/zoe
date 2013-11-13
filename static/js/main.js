@@ -23,6 +23,7 @@ zoeApp.config(['$routeProvider', function($routeProvider) {
 	when('/contact', {templateUrl: '/static/html/contact.html'}).
 	when('/campus', {templateUrl: '/static/html/campus.html'}).
 	when('/help', {templateUrl: '/static/html/help.html'}).
+	when('/stories/fiona', {templateUrl: '/static/html/stories/fiona.html'}).
 	otherwise({redirectTo: '/'});
 }]);
 

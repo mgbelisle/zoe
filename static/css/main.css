@@ -122,6 +122,11 @@ img.staff {
     color: white;
 }
 
+.stories .hero-unit {
+    background-image: url(/static/img/headers/stories.jpg);
+    color: white;
+}
+
 .contact-header {
     background-image: url(/static/img/headers/girl.jpg);
     color: white;
@@ -135,4 +140,19 @@ img.staff {
 .sidebar-info {
     border-color: #C8D6DF;
     background-color: #E8F6FF;
+}
+
+.img-story-left {
+    width: 256px;
+    margin: 12px 16px 12px 0;
+}
+
+.img-story-right {
+    width: 256px;
+    margin: 12px 0 12px 16px;
+}
+
+.photo-credits {
+    color: grey;
+    font-style: italic;
 }
