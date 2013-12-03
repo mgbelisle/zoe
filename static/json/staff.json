@@ -76,5 +76,11 @@
         "position": "Patient Care",
         "photo": "/static/img/staff/quinn_pruett.jpg",
         "bio": "/static/html/about/staff_bios/quinn_pruett.html"
+    },
+    {
+        "name": "Gabor Benda",
+        "position": "DR",
+        "photo": "/static/img/staff/gabor_benda.jpg",
+        "bio": "/static/html/about/staff_bios/gabor_benda.html"
     }
 ]
