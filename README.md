@@ -9,5 +9,6 @@ The site is hosted on http://zoecarebzn.appspot.com, owned by [zoecarebzn.webmas
 Tech Stack
 ----------
 * [AngularJS](http://angularjs.org/)
-* [Bootstrap](http://getbootstrap.com/2.3.2/)
+* [Bootstrap](http://getbootstrap.com/)
 * [Go](http://golang.org/)
+* [Bower](http://bower.io/)
