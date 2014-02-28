@@ -117,7 +117,7 @@ zoeApp.directive('extHref', function () {
 	element.click(function() {
 	    window.open(element.attr('href'),
 			element.attr('href'),
-			'width=768,height=612');
+			'width=768,height=612,scrollbars=1');
 	    var href = element.attr('data-int-href') || element.attr('href');
 	    _gaq.push(['_trackEvent', 'ext-href', href]);
 	    return false;
