@@ -12,3 +12,5 @@ Tech Stack
 * [Bootstrap](http://getbootstrap.com/)
 * [Go](http://golang.org/)
 * [Bower](http://bower.io/)
+* [Grunt](http://gruntjs.com/)
+* [RequireJS](http://requirejs.org/)
