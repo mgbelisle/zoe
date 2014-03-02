@@ -14,4 +14,10 @@ handlers:
   upload: /
 
 skip_files:
-- ^((?!api).)*$
+- ^(.*/)?Gruntfile\.js$
+- ^(.*/)?README\.md$
+- ^(.*/)?\..*$
+- ^(.*/)?archive$
+- ^(.*/)?bower\.json$
+- ^(.*/)?package\.json$
+
