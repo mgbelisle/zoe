@@ -7,7 +7,7 @@ import (
 )
 
 func init() {
-	http.HandleFunc("/api/newsletter", newsletter)
+	http.HandleFunc("/api/newsletter/", newsletter)
 }
 
 // Sends an email to Zoe that user x wants to recieve newsletters

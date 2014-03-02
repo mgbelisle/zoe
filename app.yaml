@@ -6,7 +6,7 @@ threadsafe: true
 
 handlers:
 - url: /api/(.*)
-  script: api
+  script: api/api
 - url: /static
   static_dir: static
 - url: /.*
@@ -14,4 +14,4 @@ handlers:
   upload: /
 
 skip_files:
-- ^(!api/)
+- ^((?!api).)*$
