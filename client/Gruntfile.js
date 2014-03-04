@@ -7,11 +7,11 @@ module.exports = function(grunt) {
         requirejs: {
             compile: {
                 options: {
-                    mainConfigFile: 'js/main.js',
-                    appDir: './static/',
+                    mainConfigFile: './src/js/main.js',
+                    appDir: './src',
                     baseUrl: './',
-                    name: './static/js/main',
-                    dir: './static/build',
+                    name: 'js/main',
+                    dir: './build',
                     // cssIn: "./static/css/src/main.css",
                     optimize: "uglify2"
                 }
