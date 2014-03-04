@@ -1,10 +1,6 @@
 zoe
 ===
-This is the ZoeCare website.
-
-Hosting
--------
-The site is hosted on http://zoecarebzn.appspot.com, owned by [zoecarebzn.webmaster@gmail.com](mailto:zoecarebzn.webmaster@gmail.com).
+This is the ZoeCare website.  It is located at [http://gotozoe.org/], owned by [webmaster@gotozoe.org](mailto:webmaster@gotozoe.org).
 
 Tech Stack
 ----------
