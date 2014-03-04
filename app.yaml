@@ -19,5 +19,6 @@ skip_files:
 - ^(.*/)?\..*$
 - ^(.*/)?archive$
 - ^(.*/)?bower\.json$
+- ^(.*/)?node_modules$
 - ^(.*/)?package\.json$
 
