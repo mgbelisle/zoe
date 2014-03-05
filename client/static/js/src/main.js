@@ -4,7 +4,7 @@ require.config({
     baseUrl: '../..',
     name: 'bower_components/almond/almond',
     include: 'js/src/main',
-    optimize: 'none',
+    optimize: 'uglify2',
     out: '../build.js',
     paths: {
         angular: 'bower_components/angular/angular'

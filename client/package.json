@@ -5,7 +5,6 @@
   "dependencies": {
     "bower": "~1.2.8",
     "grunt-cli": "~0.1.13",
-    "grunt-closure-tools": "~0.9.3",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-contrib-requirejs": "~0.4.1"
   },
