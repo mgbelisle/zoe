@@ -1,44 +1,46 @@
-require([
-    'bower_components/angular/angular.js'
+define([
+    'bower_components/angular/angular',
+    'bower_components/requirejs-domready/domReady!'
 ], function(
+    domReady,
     angular
 ) {
     'use strict';
 
-    // App config
+    alert('hello world');
 
-    var zoeApp = angular.module('zoe', ['$strap.directives']);
+    var app = angular.module('zoe', []);
 
-    zoeApp.config(['$routeProvider', function($routeProvider) {
-        $routeProvider.
-            when('/', {templateUrl: '/static/html/home.html'}).
-            when('/pregnancy', {templateUrl: '/static/html/pregnancy/home.html'}).
-            when('/pregnancy/symptoms', {templateUrl: '/static/html/pregnancy/symptoms.html'}).
-            when('/pregnancy/testing', {templateUrl: '/static/html/pregnancy/testing.html'}).
-            when('/pregnancy/faq', {templateUrl: '/static/html/pregnancy/faq.html'}).
-            when('/pregnancy/ultrasounds', {templateUrl: '/static/html/pregnancy/ultrasounds.html'}).
-            when('/pregnancy/abortion', {templateUrl: '/static/html/pregnancy/abortion.html'}).
-            when('/sti', {redirectTo: '/sti/testing'}).
-            when('/sti/testing', {templateUrl: '/static/html/sti/testing.html'}).
-            when('/sti/faq', {templateUrl: '/static/html/sti/faq.html'}).
-            when('/sti/symptoms', {templateUrl: '/static/html/sti/symptoms.html'}).
-            when('/services', {templateUrl: '/static/html/services.html'}).
-            when('/about', {templateUrl: '/static/html/about/home.html'}).
-            when('/about/staff', {templateUrl: '/static/html/about/staff.html'}).
-            when('/contact', {templateUrl: '/static/html/contact.html'}).
-            when('/campus', {templateUrl: '/static/html/campus.html'}).
-            when('/help', {templateUrl: '/static/html/help.html'}).
-            when('/stories/fiona', {templateUrl: '/static/html/stories/fiona.html'}).
-            otherwise({redirectTo: '/'});
-    }]);
+    // app.config(['$routeProvider', function($routeProvider) {
+    //     $routeProvider.
+    //         when('/', {templateUrl: '/static/html/home.html'}).
+    //         when('/pregnancy', {templateUrl: '/static/html/pregnancy/home.html'}).
+    //         when('/pregnancy/symptoms', {templateUrl: '/static/html/pregnancy/symptoms.html'}).
+    //         when('/pregnancy/testing', {templateUrl: '/static/html/pregnancy/testing.html'}).
+    //         when('/pregnancy/faq', {templateUrl: '/static/html/pregnancy/faq.html'}).
+    //         when('/pregnancy/ultrasounds', {templateUrl: '/static/html/pregnancy/ultrasounds.html'}).
+    //         when('/pregnancy/abortion', {templateUrl: '/static/html/pregnancy/abortion.html'}).
+    //         when('/sti', {redirectTo: '/sti/testing'}).
+    //         when('/sti/testing', {templateUrl: '/static/html/sti/testing.html'}).
+    //         when('/sti/faq', {templateUrl: '/static/html/sti/faq.html'}).
+    //         when('/sti/symptoms', {templateUrl: '/static/html/sti/symptoms.html'}).
+    //         when('/services', {templateUrl: '/static/html/services.html'}).
+    //         when('/about', {templateUrl: '/static/html/about/home.html'}).
+    //         when('/about/staff', {templateUrl: '/static/html/about/staff.html'}).
+    //         when('/contact', {templateUrl: '/static/html/contact.html'}).
+    //         when('/campus', {templateUrl: '/static/html/campus.html'}).
+    //         when('/help', {templateUrl: '/static/html/help.html'}).
+    //         when('/stories/fiona', {templateUrl: '/static/html/stories/fiona.html'}).
+    //         otherwise({redirectTo: '/'});
+    // }]);
 
-    zoeApp.config(['$locationProvider', function($locationProvider) {
-        $locationProvider.html5Mode(true);
-    }]);
+    // app.config(['$locationProvider', function($locationProvider) {
+    //     $locationProvider.html5Mode(true);
+    // }]);
 
     // Controllers
 
-    // zoeApp.controller('MapCtrl', [function() {
+    // app.controller('MapCtrl', [function() {
     //     google.load('maps', '3', {
     //         other_params: $.param({key: 'AIzaSyA0jsk5irIPWBUSAcW2WHQqNxsoqtJy5sU', sensor: false}),
     //         callback : function() {
@@ -62,7 +64,7 @@ require([
     //         }});
     // }]);
 
-    // zoeApp.controller('EmailGodCtrl', ['$scope', function($scope) {
+    // app.controller('EmailGodCtrl', ['$scope', function($scope) {
     //     $scope.alerts = [];
     //     $scope.showAlert = function() {
     //         $scope.alerts.push({
@@ -72,7 +74,7 @@ require([
     //     };
     // }]);
 
-    // zoeApp.controller('NewsletterCtrl', ['$http', '$scope', function($http, $scope) {
+    // app.controller('NewsletterCtrl', ['$http', '$scope', function($http, $scope) {
     //     $scope.alerts = [];
     //     $scope.submit = function() {
     //         $http({
@@ -101,7 +103,7 @@ require([
 
     // // Directives
 
-    // zoeApp.directive('navbar', function () {
+    // app.directive('navbar', function () {
     //     return function(scope, element, attrs) {
     //         $('ul.nav li a').click(function() {
     //             $('button.btn-navbar').click();
@@ -109,7 +111,7 @@ require([
     //     };
     // });
 
-    // zoeApp.directive('fadeOut', function () {
+    // app.directive('fadeOut', function () {
     //     return function(scope, element, attrs) {
     //         setTimeout(function() {
     //             element.fadeOut('slow');
@@ -117,7 +119,7 @@ require([
     //     };
     // });
 
-    // zoeApp.directive('extHref', function () {
+    // app.directive('extHref', function () {
     //     return function(scope, element, attrs) {
     //         element.click(function() {
     //             window.open(element.attr('href'),
@@ -130,7 +132,7 @@ require([
     //     };
     // });
 
-    // zoeApp.directive('intHref', function () {
+    // app.directive('intHref', function () {
     //     return function(scope, element, attrs) {
     //         element.click(function() {
     //             var href = element.attr('data-int-href') ||
@@ -141,20 +143,20 @@ require([
     //     };
     // });
 
-    // zoeApp.directive('homeCarousel', function () {
+    // app.directive('homeCarousel', function () {
     //     return function(scope, element, attrs) {
     //         element.carousel({interval: 10000});
     //     };
     // });
 
-    // zoeApp.directive('fbShare', function ($location) {
+    // app.directive('fbShare', function ($location) {
     //     return function(scope, element, attrs) {
     //         var href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent($location.absUrl());
     //         element.attr('href', href);
     //     };
     // });
 
-    // zoeApp.directive('staffList', function() {
+    // app.directive('staffList', function() {
     //     return {
     //         restrict: 'A',
     //         controller: function($scope, $rootScope, $http) {
@@ -174,7 +176,7 @@ require([
     //     };
     // });
 
-    // zoeApp.directive('staffMember', function() {
+    // app.directive('staffMember', function() {
     //     return {
     //         restrict: 'A',
     //         controller: function($scope) {
