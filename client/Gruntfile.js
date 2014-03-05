@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         requirejs: {
             compile: {
                 options: {
-                    mainConfigFile: './src/js/config.js',
+                    mainConfigFile: './static/js/src/config.js'
                 }
             }
         }

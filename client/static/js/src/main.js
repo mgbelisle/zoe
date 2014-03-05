@@ -1,15 +1,18 @@
-define([
-    'bower_components/angular/angular',
-    'bower_components/requirejs-domready/domReady!'
+require([
+    'angular'
 ], function(
-    domReady,
     angular
 ) {
     'use strict';
 
-    alert('hello world');
+    console.log(angular);
 
-    var app = angular.module('zoe', []);
+    angular.element(document).ready(function() {
+        alert('hello world');
+        console.log('foo');
+        var app = angular.module('zoe', []);
+        angular.bootstrap(document, ['zoe']);
+    });
 
     // app.config(['$routeProvider', function($routeProvider) {
     //     $routeProvider.

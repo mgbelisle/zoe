@@ -5,12 +5,12 @@ api_version: go1
 threadsafe: true
 
 handlers:
-- url: /api/(.*)
+- url: /api/.*
   script: api/api
 - url: /static
-  static_dir: client/build
+  static_dir: client/static
 - url: /.*
-  static_files: client/build/index.html
+  static_files: client/static/index.html
   upload: /
 
 skip_files:
