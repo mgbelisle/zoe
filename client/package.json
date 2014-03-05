@@ -1,22 +1,21 @@
 {
-    "name": "zoe",
-    "version": "0.0.0",
-    "main": "Gruntfile.js",
-    "dependencies": {
-        "grunt-contrib-requirejs": "~0.4.1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/mgbelisle/zoe.git"
-    },
-    "author": "webmaster@gotozoe.org",
-    "bugs": {
-        "url": "https://github.com/mgbelisle/zoe/issues"
-    },
-    "homepage": "http://www.gotozoe.org/",
-    "devDependencies": {
-        "bower": "~1.2.8",
-        "grunt-cli": "~0.1.13",
-        "grunt-contrib-jshint": "~0.8.0"
-    }
+  "name": "zoe",
+  "version": "0.0.0",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "bower": "~1.2.8",
+    "grunt-cli": "~0.1.13",
+    "grunt-closure-tools": "~0.9.3",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-requirejs": "~0.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mgbelisle/zoe.git"
+  },
+  "author": "webmaster@gotozoe.org",
+  "bugs": {
+    "url": "https://github.com/mgbelisle/zoe/issues"
+  },
+  "homepage": "http://www.gotozoe.org/"
 }

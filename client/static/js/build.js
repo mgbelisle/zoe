@@ -21488,8 +21488,9 @@ define('js/src/app',[
 ], function(
     angular
 ) {
+    console.log('app');
+
     var app = angular.module('zoe', []);
-    alert('hello world');
 
     return app;
 });
