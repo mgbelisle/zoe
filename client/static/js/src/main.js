@@ -2,9 +2,9 @@
 
 require.config({
     baseUrl: '../..',
-    include: 'js/src/main',
+    include: 'bower_components/almond/almond',
     generateSourceMaps: true,
-    name: 'bower_components/almond/almond',
+    name: 'js/src/main',
     optimize: 'uglify2',
     out: '../build.js',
     paths: {
