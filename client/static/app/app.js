@@ -1,16 +1,19 @@
 define([
-    'angular'
+    'angular',
+    'app/home/app'
 ], function(
-    angular
+    angular,
+    home
 ) {
     'use strict';
 
-    console.log('app');
-
     var app = angular.module('zoe', [
-        // 'zoe.routes',
-        // 'zoe.homePage'
+        'zoe.home'
     ]);
+
+    app.config(['$locationProvider', function($locationProvider) {
+        $locationProvider.html5Mode(true);
+    }]);
 
     return app;
 });
