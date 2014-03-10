@@ -1,12 +1,13 @@
 require.config({
     baseUrl: '.',
-    include: 'bower_components/almond/almond',
+    include: ['bower_components/almond/almond'],
     generateSourceMaps: true,
     name: 'main',
     optimize: 'uglify2',
     out: './build.js',
     paths: {
-        angular: 'bower_components/angular/angular'
+        angular: 'bower_components/angular/angular',
+        text: 'bower_components/requirejs-text/text'
     },
     preserveLicenseComments: false,
     shim: {
