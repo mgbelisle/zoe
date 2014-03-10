@@ -1,14 +1,17 @@
 define([
     'angular',
-    'app/home/app'
+    'app/services/app',
+    'app/support/app'
 ], function(
     angular,
-    home
+    _services,
+    _support
 ) {
     'use strict';
 
     var app = angular.module('zoe', [
-        'zoe.home'
+        'zoe.services',
+        'zoe.support'
     ]);
 
     app.config(['$locationProvider', function($locationProvider) {

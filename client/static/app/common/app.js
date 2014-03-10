@@ -5,9 +5,7 @@ define([
 ) {
     'use strict';
 
-    var app = angular.module('zoe.home', []);
-
-    console.log('home');
+    var app = angular.module('zoe.common', []);
 
     return app;
 });

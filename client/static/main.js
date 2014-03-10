@@ -21,7 +21,7 @@ require([
     'app/app'
 ], function(
     angular,
-    app
+    _app
 ) {
     'use strict';
 
