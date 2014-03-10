@@ -7,13 +7,18 @@ require.config({
     out: './build.js',
     paths: {
         angular: 'bower_components/angular/angular',
+        angularRoute: 'bower_components/angular-route/angular-route',
         text: 'bower_components/requirejs-text/text'
     },
     preserveLicenseComments: false,
     shim: {
         angular: {
             exports: 'angular'
-        }
+        },
+        angularRoute: {
+            deps: ['angular'],
+            exports: 'angularRoute'
+        },
     }
 });
 

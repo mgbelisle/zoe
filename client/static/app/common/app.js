@@ -1,16 +1,11 @@
 define([
-    'angular',
-    'app/common/body/directive'
+    'angular'
 ], function(
-    angular,
-    bodyDirective
+    angular
 ) {
     'use strict';
 
     var app = angular.module('zoe.common', []);
-
-    // Directives
-    app.directive('zoeBody', bodyDirective);
 
     return app;
 });
