@@ -1,5 +1,5 @@
 define([
-    'angular'
+    'bower_components/angular/angular'
 ], function(
     angular
 ) {

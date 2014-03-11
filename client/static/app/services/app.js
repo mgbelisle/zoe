@@ -1,9 +1,9 @@
 define([
-    'angular',
+    'bower_components/angular/angular',
     'app/common/app'
 ], function(
     angular,
-    _common
+    commonApp
 ) {
     'use strict';
 

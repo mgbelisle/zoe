@@ -5,29 +5,20 @@ require.config({
     name: 'main',
     optimize: 'uglify2',
     out: './build.js',
-    paths: {
-        angular: 'bower_components/angular/angular',
-        angularRoute: 'bower_components/angular-route/angular-route',
-        text: 'bower_components/requirejs-text/text'
-    },
     preserveLicenseComments: false,
     shim: {
-        angular: {
+        'bower_components/angular/angular': {
             exports: 'angular'
-        },
-        angularRoute: {
-            deps: ['angular'],
-            exports: 'angularRoute'
-        },
+        }
     }
 });
 
 require([
-    'angular',
+    'bower_components/angular/angular',
     'app/app'
 ], function(
     angular,
-    _app
+    app
 ) {
     'use strict';
 
