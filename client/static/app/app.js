@@ -1,33 +1,22 @@
-define([
-    'bower_components/angular/angular',
-    'bower_components/angular-route/angular-route',
-    'bower_components/requirejs-text/text!app/home/template.html',
-    'app/services/app',
-    'app/support/app'
-], function(
-    angular,
-    angularRoute,
-    homeTemplate,
-    servicesApp,
-    supportApp
-) {
-    'use strict';
+var angular = require('./bower_components/angular/angular');
+var angularRoute = require( './bower_components/angular-route/angular-route');
+// var servicesApp = require('app/services/app');
+// var supportApp = require('app/support/app');
 
-    var app = angular.module('zoe', [
-        'ngRoute',
-        'zoe.services',
-        'zoe.support'
-    ]);
+var app = angular.module('zoe', [
+    'ngRoute'
+    // 'zoe.services',
+    // 'zoe.support'
+]);
 
-    app.config(['$routeProvider', function($routeProvider) {
-        $routeProvider.
-            when('/', {template: homeTemplate}).
-            otherwise({redirectTo: '/'});
-    }]);
+app.config(['$routeProvider', function($routeProvider) {
+    $routeProvider.
+        when('/', {templateUrl: 'app/home/template.html'}).
+        otherwise({redirectTo: '/'});
+}]);
 
-    app.config(['$locationProvider', function($locationProvider) {
-        $locationProvider.html5Mode(true);
-    }]);
+app.config(['$locationProvider', function($locationProvider) {
+    $locationProvider.html5Mode(true);
+}]);
 
-    return app;
-});
+module.exports = app;

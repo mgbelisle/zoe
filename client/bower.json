@@ -1,10 +1,8 @@
 {
   "name": "zoe",
   "dependencies": {
-    "almond": "~0.2.9",
     "angular": "~1.2.9",
     "angular-route": "~1.2.14",
-    "bootstrap": "~3.0.3",
-    "requirejs-text": "~2.0.10"
+    "bootstrap": "~3.0.3"
   }
 }
