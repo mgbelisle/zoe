@@ -1,6 +1,5 @@
 var browserify = require('browserify');
 var bower = require('gulp-bower');
-var bump = require('gulp-bump');
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var q = require('q');
