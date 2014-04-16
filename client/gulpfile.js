@@ -31,15 +31,6 @@ gulp.task('browserify', ['bower'], function() {
         .pipe(gulp.dest(dest));
 });
 
-gulp.task('bump', function () {
-    gulp.src([
-        './package.json',
-        './bower.json'
-    ])
-        .pipe(bump())
-        .pipe(gulp.dest('./'));
-});
-
 gulp.task('default', [
     'jshint',
     'browserify'

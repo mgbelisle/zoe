@@ -6,7 +6,6 @@
     "browserify": "~3.41.0",
     "gulp": "~3.6.0",
     "gulp-bower": "0.0.4",
-    "gulp-bump": "~0.1.7",
     "gulp-jshint": "~1.5.3",
     "gulp-streamify": "0.0.5",
     "gulp-uglify": "~0.2.1",
