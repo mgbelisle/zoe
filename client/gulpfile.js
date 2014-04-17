@@ -1,8 +1,7 @@
-var browserify = require('browserify');
 var bower = require('gulp-bower');
+var browserify = require('browserify');
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
-var q = require('q');
 var source = require('vinyl-source-stream');
 var streamify = require('gulp-streamify');
 var uglify = require('gulp-uglify');
@@ -20,14 +19,11 @@ gulp.task('bower', function() {
 });
 
 gulp.task('browserify', ['bower'], function() {
-    var src = './static/main.js';
-    var dest = './static/build.js';
-    var bundleStream = browserify(src).bundle();
-
-    bundleStream
-        .pipe(source(src))
+    browserify('./static/main.js')
+        .bundle({debug: true})
+        .pipe(source('build.js'))
         .pipe(streamify(uglify()))
-        .pipe(gulp.dest(dest));
+        .pipe(gulp.dest('./static'));
 });
 
 gulp.task('default', [

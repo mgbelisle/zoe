@@ -1,6 +1,8 @@
+var fs = require('fs');
 var angular = require('../bower_components/angular/angular');
 var angularRoute = require( '../bower_components/angular-route/angular-route');
-var servicesApp = require('../app/services/app');
+var servicesApp = require('./services/app');
+var homeTemplate = fs.readFileSync('./home/template.html');
 // var supportApp = require('../app/support/app');
 
 var app = angular.module('zoe', [
@@ -11,7 +13,7 @@ var app = angular.module('zoe', [
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-        when('/', {templateUrl: 'app/home/template.html'}).
+        when('/', {template: homeTemplate}).
         otherwise({redirectTo: '/'});
 }]);
 

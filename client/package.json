@@ -9,7 +9,6 @@
     "gulp-jshint": "~1.5.3",
     "gulp-streamify": "0.0.5",
     "gulp-uglify": "~0.2.1",
-    "q": "~1.0.1",
     "vinyl-source-stream": "~0.1.1"
   },
   "repository": {
