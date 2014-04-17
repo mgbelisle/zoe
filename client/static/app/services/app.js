@@ -1,23 +1,15 @@
-define([
-    'bower_components/angular/angular',
-    'bower_components/angular-route/angular-route',
-    'app/common/app'
-], function(
-    angular,
-    angularRoute,
-    commonApp
-) {
-    'use strict';
+var angular = require('../../bower_components/angular/angular');
+var angularRoute = require('../../bower_components/angular-route/angular-route');
+var commonApp = require('../../app/common/app');
 
-    var app = angular.module('zoe.services', [
-        'ngRoute',
-        'zoe.common'
-    ]);
+var app = angular.module('zoe.services', [
+    'ngRoute',
+    'zoe.common'
+]);
 
-    app.config(['$routeProvider', function($routeProvider) {
-        $routeProvider.
-            when('/services/', {template: 'This is services'});
-    }]);
+app.config(['$routeProvider', function($routeProvider) {
+    $routeProvider.
+        when('/services/', {template: 'This is services'});
+}]);
 
-    return app;
-});
+module.exports = app;
