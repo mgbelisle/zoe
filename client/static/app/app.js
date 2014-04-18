@@ -1,6 +1,5 @@
 var fs = require('fs');
-var angular = require('../bower_components/angular/angular');
-var angularRoute = require( '../bower_components/angular-route/angular-route');
+var angular = require('angular');
 var servicesApp = require('./services/app');
 var homeTemplate = fs.readFileSync('./home/template.html');
 // var supportApp = require('../app/support/app');

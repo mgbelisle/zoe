@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "main": "gulpfile.js",
   "devDependencies": {
+    "angular": "^1.2.15",
     "browserify": "~3.41.0",
     "gulp": "~3.6.0",
     "gulp-bower": "0.0.4",
