@@ -20,7 +20,7 @@ gulp.task('bower', function() {
 
 gulp.task('browserify', ['bower'], function() {
     browserify('./static/main.js')
-        .bundle({debug: true, insertGlobals: true}) // TODO: Remove insertGlobals
+        .bundle({debug: true})
         .pipe(source('build.js'))
         .pipe(streamify(uglify()))
         .pipe(gulp.dest('./static'));

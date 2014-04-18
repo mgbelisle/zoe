@@ -1,5 +1,6 @@
-var angular = require('angular');
-var commonApp = require('../common/app');
+var angular = require('../../bower_components/angular/angular');
+var angularRoute = require('../../bower_components/angular-route/angular-route');
+var commonApp = require('../../app/common/app');
 
 var app = angular.module('zoe.services', [
     'ngRoute',
