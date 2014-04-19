@@ -29,7 +29,6 @@ gulp.task('build-js', ['bower'], function() {
 });
 
 gulp.task('build-css', ['bower'], function() {
-    // TODO: Maybe use gulp-minify-css
     gulp.src([
         './static/bower_components/bootstrap/dist/css/bootstrap.css',
         './static/app/**/*.css'
