@@ -38,6 +38,10 @@ gulp.task('build-css', ['bower'], function() {
         .pipe(gulp.dest('./static/'));
 });
 
+gulp.task('watch', function() {
+    gulp.watch('./static/app/**/*', ['default']);
+});
+
 gulp.task('default', [
     'jshint',
     'build-js',
