@@ -1,11 +1,5 @@
-define([
-    'bower_components/angular/angular'
-], function(
-    angular
-) {
-    'use strict';
+var angular = require('angular');
 
-    var app = angular.module('zoe.common', []);
+var app = angular.module('zoe.common', []);
 
-    return app;
-});
+module.exports = app;

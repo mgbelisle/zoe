@@ -1,4 +1,4 @@
-var angular = require('./bower_components/angular/angular');
+var angular = require('angular');
 var app = require('./app/app');
 
 angular.element(document).ready(function() {

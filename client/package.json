@@ -1,23 +1,45 @@
 {
-  "name": "zoe",
-  "version": "0.0.0",
-  "main": "gulpfile.js",
-  "devDependencies": {
-    "browserify": "~3.41.0",
-    "gulp": "~3.6.0",
-    "gulp-bower": "0.0.4",
-    "gulp-jshint": "~1.5.3",
-    "gulp-streamify": "0.0.5",
-    "gulp-uglify": "~0.2.1",
-    "vinyl-source-stream": "~0.1.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mgbelisle/zoe.git"
-  },
-  "author": "webmaster@gotozoe.org",
-  "bugs": {
-    "url": "https://github.com/mgbelisle/zoe/issues"
-  },
-  "homepage": "http://www.gotozoe.org/"
+    "name": "zoe",
+    "version": "0.0.0",
+    "main": "gulpfile.js",
+    "devDependencies": {
+        "browserify": "~3.41.0",
+        "gulp": "~3.6.0",
+        "gulp-bower": "0.0.4",
+        "gulp-jshint": "~1.5.3",
+        "gulp-streamify": "0.0.5",
+        "gulp-uglify": "~0.2.1",
+        "vinyl-source-stream": "~0.1.1",
+        "browserify-shim": "^3.4.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/mgbelisle/zoe.git"
+    },
+    "author": "webmaster@gotozoe.org",
+    "bugs": {
+        "url": "https://github.com/mgbelisle/zoe/issues"
+    },
+    "homepage": "http://www.gotozoe.org/",
+    "browserify": {
+        "transform": [
+            "browserify-shim"
+        ]
+    },
+    "browser": {
+        "angular": "./static/bower_components/angular/angular.js",
+        "angular-route": "./static/bower_components/angular-route/angular-route.js",
+        "jquery": "./static/bower_components/jquery/dist/jquery.js"
+    },
+    "browserify-shim": {
+        "jquery": "$",
+        "angular": {
+            "exports": "angular",
+            "depends": ["jquery"]
+        },
+        "angular-route": {
+            "exports": "ngRoute",
+            "depends": ["angular"]
+        }
+    }
 }
