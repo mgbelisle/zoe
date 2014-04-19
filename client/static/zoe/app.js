@@ -1,22 +1,28 @@
 var angular = require('angular');
 var angularRoute = require( 'angular-route');
-var servicesApp = require('./services/app');
-// var supportApp = require('../app/support/app');
+var commonApp = require('./apps/common/app');
+var servicesApp = require('./apps/services/app');
+// var supportApp = require('./apps/support/app');
 
 var app = angular.module('zoe', [
     'ngRoute',
+    'zoe.common',
     'zoe.services'
     // 'zoe.support'
 ]);
 
+// Routes
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-        when('/', {templateUrl: '/static/app/home/template.html'}).
+        when('/', {templateUrl: '/static/zoe/home/template.html'}).
         otherwise({redirectTo: '/'});
 }]);
 
 app.config(['$locationProvider', function($locationProvider) {
     $locationProvider.html5Mode(true);
 }]);
+
+// Directives
+app.directive('zoeNavbar', require('./navbar/directive.js'));
 
 module.exports = app;

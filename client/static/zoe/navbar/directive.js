@@ -1,9 +1,9 @@
-var angular = require('angular');
+var bootstrap = require('bootstrap');
 
 var directive = function() {
     return {
         restrict: 'E',
-        templateUrl: '/static/app/common/navbar/template.html'
+        templateUrl: '/static/zoe/navbar/template.html'
     };
 };
 
