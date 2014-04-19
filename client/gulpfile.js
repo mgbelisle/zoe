@@ -3,6 +3,7 @@ var browserify = require('browserify');
 var concat = require('gulp-concat');
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
+var minifyCSS = require('gulp-minify-css');
 var source = require('vinyl-source-stream');
 var streamify = require('gulp-streamify');
 var uglify = require('gulp-uglify');
@@ -33,6 +34,7 @@ gulp.task('build-css', ['bower'], function() {
         './static/bower_components/bootstrap/dist/css/bootstrap.css',
         './static/app/**/*.css'
     ])
+        .pipe(minifyCSS())
         .pipe(concat('build.css'))
         .pipe(gulp.dest('./static/'));
 });
