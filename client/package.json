@@ -30,10 +30,10 @@
   "browser": {
     "angular": "./static/bower_components/angular/angular.js",
     "angular-route": "./static/bower_components/angular-route/angular-route.js",
+    "bootstrap": "static/bower_components/bootstrap/dist/js/bootstrap.js",
     "jquery": "./static/bower_components/jquery/dist/jquery.js"
   },
   "browserify-shim": {
-    "jquery": "$",
     "angular": {
       "exports": "angular",
       "depends": [
@@ -45,6 +45,12 @@
       "depends": [
         "angular"
       ]
-    }
+    },
+    "bootstrap": {
+      "depends": [
+        "jquery"
+      ]
+    },
+    "jquery": "$"
   }
 }
