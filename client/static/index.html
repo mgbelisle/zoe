@@ -8,7 +8,9 @@
     <script src="/static/build.js"></script>
   </head>
   <body>
-    <zoe-navbar></zoe-navbar>
-    <div ng-view></div>
+    <div id="body">
+      <zoe-header></zoe-header>
+      <ng-view></ng-view>
+    </div>
   </body>
 </html>

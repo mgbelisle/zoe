@@ -1,4 +1,4 @@
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     body {
         background: url('/static/zoe/img/background.jpg') no-repeat top center fixed;
         background-size: cover;
@@ -15,11 +15,6 @@
 
 a, h1, h2, h3, h4, h5, h6 {
     color: #00546b;
-}
-
-.accordion-heading a {
-    font-size: 18px;
-    margin: 6px;
 }
 
 .icon {

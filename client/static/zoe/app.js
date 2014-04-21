@@ -23,6 +23,6 @@ app.config(['$locationProvider', function($locationProvider) {
 }]);
 
 // Directives
-app.directive('zoeNavbar', require('./navbar/directive.js'));
+app.directive('zoeHeader', require('./header/directive.js'));
 
 module.exports = app;

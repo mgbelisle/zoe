@@ -39,7 +39,11 @@ gulp.task('build-css', ['bower'], function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('./static/zoe/**/*', ['default']);
+    gulp.watch([
+        './static/index.html',
+        './static/main.js',
+        './static/zoe/**/*'
+    ], ['default']);
 });
 
 gulp.task('default', [
