@@ -25,5 +25,6 @@ app.config(['$routeProvider', function($routeProvider) {
 // Directives
 app.directive('zoeFooter', require('./footer/directive.js'));
 app.directive('zoeHeader', require('./header/directive.js'));
+app.directive('zoeHome', require('./home/directive.js'));
 
 module.exports = NAME;
