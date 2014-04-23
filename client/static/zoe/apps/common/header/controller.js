@@ -1,7 +1,6 @@
 var Controller = function($scope, headerService) {
-    console.log($scope);
+    $scope.navbarItems = headerService.getNavbarItems();
     $scope.$on('$routeChangeSuccess', function () {
-        console.log('foo');
         $scope.navbarItems = headerService.getNavbarItems();
     });
 };

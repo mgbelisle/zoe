@@ -8,7 +8,8 @@ var service = function($location) {
     this.getNavbarItems = function() {
         var path = $location.path();
         for (var route in _navbarItems) {
-            if (path.match(route)) {
+            var re = new RegExp(route);
+            if (re.test(path)) {
                 return _navbarItems[route];
             }
         }

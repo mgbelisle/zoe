@@ -6,7 +6,7 @@ var NAME = 'zoe.services';
 
 var app = angular.module(NAME, [
     // 'ngRoute', // TODO
-    require('../common/app'),
+    require('../common/app')
 ]);
 
 app.config(['$routeProvider', function($routeProvider) {
@@ -16,11 +16,11 @@ app.config(['$routeProvider', function($routeProvider) {
 
 app.run(['headerService', function(headerService) {
     headerService.setNavbarItems(
-            /\/services(\/.*)?/,
+        '/services(/.*)?',
         [
             {
                 href: '/foo',
-                matchRoute: '/foo',
+                matchRoute: '/services(/.*)?',
                 text: 'Foo'
             }
         ]);
