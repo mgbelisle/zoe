@@ -1,4 +1,4 @@
-var bootstrap = require('bootstrap');
+var bootstrap = require('bootstrap-tmp'); // TODO
 
 var directive = function() {
     return {
@@ -6,6 +6,8 @@ var directive = function() {
         templateUrl: '/static/zoe/home/template.html'
     };
 };
+
+directive.$inject = ['headerService'];
 
 module.exports = directive;
 

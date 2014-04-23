@@ -18,13 +18,11 @@ app.config(['$locationProvider', function($locationProvider) {
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-        when('/', {templateUrl: '/static/zoe/home/template.html'}).
+        when('/', {template: '<zoe-home></zoe-home>'}).
         otherwise({redirectTo: '/'});
 }]);
 
 // Directives
-app.directive('zoeFooter', require('./footer/directive.js'));
-app.directive('zoeHeader', require('./header/directive.js'));
 app.directive('zoeHome', require('./home/directive.js'));
 
 module.exports = NAME;

@@ -10,12 +10,12 @@
       <div class="nav-collapse collapse">
         <div class="row-fluid" style="margin-top: 12px; margin-bottom: 8px;">
           <div class="pull-left visible-desktop">
-            <a href="/"><img src="/static/zoe/header/img/logo.png" alt="logo.png" style="max-width: 30%;"></a>
+            <a href="/"><img src="/static/zoe/apps/common/header/img/logo.png" alt="logo.png" style="max-width: 30%;"></a>
             <a href="/" class="zoe-subtitle">Pregnancy and STD Testing</a>
           </div>
           <div class="social-media">
-            <a title="Share us on FaceBook" href="/" id="fb-share" data-fb-share data-ext-href><img class="social-icon" src="/static/zoe/header/img/facebook.png" alt="facebook.png"></a>
-            <a href="http://www.youtube.com/watch?v=TlbnGSMJQbQ" data-ext-href title="Visit us on YouTube"><img class="social-icon" src="/static/zoe/header/img/youtube.png" alt="youtube.png"></a>
+            <a title="Share us on FaceBook" href="/" id="fb-share" data-fb-share data-ext-href><img class="social-icon" src="/static/zoe/apps/common/header/img/facebook.png" alt="facebook.png"></a>
+            <a href="http://www.youtube.com/watch?v=TlbnGSMJQbQ" data-ext-href title="Visit us on YouTube"><img class="social-icon" src="/static/zoe/apps/common/header/img/youtube.png" alt="youtube.png"></a>
           </div>
         </div>
         <div class="row-fluid">
@@ -24,20 +24,8 @@
             <input type="hidden" name="as_sitesearch" value="gotozoe.org">
           </form>
           <ul class="nav" data-bs-navbar>
-            <li data-match-route="/pregnancy(/.*)?">
-              <a href="/pregnancy">Pregnancy</a>
-            </li>
-            <li data-match-route="/sti(/.*)?">
-              <a href="/sti">STD Testing</a>
-            </li>
-            <li data-match-route="/services">
-              <a href="/services">Services</a>
-            </li>
-            <li data-match-route="/campus">
-              <a href="/campus">On Campus</a>
-            </li>
-            <li data-match-route="/contact">
-              <a href="/contact">Contact Us</a>
+            <li ng-repeat="item in navbarItems" data-match-route="{{ item.matchRoute }}">
+              <a href="{{ item.href }}">{{ item.text }}</a>
             </li>
           </ul>
         </div>

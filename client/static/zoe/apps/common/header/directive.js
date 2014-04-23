@@ -3,7 +3,7 @@ var bootstrap = require('bootstrap');
 var directive = function() {
     return {
         restrict: 'E',
-        templateUrl: '/static/zoe/header/template.html'
+        templateUrl: '/static/zoe/apps/common/header/template.html'
     };
 };
 
