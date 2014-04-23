@@ -1,6 +1,8 @@
 // var angular = require('angular'); // TODO
 var angular = require('angular-tmp');
 
-var app = angular.module('zoe.common', []);
+var APP_NAME = 'zoe.common';
 
-module.exports = app;
+var app = angular.module(APP_NAME, []);
+
+module.exports = APP_NAME;

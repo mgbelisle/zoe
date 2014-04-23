@@ -1,11 +1,12 @@
 // var angular = require('angular'); // TODO
 // var angularRoute = require('angular-route'); // TODO
 var angular = require('angular-tmp');
-var commonApp = require('../common/app');
 
-var app = angular.module('zoe.services', [
+var NAME = 'zoe.services';
+
+var app = angular.module(NAME, [
     // 'ngRoute', // TODO
-    'zoe.common'
+    require('../common/app'),
 ]);
 
 app.config(['$routeProvider', function($routeProvider) {
@@ -13,4 +14,4 @@ app.config(['$routeProvider', function($routeProvider) {
         when('/services/', {template: 'This is services'});
 }]);
 
-module.exports = app;
+module.exports = NAME;

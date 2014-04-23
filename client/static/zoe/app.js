@@ -1,29 +1,29 @@
 // var angular = require('angular'); // TODO
 // var angularRoute = require( 'angular-route'); // TODO
-var angular = require('angular-tmp');
-var commonApp = require('./apps/common/app');
-var servicesApp = require('./apps/services/app');
-// var supportApp = require('./apps/support/app');
+var angular = require('angular-tmp'); // TODO
 
-var app = angular.module('zoe', [
+var NAME = 'zoe';
+
+var app = angular.module(NAME, [
     // 'ngRoute', // TODO
-    'zoe.common',
-    'zoe.services'
-    // 'zoe.support'
+    require('./apps/common/app'),
+    require('./apps/services/app')
+    // require('./apps/support/app') // TODO
 ]);
 
 // Routes
+app.config(['$locationProvider', function($locationProvider) {
+    $locationProvider.html5Mode(true);
+}]);
+
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
         when('/', {templateUrl: '/static/zoe/home/template.html'}).
         otherwise({redirectTo: '/'});
 }]);
 
-app.config(['$locationProvider', function($locationProvider) {
-    $locationProvider.html5Mode(true);
-}]);
-
 // Directives
+app.directive('zoeFooter', require('./footer/directive.js'));
 app.directive('zoeHeader', require('./header/directive.js'));
 
-module.exports = app;
+module.exports = NAME;
