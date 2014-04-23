@@ -11,7 +11,19 @@ var app = angular.module(NAME, [
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-        when('/services/', {template: 'This is services'});
+        when('/services', {template: 'This is services'});
+}]);
+
+app.run(['headerService', function(headerService) {
+    headerService.setNavbarItems(
+            /\/services(\/.*)?/,
+        [
+            {
+                href: '/foo',
+                matchRoute: '/foo',
+                text: 'Foo'
+            }
+        ]);
 }]);
 
 module.exports = NAME;
