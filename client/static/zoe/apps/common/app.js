@@ -1,4 +1,5 @@
-var angular = require('angular');
+// var angular = require('angular'); // TODO
+var angular = require('angular-tmp');
 
 var app = angular.module('zoe.common', []);
 

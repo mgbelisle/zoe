@@ -16,6 +16,7 @@ gulp.task('jshint', function() {
         .pipe(jshint.reporter('default'));
 });
 
+// TODO: Make things use bower
 gulp.task('bower', function() {
     return bower('./static/bower_components');
 });
@@ -30,7 +31,9 @@ gulp.task('build-js', ['bower'], function() {
 
 gulp.task('build-css', ['bower'], function() {
     gulp.src([
-        './static/bower_components/bootstrap/dist/css/bootstrap.css',
+        // './static/bower_components/bootstrap/dist/css/bootstrap.css', // TODO
+        './static/tmp/bootstrap/css/bootstrap.css', // TODO
+        './static/tmp/bootstrap/css/bootstrap-responsive.css', // TODO
         './static/zoe/**/*.css'
     ])
         .pipe(minifyCSS())

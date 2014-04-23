@@ -1,11 +1,12 @@
-var angular = require('angular');
-var angularRoute = require( 'angular-route');
+// var angular = require('angular'); // TODO
+// var angularRoute = require( 'angular-route'); // TODO
+var angular = require('angular-tmp');
 var commonApp = require('./apps/common/app');
 var servicesApp = require('./apps/services/app');
 // var supportApp = require('./apps/support/app');
 
 var app = angular.module('zoe', [
-    'ngRoute',
+    // 'ngRoute', // TODO
     'zoe.common',
     'zoe.services'
     // 'zoe.support'

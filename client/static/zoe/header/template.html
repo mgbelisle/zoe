@@ -1,28 +1,47 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <div class="row">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand visible-xs" href="/">ZoeCare - Pregnancy and STD Testing</a>
-      </div>
-    </div>
-
-    <div class="collapse navbar-collapse" id="navbar-collapse" style="border: solid green 1px; width: 100%;">
-      <div class="row">
-        <div class="hidden-xs" style="border: solid red 1px;">
-          <a href="/"><img src="/static/zoe/header/img/logo.png" alt="logo.png" style="max-width: 30%;"></a>
-          <a href="/" class="zoe-subtitle">Pregnancy and STD Testing</a>
+<div class="navbar" data-navbar>
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand hidden-desktop" href="/">ZoeCare - Pregnancy and STD Testing</a>
+      <div class="nav-collapse collapse">
+        <div class="row-fluid" style="margin-top: 12px; margin-bottom: 8px;">
+          <div class="pull-left visible-desktop">
+            <a href="/"><img src="/static/zoe/header/img/logo.png" alt="logo.png" style="max-width: 30%;"></a>
+            <a href="/" class="zoe-subtitle">Pregnancy and STD Testing</a>
+          </div>
+          <div class="social-media">
+            <a title="Share us on FaceBook" href="/" id="fb-share" data-fb-share data-ext-href><img class="social-icon" src="/static/zoe/header/img/facebook.png" alt="facebook.png"></a>
+            <a href="http://www.youtube.com/watch?v=TlbnGSMJQbQ" data-ext-href title="Visit us on YouTube"><img class="social-icon" src="/static/zoe/header/img/youtube.png" alt="youtube.png"></a>
+          </div>
         </div>
-        <div class="social-media">
-          <a title="Share us on FaceBook" href="/" id="fb-share" data-zoe-fbshare data-zoe-href><img class="social-icon" src="/static/zoe/header/img/facebook.png" alt="facebook.png"></a>
-          <a href="http://www.youtube.com/watch?v=TlbnGSMJQbQ" data-zoe-href title="Visit us on YouTube"><img class="social-icon" src="/static/zoe/header/img/youtube.png" alt="youtube.png"></a>
+        <div class="row-fluid">
+          <form class="navbar-search pull-right" method="GET" action="https://www.google.com/search">
+            <input type="text" name="as_q" class="search-query" placeholder="Search">
+            <input type="hidden" name="as_sitesearch" value="gotozoe.org">
+          </form>
+          <ul class="nav" data-bs-navbar>
+            <li data-match-route="/pregnancy(/.*)?">
+              <a href="/pregnancy">Pregnancy</a>
+            </li>
+            <li data-match-route="/sti(/.*)?">
+              <a href="/sti">STD Testing</a>
+            </li>
+            <li data-match-route="/services">
+              <a href="/services">Services</a>
+            </li>
+            <li data-match-route="/campus">
+              <a href="/campus">On Campus</a>
+            </li>
+            <li data-match-route="/contact">
+              <a href="/contact">Contact Us</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-</nav>
+</div>
