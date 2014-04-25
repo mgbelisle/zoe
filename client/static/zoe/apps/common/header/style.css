@@ -29,3 +29,12 @@
         right: 0; top: 0;
     }
 }
+
+.nav {
+    padding-top: 6px;
+}
+
+.navbar .nav>li>a {
+    color: #00546b;
+    font-size: 18px;
+}

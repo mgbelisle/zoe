@@ -24,7 +24,7 @@ gulp.task('build-js', ['bower'], function() {
     browserify('./static/zoe/main.js')
         .bundle({debug: true})
         .pipe(source('build.js'))
-        .pipe(streamify(uglify()))
+        // .pipe(streamify(uglify())) // TODO
         .pipe(gulp.dest('./static/'));
 });
 

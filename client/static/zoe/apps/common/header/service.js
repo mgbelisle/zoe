@@ -1,21 +1,26 @@
-var service = function($location) {
-    var _navbarItems = {};
+var service = function($route, urlService) {
 
-    this.setNavbarItems = function(route, items) {
-        _navbarItems[route] = items;
-    };
+    // Nav items
+    var _navItems = []; // [[params1: items1], [params2: items2]]
 
-    this.getNavbarItems = function() {
-        var path = $location.path();
-        for (var route in _navbarItems) {
-            var re = new RegExp(route);
-            if (re.test(path)) {
-                return _navbarItems[route];
+    this.getNavItems = function() {
+        var currentParams = $route.current.params;
+        var items = [];
+        _navItems.forEach(function(i) {
+            var params = i[0];
+            if (urlService.matchesCurrentParams(params)) {
+                items.push.apply(items, i[1]); // Extends items with new items
             }
-        }
+        });
+        return items;
     };
+
+    this.setNavItems = function(params, items) {
+        _navItems.push([params, items]);
+    };
+
 };
 
-service.$inject = ['$location'];
+service.$inject = ['$route', 'urlService'];
 
 module.exports = service;

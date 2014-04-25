@@ -32,10 +32,7 @@
     "angular": "./static/bower_components/angular/angular.js",
     "angular-route": "./static/bower_components/angular-route/angular-route.js",
     "bootstrap": "./static/bower_components/bootstrap/dist/js/bootstrap.js",
-    "jquery": "./static/bower_components/jquery/dist/jquery.js",
-    "angular-tmp": "./static/tmp/angular.js",
-    "bootstrap-tmp": "./static/tmp/bootstrap/js/bootstrap.js",
-    "jquery-tmp": "./static/tmp/jquery.js"
+    "jquery": "./static/bower_components/jquery/dist/jquery.js"
   },
   "browserify-shim": {
     "angular": {
@@ -45,7 +42,6 @@
       ]
     },
     "angular-route": {
-      "exports": "ngRoute",
       "depends": [
         "angular"
       ]
@@ -55,18 +51,6 @@
         "jquery"
       ]
     },
-    "jquery": "$",
-    "angular-tmp": {
-      "exports": "angular",
-      "depends": [
-        "jquery-tmp"
-      ]
-    },
-    "bootstrap-tmp": {
-      "depends": [
-        "jquery-tmp"
-      ]
-    },
-    "jquery-tmp": "$"
+    "jquery": "$"
   }
 }

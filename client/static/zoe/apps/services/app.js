@@ -1,6 +1,7 @@
 // var angular = require('angular'); // TODO
 // var angularRoute = require('angular-route'); // TODO
 var angular = require('angular-tmp');
+var bootstrap = require('bootstrap-tmp');
 
 var NAME = 'zoe.services';
 
@@ -19,9 +20,19 @@ app.run(['headerService', function(headerService) {
         '/services(/.*)?',
         [
             {
-                href: '/foo',
+                href: '/services/pregnancy',
                 matchRoute: '/services(/.*)?',
-                text: 'Foo'
+                text: 'Pregnancy'
+            },
+            {
+                href: '/services/sti',
+                matchRoute: '/services/sti(/.*)?',
+                text: 'STD Testing'
+            },
+            {
+                href: '/contact',
+                matchRoute: '/contact(/.*)?',
+                text: 'Contact Us'
             }
         ]);
 }]);

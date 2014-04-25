@@ -1,14 +1,13 @@
-// var angular = require('angular'); // TODO
-// var angularRoute = require( 'angular-route'); // TODO
-var angular = require('angular-tmp'); // TODO
-
 var NAME = 'zoe';
 
+var angular = require('angular');
+var angularRoute = require('angular-route');
+
 var app = angular.module(NAME, [
-    // 'ngRoute', // TODO
+    'ngRoute',
     require('./apps/common/app'),
-    require('./apps/services/app')
-    // require('./apps/support/app') // TODO
+    // require('./apps/services/app'),
+    // require('./apps/support/app')
 ]);
 
 // Routes
@@ -18,8 +17,22 @@ app.config(['$locationProvider', function($locationProvider) {
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-        when('/', {templateUrl: '/static/zoe/home/template.html'}).
+        when('/:kingdom?/:phylum?/:class?/:order?/:family?/:genus?/:species?',
+             {templateUrl: '/static/zoe/body.html'}).
         otherwise({redirectTo: '/'});
+}]);
+
+app.run(['headerService', function(headerService) {
+    headerService.setNavItems(
+        {}, // Visible for all params
+        [
+            {
+                params: {kingdom: 'contact'},
+                href: '/contact',
+                text: 'Contact Us'
+            }
+        ]
+    );
 }]);
 
 module.exports = NAME;

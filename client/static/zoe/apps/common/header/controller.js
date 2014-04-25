@@ -1,10 +1,11 @@
-var Controller = function($scope, headerService) {
-    $scope.navbarItems = headerService.getNavbarItems();
+var Controller = function($scope, headerService, urlService) {
+    $scope.navItems = headerService.getNavItems();
     $scope.$on('$routeChangeSuccess', function () {
-        $scope.navbarItems = headerService.getNavbarItems();
+        $scope.navItems = headerService.getNavItems();
     });
+    $scope.matchesCurrentParams = urlService.matchesCurrentParams;
 };
 
-Controller.$inject = ['$scope', 'headerService'];
+Controller.$inject = ['$scope', 'headerService', 'urlService'];
 
 module.exports = Controller;

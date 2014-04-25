@@ -1,11 +1,14 @@
-// var angular = require('angular'); // TODO
-var angular = require('angular-tmp');
+var NAME = 'zoe.common';
 
-var APP_NAME = 'zoe.common';
+var angular = require('angular');
 
-var app = angular.module(APP_NAME, []);
+var app = angular.module(NAME, []);
 
+// Directives
 app.directive('zoeHeader', require('./header/directive.js'));
+
+// Services
+app.service('urlService', require('./services/url.js'));
 app.service('headerService', require('./header/service.js'));
 
-module.exports = APP_NAME;
+module.exports = NAME;

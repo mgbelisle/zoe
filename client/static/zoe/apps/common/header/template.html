@@ -23,8 +23,8 @@
             <input type="text" name="as_q" class="search-query" placeholder="Search">
             <input type="hidden" name="as_sitesearch" value="gotozoe.org">
           </form>
-          <ul class="nav" data-bs-navbar>
-            <li ng-repeat="item in navbarItems" data-match-route="{{ item.matchRoute }}">
+          <ul class="nav">
+            <li ng-repeat="item in navItems" ng-class="{active: matchesCurrentParams(item.params)}">
               <a href="{{ item.href }}">{{ item.text }}</a>
             </li>
           </ul>
