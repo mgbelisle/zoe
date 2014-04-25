@@ -5,9 +5,9 @@ var angularRoute = require('angular-route');
 
 var app = angular.module(NAME, [
     'ngRoute',
-    require('./apps/common/app'),
-    // require('./apps/services/app'),
-    // require('./apps/support/app')
+    require('./apps/common/app.js'),
+    // require('./apps/services/app.js'),
+    // require('./apps/support/app.js')
 ]);
 
 // Routes
