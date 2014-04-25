@@ -4,7 +4,8 @@ var directive = function() {
     return {
         controller: controller,
         restrict: 'E',
-        templateUrl: '/static/zoe/apps/common/header/template.html'
+        transclude: true,
+        template: '<ng-transclude></ng-transclude>'
     };
 };
 

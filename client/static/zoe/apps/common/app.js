@@ -5,6 +5,7 @@ var angular = require('angular');
 var app = angular.module(NAME, []);
 
 // Directives
+app.directive('zoeContent', require('./content/directive.js'));
 app.directive('zoeHeader', require('./header/directive.js'));
 app.directive('zoeHref', require('./directives/href.js'));
 app.directive('zoeFbshare', require('./directives/fbshare.js'));

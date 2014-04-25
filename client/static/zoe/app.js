@@ -2,6 +2,7 @@ var NAME = 'zoe';
 
 var angular = require('angular');
 var angularRoute = require('angular-route');
+var bootstrap = require('bootstrap'); // Just needs included once
 
 var app = angular.module(NAME, [
     'ngRoute',
