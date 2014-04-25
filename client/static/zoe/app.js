@@ -35,6 +35,11 @@ app.run(['headerService', function(headerService) {
             text: 'Support'
         },
         {
+            href: '/dash',
+            params: {kingdom: 'dash'},
+            text: 'Stache Dash'
+        },
+        {
             href: '/contact',
             params: {kingdom: 'contact'},
             text: 'Contact Us'
