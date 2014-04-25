@@ -15,7 +15,6 @@ gulp.task('jshint', function() {
         .pipe(jshint.reporter('default'));
 });
 
-// TODO: Make things use bower
 gulp.task('bower', function() {
     return bower('./static/bower_components');
 });
