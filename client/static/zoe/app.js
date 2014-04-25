@@ -18,7 +18,7 @@ app.config(['$locationProvider', function($locationProvider) {
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-        when('/:kingdom?/:phylum?/:class?/:order?/:family?/:genus?/:species?', {}).
+        when('/:kingdom?/:phylum?/:class?/:order?/:family?/:genus?/:species?', {templateUrl: 'body.html'}).
         otherwise({redirectTo: '/'});
 }]);
 

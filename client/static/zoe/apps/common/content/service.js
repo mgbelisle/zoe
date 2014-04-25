@@ -1,21 +1,21 @@
 var service = function($route, urlService) {
 
-    // Nav items
-    var _contents = []; // [[params1, directive1], [params2, directive2]]
+    // Directives
+    var _directives = []; // [[params1, directive1], [params2, directive2]]
+
+    this.setDirective = function(params, directive) {
+        _directives.push([params, directive]);
+    };
 
     this.getContent = function() {
         var currentParams = $route.current.params;
-        for (var i=0; i < _contents.length; i++) {
-            var pair = _contents[i];
+        for (var i=0; i < _directives.length; i++) {
+            var pair = _directives[i];
             var params = pair[0];
             if (urlService.matchesCurrentParams(params)) {
                 return pair[1];
             }
         }
-    };
-
-    this.setContent = function(params, directive) {
-        _contents.push([params, directive]);
     };
 
 };

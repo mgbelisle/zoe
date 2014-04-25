@@ -1,10 +1,10 @@
-var controller = require('./controller.js');
+var Controller = require('./controller.js');
 
 var directive = function() {
     return {
-        controller: controller,
+        controller: Controller,
         restrict: 'E',
-        template: 'Content' // TODO
+        template: '{{ content }}'
     };
 };
 

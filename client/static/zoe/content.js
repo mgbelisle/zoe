@@ -1,5 +1,5 @@
 var config = function(contentService) {
-    contentService.setContent({kingdom: undefined}, require('./home/directive.js'));
+    contentService.setDirective({kingdom: undefined}, require('./home/directive.js'));
 };
 
 config.$inject = ['contentService'];
