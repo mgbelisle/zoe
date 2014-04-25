@@ -1,4 +1,4 @@
-var service = function($route, urlService) {
+var service = function(urlService) {
 
     // Directives
     var _directives = []; // [[params1, directive1], [params2, directive2]]
@@ -8,11 +8,12 @@ var service = function($route, urlService) {
     };
 
     this.getContent = function() {
-        var currentParams = $route.current.params;
         for (var i=0; i < _directives.length; i++) {
             var pair = _directives[i];
             var params = pair[0];
             if (urlService.matchesCurrentParams(params)) {
+                angular.directive('zoeFoo', pair[1]);
+                debugger;
                 return pair[1];
             }
         }
@@ -20,7 +21,7 @@ var service = function($route, urlService) {
 
 };
 
-service.$inject = ['$route', 'urlService'];
+service.$inject = ['urlService'];
 
 module.exports = service;
 

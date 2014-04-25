@@ -1,8 +1,8 @@
-var controller = require('./controller.js');
+var Controller = require('./controller.js');
 
 var directive = function() {
     return {
-        controller: controller,
+        controller: Controller,
         restrict: 'E',
         templateUrl: '/static/zoe/apps/common/header/template.html'
     };

@@ -1,10 +1,9 @@
-var service = function($route, urlService) {
+var service = function(urlService) {
 
     // Nav items
     var _navItems = []; // [[params1, items1], [params2, items2]]
 
     this.getNavItems = function() {
-        var currentParams = $route.current.params;
         for (var i=0; i < _navItems.length; i++) {
             var pair = _navItems[i];
             var params = pair[0];
@@ -20,6 +19,6 @@ var service = function($route, urlService) {
 
 };
 
-service.$inject = ['$route', 'urlService'];
+service.$inject = ['urlService'];
 
 module.exports = service;

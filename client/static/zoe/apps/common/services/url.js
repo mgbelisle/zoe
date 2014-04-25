@@ -1,8 +1,7 @@
-var service = function($route) {
+var service = function($routeParams) {
     this.matchesCurrentParams = function(params) {
-        var currentParams = $route.current.params;
         for (var key in params) {
-            if (params[key] != currentParams[key]) {
+            if (params[key] != $routeParams[key]) {
                 return false;
             }
         }

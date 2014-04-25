@@ -1,8 +1,11 @@
 var NAME = 'zoe.common';
 
 var angular = require('angular');
+require('angular-route');
 
-var app = angular.module(NAME, []);
+var app = angular.module(NAME, [
+    'ngRoute'
+]);
 
 // Directives
 app.directive('zoeContent', require('./content/directive.js'));
