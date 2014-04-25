@@ -4,8 +4,7 @@ var directive = function() {
     return {
         controller: controller,
         restrict: 'E',
-        transclude: true,
-        template: '<ng-transclude></ng-transclude>'
+        template: 'Content' // TODO
     };
 };
 

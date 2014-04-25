@@ -18,36 +18,11 @@ app.config(['$locationProvider', function($locationProvider) {
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-        when('/:kingdom?/:phylum?/:class?/:order?/:family?/:genus?/:species?',
-             {templateUrl: '/static/zoe/body.html'}).
+        when('/:kingdom?/:phylum?/:class?/:order?/:family?/:genus?/:species?', {}).
         otherwise({redirectTo: '/'});
 }]);
 
-app.run(['headerService', function(headerService) {
-    var items = [
-        {
-            href: '/services',
-            params: {kingdom: 'services'},
-            text: 'Services'
-        },
-        {
-            href: '/support',
-            params: {kingdom: 'support'},
-            text: 'Support'
-        },
-        {
-            href: '/dash',
-            params: {kingdom: 'dash'},
-            text: 'Stache Dash'
-        },
-        {
-            href: '/contact',
-            params: {kingdom: 'contact'},
-            text: 'Contact Us'
-        }
-    ];
-    headerService.setNavItems({kingdom: undefined}, items);
-    headerService.setNavItems({kingdom: 'contact'}, items);
-}]);
+app.run(require('./header.js'));
+app.run(require('./content.js'));
 
 module.exports = NAME;
