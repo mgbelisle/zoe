@@ -21,6 +21,12 @@ app.run(['headerService', function(headerService) {
                 params: {kingdom: 'services',
                          phylum: 'sti'},
                 text: 'STD Testing'
+            },
+            {
+                href: '/services/contact',
+                params: {kingdom: 'services',
+                         phylum: 'contact'},
+                text: 'Contact Us'
             }
         ]);
 }]);

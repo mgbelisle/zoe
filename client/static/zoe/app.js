@@ -6,7 +6,7 @@ var angularRoute = require('angular-route');
 var app = angular.module(NAME, [
     'ngRoute',
     require('./apps/common/app.js'),
-    // require('./apps/services/app.js'),
+    require('./apps/services/app.js')
     // require('./apps/support/app.js')
 ]);
 
@@ -23,16 +23,25 @@ app.config(['$routeProvider', function($routeProvider) {
 }]);
 
 app.run(['headerService', function(headerService) {
-    headerService.setNavItems(
-        {}, // Visible for all params
-        [
-            {
-                params: {kingdom: 'contact'},
-                href: '/contact',
-                text: 'Contact Us'
-            }
-        ]
-    );
+    var items = [
+        {
+            href: '/services',
+            params: {kingdom: 'services'},
+            text: 'Services'
+        },
+        {
+            href: '/support',
+            params: {kingdom: 'support'},
+            text: 'Support'
+        },
+        {
+            href: '/contact',
+            params: {kingdom: 'contact'},
+            text: 'Contact Us'
+        }
+    ];
+    headerService.setNavItems({kingdom: undefined}, items);
+    headerService.setNavItems({kingdom: 'contact'}, items);
 }]);
 
 module.exports = NAME;
