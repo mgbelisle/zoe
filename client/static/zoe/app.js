@@ -12,7 +12,6 @@ var app = angular.module(NAME, [
 ]);
 
 app.config(require('./route.js'));
-app.run(require('./header.js'));
-app.run(require('./content.js'));
+app.run(require('./home/config.js'));
 
 module.exports = NAME;

@@ -1,19 +1,17 @@
 var service = function(urlService) {
 
-    // Directives
-    var _directives = []; // [[params1, directive1], [params2, directive2]]
+    // Templates
+    var _templates = []; // [[params1, template1], [params2, template2]]
 
-    this.setDirective = function(params, directive) {
-        _directives.push([params, directive]);
+    this.setTemplate = function(params, template) {
+        _templates.push([params, template]);
     };
 
-    this.getContent = function() {
-        for (var i=0; i < _directives.length; i++) {
-            var pair = _directives[i];
+    this.getTemplate = function() {
+        for (var i=0; i < _templates.length; i++) {
+            var pair = _templates[i];
             var params = pair[0];
             if (urlService.matchesCurrentParams(params)) {
-                angular.directive('zoeFoo', pair[1]);
-                debugger;
                 return pair[1];
             }
         }

@@ -4,7 +4,7 @@ var directive = function() {
     return {
         controller: Controller,
         restrict: 'E',
-        template: '{{ content }}'
+        template: '<div ng-include="template"></div>'
     };
 };
 

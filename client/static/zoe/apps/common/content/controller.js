@@ -1,10 +1,10 @@
-var Controller = function($scope, contentService, urlService) { // TODO: Remove urlService
-    $scope.content = contentService.getContent();
+var Controller = function($scope, contentService) {
+    $scope.template = contentService.getTemplate();
     $scope.$on('$routeChangeSuccess', function () {
-        $scope.content = contentService.getContent();
+        $scope.template = contentService.getTemplate();
     });
 };
 
-Controller.$inject = ['$scope', 'contentService', 'urlService'];
+Controller.$inject = ['$scope', 'contentService'];
 
 module.exports = Controller;
