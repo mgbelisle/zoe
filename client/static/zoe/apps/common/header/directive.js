@@ -1,10 +1,10 @@
-var Controller = require('./controller.js');
+var fs = require('fs');
 
 var directive = function() {
     return {
-        controller: Controller,
+        controller: require('./controller.js'),
         restrict: 'E',
-        templateUrl: '/static/zoe/apps/common/header/template.html'
+        template: fs.readFileSync(__dirname + '/template.html', 'utf8')
     };
 };
 

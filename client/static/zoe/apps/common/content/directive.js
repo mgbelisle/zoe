@@ -1,8 +1,6 @@
-var Controller = require('./controller.js');
-
 var directive = function() {
     return {
-        controller: Controller,
+        controller: require('./controller.js'),
         restrict: 'E',
         template: '<div ng-include="template"></div>'
     };

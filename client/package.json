@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "main": "gulpfile.js",
   "devDependencies": {
+    "brfs": "~1.0.2",
     "browserify": "~3.41.0",
     "browserify-shim": "^3.4.1",
     "gulp": "~3.6.0",
@@ -25,6 +26,7 @@
   "homepage": "http://www.gotozoe.org/",
   "browserify": {
     "transform": [
+      "brfs",
       "browserify-shim"
     ]
   },
