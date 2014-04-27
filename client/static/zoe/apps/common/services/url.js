@@ -9,6 +9,6 @@ var service = function($routeParams) {
     };
 };
 
-service.$inject = ['$route'];
+service.$inject = ['$routeParams'];
 
 module.exports = service;
