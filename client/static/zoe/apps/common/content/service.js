@@ -1,10 +1,16 @@
-var service = function(urlService) {
+var crypto = require('crypto');
+
+var service = function($templateCache, urlService) {
 
     // Templates
     var _templates = []; // [[params1, template1], [params2, template2]]
 
     this.setTemplate = function(params, template) {
-        _templates.push([params, template]);
+        var hash = crypto.createHash('sha256');
+        hash.update(template);
+        hash = hash.digest('hex');
+        $templateCache.put(hash, template);
+        _templates.push([params, hash]);
     };
 
     this.getTemplate = function() {
@@ -19,7 +25,7 @@ var service = function(urlService) {
 
 };
 
-service.$inject = ['urlService'];
+service.$inject = ['$templateCache', 'urlService'];
 
 module.exports = service;
 

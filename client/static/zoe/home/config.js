@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 var config = function(headerService, contentService) {
     var headerNavItems = [
         {
@@ -25,7 +27,7 @@ var config = function(headerService, contentService) {
     headerService.setNavItems({kingdom: 'contact'}, headerNavItems);
 
     contentService.setTemplate({kingdom: undefined},
-                               '/static/zoe/home/template.html');
+                               fs.readFileSync(__dirname + '/template.html', 'utf8'));
 };
 
 config.$inject = ['headerService', 'contentService'];

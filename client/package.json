@@ -6,6 +6,7 @@
     "brfs": "~1.0.2",
     "browserify": "~3.41.0",
     "browserify-shim": "^3.4.1",
+    "crypto": "0.0.3",
     "gulp": "~3.6.0",
     "gulp-bower": "0.0.4",
     "gulp-concat": "^2.2.0",
