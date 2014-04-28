@@ -11,7 +11,8 @@ var app = angular.module(NAME, [
     // require('./apps/support/app.js')
 ]);
 
-app.config(require('./route.js'));
+app.config(require('./config.js'));
 app.run(require('./home/config.js'));
+app.run(require('./contact/config.js'));
 
 module.exports = NAME;
