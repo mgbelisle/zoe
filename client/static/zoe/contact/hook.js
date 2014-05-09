@@ -6,6 +6,5 @@ var onRun = function(contentService) {
     var fs = require('fs');
     var template = fs.readFileSync(__dirname + '/template.html', 'utf8');
     contentService.setTemplate({kingdom: 'contact'}, template);
-    // contentService.setTemplate({phylum: 'contact'}, template);
 };
 onRun.$inject = ['contentService'];

@@ -1,4 +1,5 @@
 var NAME = 'zoe.common';
+module.exports = NAME;
 
 var angular = require('angular');
 require('angular-route');
@@ -17,5 +18,3 @@ app.directive('zoeHref', require('./directives/href.js'));
 app.service('contentService', require('./content/service.js'));
 app.service('headerService', require('./header/service.js'));
 app.service('urlService', require('./services/url.js'));
-
-module.exports = NAME;
