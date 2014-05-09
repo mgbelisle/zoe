@@ -1,15 +1,15 @@
 var NAME = 'zoe';
 module.exports = NAME;
 
-var angular = require('angular');
 require('angular-route'); // Just needs included once
 require('bootstrap'); // Just needs included once
+var angular = require('angular');
 
 var app = angular.module(NAME, [
     'ngRoute',
-    require('./apps/common/app.js'),
-    require('./apps/services/app.js')
-    // require('./apps/support/app.js')
+    require('./home/app.js'),
+    require('./contact/app.js'),
+    require('./services/app.js')
 ]);
 
 // Routes - Params are available by their biological taxonomy names
@@ -25,7 +25,3 @@ app.config([
             otherwise({redirectTo: '/'});
     }
 ]);
-
-// Hooks
-require('./home/hook.js')(app);
-require('./contact/hook.js')(app);
