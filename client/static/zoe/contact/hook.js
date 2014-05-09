@@ -1,11 +1,11 @@
-var fs = require('fs');
+module.exports = function(app) {
+    app.run(onRun);
+};
 
-var config = function(contentService) {
+var onRun = function(contentService) {
+    var fs = require('fs');
     var template = fs.readFileSync(__dirname + '/template.html', 'utf8');
     contentService.setTemplate({kingdom: 'contact'}, template);
     // contentService.setTemplate({phylum: 'contact'}, template);
 };
-
-config.$inject = ['contentService'];
-
-module.exports = config;
+onRun.$inject = ['contentService'];

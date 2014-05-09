@@ -1,6 +1,9 @@
-var fs = require('fs');
+module.exports = function(app) {
+    app.run(onRun);
+};
 
-var config = function(headerService, contentService) {
+var onRun = function(headerService, contentService) {
+    var fs = require('fs');
     var headerNavItems = [
         {
             href: '/services',
@@ -29,7 +32,4 @@ var config = function(headerService, contentService) {
     contentService.setTemplate({kingdom: undefined},
                                fs.readFileSync(__dirname + '/template.html', 'utf8'));
 };
-
-config.$inject = ['headerService', 'contentService'];
-
-module.exports = config;
+onRun.$inject = ['headerService', 'contentService'];

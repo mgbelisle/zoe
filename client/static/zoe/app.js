@@ -12,7 +12,7 @@ var app = angular.module(NAME, [
 ]);
 
 app.config(require('./config.js'));
-app.run(require('./home/config.js'));
-app.run(require('./contact/config.js'));
+require('./home/hook.js')(app);
+require('./contact/hook.js')(app);
 
 module.exports = NAME;
