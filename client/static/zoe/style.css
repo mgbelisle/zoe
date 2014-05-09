@@ -1,6 +1,6 @@
 @media (min-width: 768px) {
     body {
-        background: url('/static/zoe/img/background.jpg') no-repeat top center fixed;
+        background: url(./img/background.jpg) no-repeat top center fixed;
         background-size: cover;
     }
     #body {
