@@ -1,6 +1,7 @@
 var bower = require('gulp-bower');
 var browserify = require('browserify');
 var concat = require('gulp-concat');
+var es = require('event-stream');
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var minifyCSS = require('gulp-minify-css');
@@ -24,23 +25,25 @@ gulp.task('build-js', ['bower'], function() {
         .bundle({debug: true})
         .pipe(source('build.js'))
         // .pipe(streamify(uglify())) // TODO
-        .pipe(gulp.dest('./static/'));
+        .pipe(gulp.dest('./static'));
 });
 
 gulp.task('build-css', ['bower'], function() {
-    gulp.src([
-        // './static/bower_components/bootstrap/dist/css/bootstrap.css', // TODO
-        './static/tmp/bootstrap/css/bootstrap.css', // TODO
-        './static/tmp/bootstrap/css/bootstrap-responsive.css', // TODO
-        './static/zoe/**/*.css'
-    ])
-        .pipe(minifyCSS())
+    return es.merge(
+        gulp.src([
+            // './static/bower_components/bootstrap/dist/css/bootstrap.css', // TODO
+            './static/tmp/bootstrap/css/bootstrap.css', // TODO
+            './static/tmp/bootstrap/css/bootstrap-responsive.css', // TODO
+        ]).pipe(minifyCSS({root: '.'})),
+        // ]).pipe(minifyCSS({root: '.', relativeTo: '/static/tmp/bootstrap/css'})), // Works
+        gulp.src('./static/zoe/**/*.css').pipe(minifyCSS())
+    )
         .pipe(concat('build.css'))
-        .pipe(gulp.dest('./static/'));
+        .pipe(gulp.dest('./static'));
 });
 
 gulp.task('watch', function() {
-    gulp.watch(['./static/zoe/**/*'], ['default']);
+    gulp.watch('./static/zoe/**/*', ['default']);
 });
 
 gulp.task('default', [
