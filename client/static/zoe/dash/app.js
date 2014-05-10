@@ -1,4 +1,4 @@
-var NAME = 'zoe.home';
+var NAME = 'zoe.dash';
 module.exports = NAME;
 
 var angular = require('angular');
@@ -13,7 +13,9 @@ app.run([
     function(
         contentService
     ) {
-        contentService.setTemplate({kingdom: undefined},
-                                   fs.readFileSync(__dirname + '/template.html', 'utf8'));
+        contentService.setTemplate(
+            {kingdom: 'dash'},
+            fs.readFileSync(__dirname + '/template.html', 'utf8')
+        );
     }
 ]);
