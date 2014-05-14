@@ -1,0 +1,7 @@
+#zoe-home-left, #zoe-home-right {
+    padding: 96px 0 96px 0;
+}
+
+#zoe-home-left {
+    border-right: solid #CCCCCC 1px;
+}
