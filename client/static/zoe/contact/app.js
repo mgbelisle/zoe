@@ -11,8 +11,6 @@ var app = angular.module(NAME, [
 // Directives
 app.directive('zoeMap', require('./map/directive.js'));
 
-app.controller('ContactController', require('./controller.js'));
-
 // Setup
 app.run([
     'contentService',
