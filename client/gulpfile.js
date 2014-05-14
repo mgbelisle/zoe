@@ -20,7 +20,7 @@ gulp.task('bower', function() {
 });
 
 gulp.task('build-js', ['bower'], function() {
-    browserify('./static/zoe/main.js')
+    browserify('./main.js')
         .bundle({debug: true})
         .pipe(source('build.js'))
         // .pipe(streamify(uglify())) // TODO
