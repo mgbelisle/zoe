@@ -25,7 +25,7 @@
           </form>
           <ul class="nav">
             <li ng-repeat="item in navItems" ng-class="{active: matchesCurrentParams(item.params)}">
-              <a href="{{ item.href }}">{{ item.text }}</a>
+              <a ng-href="{{ item.href }}">{{ item.text }}</a>
             </li>
           </ul>
         </div>

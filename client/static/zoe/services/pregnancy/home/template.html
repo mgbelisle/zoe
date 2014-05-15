@@ -1,7 +1,6 @@
 <div class="row-fluid">
   <div class="span3">
-    <!-- <div data-ng-include="'/static/html/pregnancy/nav.html'"> -->
-    <!-- </div> -->
+    <zoe-side-nav ng-controller="PregnancySideNavController"></zoe-side-nav>
     <div class="well sidebar-info">
       <h4>Points to Ponder</h4>
       <p>There is much to contemplate before you make a decision about
@@ -11,7 +10,7 @@
 	<li>Is the pregnancy viable?</li>
 	<li>How far along are you?</li>
 	<li>
-	  <a class="accordion-toggle" data-toggle="collapse" data-target="#pregnancy-ectopic" data-int-href>
+	  <a class="accordion-toggle" data-toggle="collapse" data-target="#pregnancy-ectopic">
 	    Is the pregnancy in your uterus?
 	  </a>
 	  <div id="pregnancy-ectopic" class="collapse">

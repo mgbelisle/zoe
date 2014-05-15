@@ -13,8 +13,9 @@ app.directive('zoeContent', require('./content/directive.js'));
 app.directive('zoeFbshare', require('./directives/fbshare.js'));
 app.directive('zoeHeader', require('./header/directive.js'));
 app.directive('zoeHref', require('./directives/href.js'));
+app.directive('zoeSideNav', require('./sideNav/directive.js'));
 
 // Services
 app.service('contentService', require('./content/service.js'));
 app.service('headerService', require('./header/service.js'));
-app.service('urlService', require('./services/url.js'));
+app.service('urlService', require('./urlService.js'));
