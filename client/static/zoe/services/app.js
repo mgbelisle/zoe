@@ -5,6 +5,7 @@ var angular = require('angular');
 
 var app = angular.module(NAME, [
     require('../common/app.js'),
+    require('./home/app.js'),
     require('./pregnancy/app.js')
 ]);
 
