@@ -4,7 +4,8 @@ module.exports = NAME;
 var angular = require('angular');
 
 var app = angular.module(NAME, [
-    require('../common/app.js')
+    require('../common/app.js'),
+    require('./pregnancy/app.js')
 ]);
 
 app.run([
