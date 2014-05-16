@@ -21,7 +21,7 @@ var directive = function() {
                     var busMarker = new google.maps.Marker({
                         position: new google.maps.LatLng(45.665511, -111.047655),
                         map: map,
-                        icon: '/static/zoe/contact/map/img/bus.png'
+                        icon: '/static/zoe/img/icons/bus.png'
                     });
 	        }
             });
