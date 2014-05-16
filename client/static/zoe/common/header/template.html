@@ -10,12 +10,12 @@
       <div class="nav-collapse collapse">
         <div class="row-fluid" style="margin-top: 12px; margin-bottom: 8px;">
           <div class="pull-left visible-desktop">
-            <a href="/"><img src="/static/zoe/common/header/img/logo.png" alt="logo.png" style="max-width: 30%;"></a>
+            <a href="/"><img src="/static/zoe/img/logo.png" alt="logo.png" style="max-width: 30%;"></a>
             <a href="/" class="zoe-subtitle">Pregnancy and STD Testing</a>
           </div>
           <div class="social-media">
-            <a title="Share us on FaceBook" href="/" zoe-fbshare zoe-href><img class="social-icon" src="/static/zoe/common/header/img/facebook.png" alt="facebook.png"></a>
-            <a href="http://www.youtube.com/watch?v=TlbnGSMJQbQ" zoe-href title="Visit us on YouTube"><img class="social-icon" src="/static/zoe/common/header/img/youtube.png" alt="youtube.png"></a>
+            <a title="Share us on FaceBook" href="/" zoe-fb-share zoe-href><img class="social-icon" src="/static/zoe/img/icons/facebook.png" alt="facebook.png"></a>
+            <a href="http://www.youtube.com/watch?v=TlbnGSMJQbQ" zoe-href title="Visit us on YouTube"><img class="social-icon" src="/static/zoe/img/icons/youtube.png" alt="youtube.png"></a>
           </div>
         </div>
         <div class="row-fluid">
@@ -24,7 +24,7 @@
             <input type="hidden" name="as_sitesearch" value="gotozoe.org">
           </form>
           <ul class="nav">
-            <li ng-repeat="item in navItems" ng-class="{active: matchesCurrentParams(item.params)}">
+            <li ng-repeat="item in navItems" ng-class="{active: isActive(item.href)}">
               <a ng-href="{{ item.href }}">{{ item.text }}</a>
             </li>
           </ul>

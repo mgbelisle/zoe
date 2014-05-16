@@ -9,13 +9,10 @@ var app = angular.module(NAME, [
 ]);
 
 // Directives
-app.directive('zoeContent', require('./content/directive.js'));
-app.directive('zoeFbshare', require('./directives/fbshare.js'));
+app.directive('zoeFbShare', require('./fb_share_directive.js'));
 app.directive('zoeHeader', require('./header/directive.js'));
-app.directive('zoeHref', require('./directives/href.js'));
-app.directive('zoeSideNav', require('./sideNav/directive.js'));
+app.directive('zoeHref', require('./href_directive.js'));
+app.directive('zoeSideNav', require('./side_nav/directive.js'));
 
 // Services
-app.service('contentService', require('./content/service.js'));
-app.service('headerService', require('./header/service.js'));
-app.service('urlService', require('./urlService.js'));
+app.service('urlService', require('./url_service.js'));

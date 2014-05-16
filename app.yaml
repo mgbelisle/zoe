@@ -10,7 +10,7 @@ handlers:
 - url: /static
   static_dir: client/static
 - url: /.*
-  static_files: client/static/zoe/index.html
+  static_files: client/static/index.html
   upload: /
 
 skip_files:

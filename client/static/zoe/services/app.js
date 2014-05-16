@@ -2,41 +2,52 @@ var NAME = 'zoe.services';
 module.exports = NAME;
 
 var angular = require('angular');
+var fs = require('fs');
 
 var app = angular.module(NAME, [
-    require('../common/app.js'),
-    require('./home/app.js'),
-    require('./pregnancy/app.js')
+    require('../common/app.js')
 ]);
 
-app.run([
-    'headerService',
-    function(
-        headerService
-    ) {
-        headerService.setNavItems(
-            {kingdom: 'services'},
-            [
-                {
-                    href: '/services/pregnancy',
-                    params: {kingdom: 'services',
-                             phylum: 'pregnancy'},
-                    text: 'Pregnancy'
-                },
-                {
-                    href: '/services/sti',
-                    params: {kingdom: 'services',
-                             phylum: 'sti'},
-                    text: 'STD Testing'
-                },
-                {
-                    href: '/services/contact',
-                    params: {kingdom: 'services',
-                             phylum: 'contact'},
-                    text: 'Contact Us'
-                }
-            ]
-        );
+// Routes
+app.config([
+    '$routeProvider',
+    function($routeProvider) {
+        $routeProvider.
+            when('/services', {template: fs.readFileSync(__dirname + '/html/home.html', 'utf8')}).
+            when('/services/pregnancy', {template: fs.readFileSync(__dirname + '/html/pregnancy/home.html', 'utf8')}).
+            when('/services/sti', {template: fs.readFileSync(__dirname + '/html/sti/home.html', 'utf8')}).
+            when('/services/contact', {template: fs.readFileSync(__dirname + '/../html/contact.html', 'utf8')});
     }
 ]);
 
+// Header
+app.controller('PregnancyHeaderController', [
+    '$scope',
+    function(
+        $scope
+    ) {
+        $scope.navItems = [
+            {
+                href: '/services/pregnancy',
+                text: 'Pregnancy'
+            },
+            {
+                href: '/services/sti',
+                text: 'STD Testing'
+            },
+            {
+                href: '/services/contact',
+                text: 'Contact Us'
+            }
+        ];
+    }
+]);
+
+// Side nav
+app.controller('PregnancySideNavController', [
+    '$scope',
+    function($scope) {
+        $scope.text = 'Pregnancy';
+        $scope.navItems = [];
+    }
+]);

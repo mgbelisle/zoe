@@ -10,6 +10,7 @@ var uglify = require('gulp-uglify');
 
 gulp.task('jshint', function() {
     gulp.src(['./gulpfile.js',
+              './static/index.js',
               './static/zoe/**/*.js'])
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
@@ -20,10 +21,10 @@ gulp.task('bower', function() {
 });
 
 gulp.task('build-js', ['bower'], function() {
-    browserify('./static/zoe/main.js')
+    browserify('./static/index.js')
         .bundle({debug: true})
         .pipe(source('build.js'))
-        // .pipe(streamify(uglify())) // TODO
+        // .pipe(streamify(uglify())) // TODO?
         .pipe(gulp.dest('./static'));
 });
 
@@ -40,7 +41,10 @@ gulp.task('build-css', ['bower'], function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('./static/zoe/**/*', ['default']);
+    gulp.watch([
+        './static/index.*',
+        './static/zoe/**/*'
+    ], ['default']);
 });
 
 gulp.task('default', [

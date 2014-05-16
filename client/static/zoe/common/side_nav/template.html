@@ -1,0 +1,8 @@
+<div class="well zoe-side-nav">
+  <ul class="nav nav-list">
+    <li class="nav-header">{{ text }}</li>
+    <li ng-repeat="item in navItems" ng-class="{active: isActive(item.href)}">
+      <a ng-href="{{ item.href }}">{{ item.text }}</a>
+    </li>
+  </ul>
+</div>
