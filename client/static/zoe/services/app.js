@@ -14,16 +14,16 @@ app.config([
     function($routeProvider) {
         $routeProvider.
             when('/services', {template: fs.readFileSync(__dirname + '/html/home.html', 'utf8')}).
-            when('/services/pregnancy', {template: fs.readFileSync(__dirname + '/html/pregnancy/home.html', 'utf8')}).
-            when('/services/pregnancy/symptoms', {template: fs.readFileSync(__dirname + '/html/pregnancy/symptoms.html', 'utf8')}).
-            when('/services/pregnancy/testing', {template: fs.readFileSync(__dirname + '/html/pregnancy/testing.html', 'utf8')}).
-            when('/services/pregnancy/ultrasounds', {template: fs.readFileSync(__dirname + '/html/pregnancy/ultrasounds.html', 'utf8')}).
-            when('/services/pregnancy/abortion', {template: fs.readFileSync(__dirname + '/html/pregnancy/abortion.html', 'utf8')}).
-            when('/services/pregnancy/faq', {template: fs.readFileSync(__dirname + '/html/pregnancy/faq.html', 'utf8')}).
+            when('/services/pregnancy', {template: fs.readFileSync(__dirname + '/html/pregnancy.html', 'utf8')}).
+            when('/services/pregnancy/symptoms', {template: fs.readFileSync(__dirname + '/html/pregnancy_symptoms.html', 'utf8')}).
+            when('/services/pregnancy/testing', {template: fs.readFileSync(__dirname + '/html/pregnancy_testing.html', 'utf8')}).
+            when('/services/pregnancy/ultrasounds', {template: fs.readFileSync(__dirname + '/html/pregnancy_ultrasounds.html', 'utf8')}).
+            when('/services/pregnancy/abortion', {template: fs.readFileSync(__dirname + '/html/pregnancy_abortion.html', 'utf8')}).
+            when('/services/pregnancy/faq', {template: fs.readFileSync(__dirname + '/html/pregnancy_faq.html', 'utf8')}).
             when('/services/sti', {redirectTo: '/services/sti/testing'}).
-            when('/services/sti/testing', {template: fs.readFileSync(__dirname + '/html/sti/testing.html', 'utf8')}).
-            when('/services/sti/symptoms', {template: fs.readFileSync(__dirname + '/html/sti/symptoms.html', 'utf8')}).
-            when('/services/sti/faq', {template: fs.readFileSync(__dirname + '/html/sti/faq.html', 'utf8')}).
+            when('/services/sti/testing', {template: fs.readFileSync(__dirname + '/html/sti_testing.html', 'utf8')}).
+            when('/services/sti/symptoms', {template: fs.readFileSync(__dirname + '/html/sti_symptoms.html', 'utf8')}).
+            when('/services/sti/faq', {template: fs.readFileSync(__dirname + '/html/sti_faq.html', 'utf8')}).
             when('/services/contact', {template: fs.readFileSync(__dirname + '/html/contact.html', 'utf8')});
     }
 ]);
