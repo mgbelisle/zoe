@@ -41,3 +41,8 @@ a, h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
     margin: 6px;
 }
+
+.zoe-side-info {
+    border-color: #C8D6DF;
+    background-color: #E8F6FF;
+}

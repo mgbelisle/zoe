@@ -16,12 +16,12 @@ app.config([
             when('/services', {template: fs.readFileSync(__dirname + '/html/home.html', 'utf8')}).
             when('/services/pregnancy', {template: fs.readFileSync(__dirname + '/html/pregnancy/home.html', 'utf8')}).
             when('/services/sti', {template: fs.readFileSync(__dirname + '/html/sti/home.html', 'utf8')}).
-            when('/services/contact', {template: fs.readFileSync(__dirname + '/../html/contact.html', 'utf8')});
+            when('/services/contact', {template: fs.readFileSync(__dirname + '/html/contact.html', 'utf8')});
     }
 ]);
 
 // Header
-app.controller('PregnancyHeaderController', [
+app.controller('ServicesHeaderController', [
     '$scope',
     function(
         $scope
@@ -48,6 +48,27 @@ app.controller('PregnancySideNavController', [
     '$scope',
     function($scope) {
         $scope.text = 'Pregnancy';
-        $scope.navItems = [];
+        $scope.navItems = [
+            {
+                href: '/services/pregnancy/symptoms',
+                text: 'Signs and Symptoms'
+            },
+            {
+                href: '/services/pregnancy/testing',
+                text: 'Testing'
+            },
+            {
+                href: '/services/pregnancy/ultrasounds',
+                text: 'Ultrasounds'
+            },
+            {
+                href: '/services/pregnancy/abortion',
+                text: 'Abortion'
+            },
+            {
+                href: '/services/pregnancy/faq',
+                text: 'FAQ'
+            }
+        ];
     }
 ]);
