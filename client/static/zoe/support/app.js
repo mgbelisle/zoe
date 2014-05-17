@@ -15,6 +15,7 @@ app.config([
         $routeProvider.
             when('/support', {redirectTo: '/support/help'}). // TODO
             when('/support/about', {template: fs.readFileSync(__dirname + '/html/about.html', 'utf8')}).
+            when('/support/about/staff/:name', {template: fs.readFileSync(__dirname + '/html/about_staff.html', 'utf8')}).
             when('/support/help', {template: fs.readFileSync(__dirname + '/html/help.html', 'utf8')}).
             when('/support/stories', {redirectTo: '/support/stories/fiona'}).
             when('/support/contact', {template: fs.readFileSync(__dirname + '/html/contact.html', 'utf8')});
