@@ -9,7 +9,8 @@ var fs = require('fs');
 var app = angular.module(NAME, [
     'ngRoute',
     require('./common/app.js'),
-    require('./services/app.js')
+    require('./services/app.js'),
+    require('./support/app.js')
 ]);
 
 // HTML5 mode for URLs

@@ -21,19 +21,19 @@
 	  </div>
         </div>
       </div>
-      <!-- <div class="accordion-group"> -->
-      <!--   <div class="accordion-heading"> -->
-      <!-- 	<a class="accordion-toggle" data-toggle="collapse" data-target="#contact-email"> -->
-      <!-- 	  <img src="/static/zoe/img/icons/mail.svg" alt="mail.svg" class="icon"> -->
-      <!--       Email -->
-      <!-- 	</a> -->
-      <!--   </div> -->
-      <!--   <div id="contact-email" class="accordion-body collapse"> -->
-      <!-- 	<div class="accordion-inner"> -->
-      <!--       <p><a href="mailto:appt@gotozoe.org" class="btn btn-primary">Send an email to appt@gotozoe.org &raquo;</a></p> -->
-      <!-- 	</div> -->
-      <!--   </div> -->
-      <!-- </div> -->
+      <div class="accordion-group" ng-if="showEmail">
+        <div class="accordion-heading">
+      	<a class="accordion-toggle" data-toggle="collapse" data-target="#contact-email">
+      	  <img src="/static/zoe/img/icons/mail.svg" alt="mail.svg" class="icon">
+            Email
+      	</a>
+        </div>
+        <div id="contact-email" class="accordion-body collapse">
+      	<div class="accordion-inner">
+            <p><a href="mailto:appt@gotozoe.org" class="btn btn-primary">Send an email to appt@gotozoe.org &raquo;</a></p>
+      	</div>
+        </div>
+      </div>
       <div class="accordion-group">
         <div class="accordion-heading">
 	  <a class="accordion-toggle" data-toggle="collapse" data-target="#contact-in-person">
