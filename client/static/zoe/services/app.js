@@ -20,7 +20,10 @@ app.config([
             when('/services/pregnancy/ultrasounds', {template: fs.readFileSync(__dirname + '/html/pregnancy/ultrasounds.html', 'utf8')}).
             when('/services/pregnancy/abortion', {template: fs.readFileSync(__dirname + '/html/pregnancy/abortion.html', 'utf8')}).
             when('/services/pregnancy/faq', {template: fs.readFileSync(__dirname + '/html/pregnancy/faq.html', 'utf8')}).
-            when('/services/sti', {template: fs.readFileSync(__dirname + '/html/sti/home.html', 'utf8')}).
+            when('/services/sti', {redirectTo: '/services/sti/testing'}).
+            when('/services/sti/testing', {template: fs.readFileSync(__dirname + '/html/sti/testing.html', 'utf8')}).
+            // when('/services/sti', {template: fs.readFileSync(__dirname + '/html/sti/home.html', 'utf8')}).
+            // when('/services/sti', {template: fs.readFileSync(__dirname + '/html/sti/home.html', 'utf8')}).
             when('/services/contact', {template: fs.readFileSync(__dirname + '/html/contact.html', 'utf8')});
     }
 ]);
@@ -72,6 +75,27 @@ app.controller('PregnancySideNavController', [
             },
             {
                 href: '/services/pregnancy/faq',
+                text: 'FAQ'
+            }
+        ];
+    }
+]);
+
+app.controller('StiSideNavController', [
+    '$scope',
+    function($scope) {
+        $scope.text = 'STI/STD Testing';
+        $scope.navItems = [
+            {
+                href: '/services/sti/testing',
+                text: 'Should I be tested?'
+            },
+            {
+                href: '/services/sti/symptoms',
+                text: 'Symptoms'
+            },
+            {
+                href: '/services/sti/faq',
                 text: 'FAQ'
             }
         ];
