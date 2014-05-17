@@ -6,7 +6,7 @@ threadsafe: true
 
 handlers:
 - url: /api/.*
-  script: api/api
+  script: server/api
 - url: /static
   static_dir: client/static
 - url: /.*
@@ -14,11 +14,9 @@ handlers:
   upload: /
 
 skip_files:
-- ^(.*/)?Gruntfile\.js$
+- ^(.*/)?gulpfile\.js$
 - ^(.*/)?README\.md$
 - ^(.*/)?\..*$
-- ^(.*/)?archive$
 - ^(.*/)?bower\.json$
 - ^(.*/)?node_modules$
 - ^(.*/)?package\.json$
-
