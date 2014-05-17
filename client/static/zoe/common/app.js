@@ -17,6 +17,7 @@ app.directive('zoeHref', require('./href_directive.js'));
 app.directive('zoeImgLeft', require('./img_left/directive.js'));
 app.directive('zoeImgRight', require('./img_right/directive.js'));
 app.directive('zoeMap', require('./map/directive.js'));
+app.directive('zoeRuLinks', require('./ru_links/directive.js'));
 app.directive('zoeSideNav', require('./side_nav/directive.js'));
 
 // Services
