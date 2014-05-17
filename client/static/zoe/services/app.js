@@ -16,6 +16,7 @@ app.config([
             when('/services', {template: fs.readFileSync(__dirname + '/html/home.html', 'utf8')}).
             when('/services/pregnancy', {template: fs.readFileSync(__dirname + '/html/pregnancy/home.html', 'utf8')}).
             when('/services/pregnancy/symptoms', {template: fs.readFileSync(__dirname + '/html/pregnancy/symptoms.html', 'utf8')}).
+            when('/services/pregnancy/testing', {template: fs.readFileSync(__dirname + '/html/pregnancy/testing.html', 'utf8')}).
             when('/services/sti', {template: fs.readFileSync(__dirname + '/html/sti/home.html', 'utf8')}).
             when('/services/contact', {template: fs.readFileSync(__dirname + '/html/contact.html', 'utf8')});
     }
