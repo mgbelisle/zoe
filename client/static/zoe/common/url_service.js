@@ -1,9 +1,16 @@
-var service = function($routeParams) {
+var service = function($location) {
     this.isActive = function(url) {
-        return false; // TODO
+        var params1 = url.split('/');
+        var params2 = $location.path().split('/');
+        for (var i = 0; i < params1.length; i++) {
+            if (params1[i] != params2[i]) {
+                return false;
+            }
+        }
+        return true;
     };
 };
 
-service.$inject = ['$routeParams'];
+service.$inject = ['$location'];
 
 module.exports = service;
