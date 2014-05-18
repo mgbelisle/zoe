@@ -1,14 +1,3 @@
-.zoe-home a {
-    display: block;
-    margin: 12px;
-    font-size: 20px;
-}
-
-a.zoe-home-section {
-    font-size: 26px;
-    font-weight: bold;
-}
-
 #zoe-home-left, #zoe-home-right {
     margin: 0;
     padding: 48px;
