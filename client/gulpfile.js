@@ -22,9 +22,9 @@ gulp.task('bower', function() {
 
 gulp.task('build-js', ['bower'], function() {
     browserify('./static/index.js')
-        .bundle({debug: true})
+        .bundle() // {debug: true}
         .pipe(source('build.js'))
-        // .pipe(streamify(uglify())) // TODO?
+        .pipe(streamify(uglify()))
         .pipe(gulp.dest('./static'));
 });
 
