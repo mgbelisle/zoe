@@ -1,38 +1,40 @@
 <zoe-header ng-controller="SupportHeaderController"></zoe-header>
-<div class="row-fluid">
-  <div class="span3">
-    <zoe-side-nav ng-controller="AboutSideNavController"></zoe-side-nav>
-    <div class="row-fluid hidden-phone">
-      <div class="span4" ng-repeat="member in member" style="margin: 0; padding: 4px;">
-        <img ng-src="{{ member.img }}"
-             class="img-rounded"
-             style="margin: 4px; cursor: pointer;"
-             title="{{ member.name }} - {{ member.position }}"
-             ng-click="setMember(member)">
-	<div style="font-size: 7px;" class="text-center">
-	  {{ member.name }}
-	</div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+      <zoe-side-nav ng-controller="AboutSideNavController"></zoe-side-nav>
+      <div class="row-fluid hidden-phone">
+        <div class="span4" ng-repeat="member in members" style="margin: 0; padding: 4px;">
+          <img ng-src="{{ member.img }}"
+               class="img-rounded"
+               style="margin: 4px; cursor: pointer;"
+               title="{{ member.name }} - {{ member.position }}"
+               ng-click="setMember(member)">
+	  <div style="font-size: 7px;" class="text-center">
+	    {{ member.name }}
+	  </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="span9">
-    <div class="hero-unit about-header">
-      <h2>Our Staff</h2>
-    </div>
-    <div class="row-fluid visible-phone">
-      <img ng-repeat="member in members"
-           ng-src="{{ member.img }}"
-           class="img-rounded"
-           style="cursor: pointer; width: 8%; display: inline; margin: 0 3px;"
-           title="{{ member.name }} - {{ member.position }}"
-           ng-click="setMember(member)">
-    </div>
-    <div class="row-fluid">
-      <div>
-        <h4>{{ member.name }} - {{ member.position }}</h4>
-        <div class="row-fluid">
-          <img ng-src="{{ member.img }}" class="img-rounded pull-left" style="width: 150px; margin: 0 16px 16px 0;">
-          <span ng-include="member.bio"></span>
+    <div class="span9">
+      <div class="hero-unit zoe-hero-support">
+        <h2>Our Staff</h2>
+      </div>
+      <div class="row-fluid visible-phone">
+        <img ng-repeat="member in members"
+             ng-src="{{ member.img }}"
+             class="img-rounded"
+             style="cursor: pointer; width: 8%; display: inline; margin: 0 3px;"
+             title="{{ member.name }} - {{ member.position }}"
+             ng-click="setMember(member)">
+      </div>
+      <div class="row-fluid">
+        <div>
+          <h4>{{ member.name }} - {{ member.position }}</h4>
+          <div class="row-fluid">
+            <img ng-src="{{ member.img }}" class="img-rounded pull-left" style="width: 150px; margin: 0 16px 16px 0;">
+            <span ng-include="member.bio"></span>
+          </div>
         </div>
       </div>
     </div>
