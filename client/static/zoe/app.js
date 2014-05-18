@@ -26,34 +26,16 @@ app.config([
     '$routeProvider',
     function($routeProvider) {
         $routeProvider.
-            otherwise({redirectTo: '/'}).
             when('/', {template: fs.readFileSync(__dirname + '/html/home.html', 'utf8')}).
-            when('/dash', {template: fs.readFileSync(__dirname + '/html/dash.html', 'utf8')}).
-            when('/contact', {template: fs.readFileSync(__dirname + '/html/contact.html', 'utf8')});
+            otherwise({redirectTo: '/'});
     }
 ]);
 
 // Header
-app.controller('RootHeaderController', [
+app.controller('HomeHeaderController', [
     '$scope',
     function($scope) {
-        $scope.navItems = [
-            {
-                href: '/services',
-                text: 'Services'
-            },
-            {
-                href: '/support',
-                text: 'Support'
-            },
-            {
-                href: '/dash',
-                text: 'Stache Dash'
-            },
-            {
-                href: '/contact',
-                text: 'Contact Us'
-            }
-        ];
+        $scope.showSearch = false;
+        $scope.navItems = [];
     }
 ]);
