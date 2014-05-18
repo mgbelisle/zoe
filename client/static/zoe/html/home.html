@@ -1,12 +1,12 @@
 <zoe-header ng-controller="HomeHeaderController"></zoe-header>
-<div class="row-fluid text-center">
+<div class="row-fluid text-center zoe-home">
   <div class="span6" id="zoe-home-left" ng-controller="ServicesHeaderController">
-    <a href="/services/"><h3>Our Services</h3></a>
-    <a ng-repeat="item in navItems" href="{{ item.href }}"><h4>{{ item.text }}</h4></a>
+    <a href="/services/" class="zoe-home-section">Our Services</a>
+    <a ng-repeat="item in navItems" href="{{ item.href }}">{{ item.text }}</a>
   </div>
   <div class="span6" id="zoe-home-right" ng-controller="SupportHeaderController">
-    <a href="/support/"><h3>Support Us</h3></a>
-    <a ng-repeat="item in navItems" href="{{ item.href }}"><h4>{{ item.text }}</h4></a>
+    <a href="/support/" class="zoe-home-section">Support Us</a>
+    <a ng-repeat="item in navItems" href="{{ item.href }}">{{ item.text }}</a>
   </div>
 </div>
 <zoe-footer></zoe-footer>

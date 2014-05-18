@@ -1,7 +1,19 @@
-#zoe-home-left, #zoe-home-right {
-    padding: 96px 0 96px 0;
+.zoe-home a {
+    display: block;
+    margin: 12px;
+    font-size: 20px;
 }
 
-#zoe-home-left {
-    border-right: solid #CCCCCC 1px;
+a.zoe-home-section {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#zoe-home-left, #zoe-home-right {
+    margin: 0;
+    padding: 48px;
+}
+
+#zoe-home-right {
+    border-left: solid #CCCCCC 1px;
 }
