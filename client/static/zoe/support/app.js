@@ -48,7 +48,7 @@ app.controller('SupportHeaderController', [
             },
             {
                 href: '/support/dash',
-                text: "'Stache Dash",
+                text: "'STACHE DASH",
                 'class': 'zoe-dash-nav'
             },
             {
