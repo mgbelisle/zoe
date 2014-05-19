@@ -24,6 +24,7 @@ app.config([
             when('/services/sti/testing', {template: fs.readFileSync(__dirname + '/html/sti_testing.html', 'utf8')}).
             when('/services/sti/symptoms', {template: fs.readFileSync(__dirname + '/html/sti_symptoms.html', 'utf8')}).
             when('/services/sti/faq', {template: fs.readFileSync(__dirname + '/html/sti_faq.html', 'utf8')}).
+            when('/services/dash', {template: fs.readFileSync(__dirname + '/../common/html/dash.html', 'utf8')}).
             when('/services/contact', {template: fs.readFileSync(__dirname + '/html/contact.html', 'utf8')});
     }
 ]);
@@ -42,6 +43,11 @@ app.controller('ServicesHeaderController', [
             {
                 href: '/services/sti',
                 text: 'STD Testing'
+            },
+            {
+                href: '/services/dash',
+                text: "'Stache Dash",
+                'class': 'zoe-dash-nav'
             },
             {
                 href: '/services/contact',

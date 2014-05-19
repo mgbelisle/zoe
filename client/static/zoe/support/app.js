@@ -13,7 +13,7 @@ app.config([
     '$routeProvider',
     function($routeProvider) {
         $routeProvider.
-            when('/support', {redirectTo: '/support/about'}). // TODO
+            when('/support', {redirectTo: '/support/help'}).
             when('/support/about', {template: fs.readFileSync(__dirname + '/html/about.html', 'utf8')}).
             when('/support/about/staff', {
                 template: fs.readFileSync(__dirname + '/html/about_staff.html', 'utf8'),
@@ -22,7 +22,7 @@ app.config([
             when('/support/help', {template: fs.readFileSync(__dirname + '/html/help.html', 'utf8')}).
             when('/support/stories', {redirectTo: '/support/stories/fiona'}).
             when('/support/stories/fiona', {template: fs.readFileSync(__dirname + '/html/stories_fiona.html', 'utf8')}).
-            when('/support/dash', {template: fs.readFileSync(__dirname + '/html/dash.html', 'utf8')}).
+            when('/support/dash', {template: fs.readFileSync(__dirname + '/../common/html/dash.html', 'utf8')}).
             when('/support/contact', {template: fs.readFileSync(__dirname + '/html/contact.html', 'utf8')});
     }
 ]);
@@ -48,7 +48,8 @@ app.controller('SupportHeaderController', [
             },
             {
                 href: '/support/dash',
-                text: "'Stache Dash"
+                text: "'Stache Dash",
+                'class': 'zoe-dash-nav'
             },
             {
                 href: '/support/contact',
