@@ -34,7 +34,7 @@
     "angular": "./static/bower_components/angular/angular.js",
     "angular-route": "./static/bower_components/angular-route/angular-route.js",
     "bootstrap": "./static/tmp/bootstrap/js/bootstrap.js",
-    "jquery": "./static/bower_components/jquery/dist/jquery.js"
+    "jquery": "./static/bower_components/jquery/jquery.js"
   },
   "browserify-shim": {
     "angular": {
