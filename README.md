@@ -13,3 +13,17 @@ Tech Stack
 * Server
   * [AppEngine](https://developers.google.com/appengine/)
   * [Go](http://golang.org/)
+
+Build
+-----
+
+Run these commands from the [/client/] directory (same as any other gulp project):
+
+```sh
+npm install
+npm install -g gulp
+gulp
+```
+
+Deploy
+------
