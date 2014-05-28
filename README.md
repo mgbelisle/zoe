@@ -17,7 +17,7 @@ Tech Stack
 Build
 -----
 
-Run these commands from the /client/ directory (same as any other gulp project):
+Run these commands from the (/client/) directory (same as any other gulp project):
 
 ```sh
 npm install
