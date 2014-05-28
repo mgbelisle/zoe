@@ -14,9 +14,19 @@ handlers:
   upload: /
 
 skip_files:
-- ^(.*/)?gulpfile\.js$
 - ^(.*/)?README\.md$
 - ^(.*/)?\..*$
 - ^(.*/)?bower\.json$
+- ^(.*/)?gulpfile\.js$
 - ^(.*/)?node_modules$
 - ^(.*/)?package\.json$
+# bower_components
+# find client/static/bower_components -type f -name '*.*' | grep -v -e '^.*\.git' | rev | cut -f 1 -d '.' | rev | sort -u
+- ^(.*/)?.*\.editorconfig$
+- ^(.*/)?.*\.gzip$
+- ^(.*/)?.*\.jshintignore$
+- ^(.*/)?.*\.jshintrc$
+- ^(.*/)?.*\.less$
+- ^(.*/)?.*\.txt$
+- ^(.*/)?.*\.xml$
+- ^(.*/)?.*\.yml$
