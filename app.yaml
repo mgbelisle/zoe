@@ -6,7 +6,7 @@ threadsafe: true
 
 handlers:
 - url: /api/.*
-  script: server/api
+  script: _go_app
 - url: /static
   static_dir: client/static
 - url: /.*
