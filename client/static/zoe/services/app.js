@@ -45,13 +45,12 @@ app.controller('ServicesHeaderController', [
                 text: 'STD Testing'
             },
             {
-                href: '/services/dash',
-                text: "'STACHE DASH",
-                'class': 'zoe-dash-nav'
-            },
-            {
                 href: '/services/contact',
                 text: 'Contact Us'
+            },
+            {
+                href: '/support/',
+                text: 'Support Us'
             }
         ];
     }

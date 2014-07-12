@@ -1,48 +1,524 @@
 <zoe-header ng-controller="SupportHeaderController"></zoe-header>
-<div class="container-fluid">
+<div class="container-fluid ng-scope" id="dash-content">
   <div class="row-fluid">
-    <div class="span6">
-      <img src="/static/zoe/img/dash.png" alt="dash.png" class="img-rounded">
-    </div>
-    <div class="span6 text-center" style="padding-top: 128px;">
-      <a href="http://www.racemontana.com/search/event.aspx?id=27306" class="btn btn-large btn-primary">Register &raquo;</a>
-      <h5>Saturday, June 28, 2014 9:00 AM</h5>
-      <a href="https://www.google.com/maps/search/Bogert+Park+325+S+Church+Ave+Bozeman,+MT/@45.6761,-111.0306565,17z/data=!3m1!4b1">
-        Bogert Park<br />
-        325 S Church Ave<br />
-        Bozeman, MT
-      </a>
-    </div>
+    <img src="/static/zoe/img/dash.png" alt="dash.png" id="dash-img" class="img-rounded" style="display: block; margin: 0px auto; max-width: 50%;">
   </div>
-  <h3>Event Summary</h3>
-  <p>Welcome to the ZoeCare 'STACHE DASH Road & Trail Race. The 1ST Annual 3, 5 & 10k 'STACHE 
-    DASH will support ZoeCare's Man UP and WAIT Training programs.</p>
-  <p>The 'STACHE DASH couples perfectly with these new programs. Man UP has embarked upon a 
-    fatherhood initiative and male mentoring campaign entitled "Taking Back the Beard." An unplanned 
-    pregnancy can be as unsettling for a new 'father to be' as it is for young mothers. Man UP helps men 
-    find their voice in unplanned pregnancies. We offer mentoring and parenting tools, what masculinity 
-    means and an opportunity for men to step up and into their new fatherhood role.</p>
-  <p>WAIT Training is a relationship training curriculum designed for 7th through 9th grade public school 
-    students. It helps young people gain relationship skills and tools and addresses issues like bullying, 
-    sexting, pornography, self-esteem, boundaries and sexual integrity.</p>
-
-  <h3>Event Details</h3>
-  <p>The 'STACHE DASH consists of three separate distances: 3K Walk, and 5K & 10K runs. Race[s] 
-    begin at Bogert Park, 9am, Saturday, June 28. The course covers trail on both Pete's Hill and the 
-    Bozeman Trail system.</p>
-  <p>Runners of every age, shape and size, boys and girls are WELCOME.</p>
-  <p>Mustaches are very much encouraged (real or fake). The mustache competition is open to everyone.</p>
-  <p>Two water stations will be available on course and at the finish line.</p>
-  <p>Portable restrooms will be available at Bogert Park.</p>
-
-  <h3>Packet Pick-up</h3>
-  <p>Early race packet pick-up is strongly encouraged. Packets may be picked up at Bozeman Running 
-    Company on Friday, June 27. Packets will be available prior to the race for those unable to pick up 
-    a packet on Friday at BRC. Once again, getting your packet early is strongly encouraged. The races 
-    will be staggered beginning with the 5k, 10 minute stagger to the 10k followed 10 minutes later by 
-    the 3k walk. The race will START promptly at 9am.</p>
-
-  <h3>Post Race</h3>
-  <p>Awards will be given immediately following the race. Beverages and snacks will be available.</p>
+  <h3>5K Adult</h3>
+  <table class="table table-bordered">
+    <tbody><tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Notes</th>
+      </tr>
+      <tr>
+        <td>Dontae Baker</td>
+        <td>00:20:05</td>
+        <td>1st in M 5K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>AJ McBroom</td>
+        <td>00:20:44</td>
+        <td>2nd in M 5K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>Arianna Celis</td>
+        <td>00:21:00</td>
+        <td>1st in W 5K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>Erika Whaley</td>
+        <td>00:21:09</td>
+        <td>2nd in W 5K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>Ky Mickelsen</td>
+        <td>00:21:57</td>
+        <td>3rd in M 5K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>Bryon McCotter</td>
+        <td>00:22:02</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Thomas Gilboy</td>
+        <td>00:22:11</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Aaron Devine</td>
+        <td>00:22:41</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Joshua Flohr</td>
+        <td>00:23:21</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Amanda Crawford</td>
+        <td>00:23:26</td>
+        <td>3rd in W 5K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>Teri Tritz</td>
+        <td>00:24:03</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Rhys McCotter</td>
+        <td>00:25:05</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Houston Abbott</td>
+        <td>00:25:05</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Grace Berner</td>
+        <td>00:26:08</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Randy Chamberlin</td>
+        <td>00:27:27</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Josh Chamberlin</td>
+        <td>00:27:27</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>bryce Sullivan</td>
+        <td>00:27:38</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Anthony Hart</td>
+        <td>00:28:02</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Brett LaShelle</td>
+        <td>00:28:04</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Kristin How</td>
+        <td>00:28:05</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Katie Hart</td>
+        <td>00:28:19</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Leonard J Baluski</td>
+        <td>00:28:52</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Krista Dicomitis</td>
+        <td>00:29:09</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Nik Grout</td>
+        <td>00:29:21</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Jessica Burgard</td>
+        <td>00:29:23</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Crystal Van Dyken</td>
+        <td>00:29:28</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>David Kimm</td>
+        <td>00:29:58</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Katie Kimm</td>
+        <td>00:29:59</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Sonja Stordahl</td>
+        <td>00:30:15</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Maggie Fillmore</td>
+        <td>00:30:22</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Kristi Abrahamsen</td>
+        <td>00:31:03</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Abbie Aamot</td>
+        <td>00:31:27</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Sarah Partovi</td>
+        <td>00:31:39</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Abby Cilker</td>
+        <td>00:31:53</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Corinne Casolara</td>
+        <td>00:32:15</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Maurine Michaud</td>
+        <td>00:32:27</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Brennan Meyer</td>
+        <td>00:32:51</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Lauren Vinson</td>
+        <td>00:32:52</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Desiree Van Zee</td>
+        <td>00:33:01</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Katie Eisenstein</td>
+        <td>00:33:04</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Dana McGowen</td>
+        <td>00:33:04</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Kirk Aamot</td>
+        <td>00:34:05</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Brett Ritter</td>
+        <td>00:34:31</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Erin McGinley</td>
+        <td>00:34:36</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Gary Kachadurian</td>
+        <td>00:34:47</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Sarah Veltkamp</td>
+        <td>00:35:24</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Dani Jung</td>
+        <td>00:35:34</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Naomi Shields</td>
+        <td>00:36:21</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Caleb Demery</td>
+        <td>00:36:22</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Elliot Heumier</td>
+        <td>00:36:43</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Donald Wood</td>
+        <td>00:36:44</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Anya Valeriano</td>
+        <td>00:36:45</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Haley Sargent</td>
+        <td>00:36:47</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Sumner LaValley</td>
+        <td>00:37:01</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Camille LaShelle</td>
+        <td>00:37:48</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Katie Meyer</td>
+        <td>00:37:48</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Sarah Juel</td>
+        <td>00:38:19</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Marilee Cornforth</td>
+        <td>00:42:22</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Nikita Cornforth</td>
+        <td>00:42:22</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Taylor Johnson</td>
+        <td>00:42:23</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Erika Johnson</td>
+        <td>00:42:23</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Katheryn Chamberlain</td>
+        <td>00:43:01</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Michaela Hockenberry</td>
+        <td>00:43:07</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Emily Turner</td>
+        <td>00:43:08</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Nichole Chamberlain</td>
+        <td>00:43:09</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Linda Chamberlain</td>
+        <td>00:43:19</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Diane Rice</td>
+        <td>00:43:21</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Deidre Klompien</td>
+        <td>00:43:21</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Karla Sutter</td>
+        <td>00:43:38</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Becky Anderson</td>
+        <td>00:43:42</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Ari Richard</td>
+        <td>00:44:33</td>
+        <td></td>
+      </tr><tr>
+  </tr></tbody></table>
+  <h3>10K Adult</h3>
+  <table class="table table-bordered">
+    <tbody><tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Notes</th>
+      </tr>
+      <tr>
+        <td>Jake Buhl</td>
+        <td>00:32:27</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Dallas Shaw</td>
+        <td>00:33:58</td>
+        <td>1st in M 10K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>Jennifer Hodges</td>
+        <td>00:34:27</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Sam Fountaine</td>
+        <td>00:34:47</td>
+        <td>2nd in M 10K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>Jenny Stone</td>
+        <td>00:35:24</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Ashley Jensen</td>
+        <td>00:43:39</td>
+        <td>1st in W 10K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>Anna Fountaine</td>
+        <td>00:46:39</td>
+        <td>2nd in W 10K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>Kiera Pattison</td>
+        <td>00:49:29</td>
+        <td>3rd in W 10K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>Alison Curry</td>
+        <td>00:50:05</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Emily Entz</td>
+        <td>00:50:13</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Elaine Hense</td>
+        <td>00:53:34</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Iver Gullixson</td>
+        <td>00:53:38</td>
+        <td>3rd in M 10K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>Cindy Fitzgerald</td>
+        <td>00:55:13</td>
+        <td></td>
+      </tr><tr>
+  </tr></tbody></table>
+  <h3>5K Youth</h3>
+  <table class="table table-bordered">
+    <tbody><tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Notes</th>
+      </tr>
+      <tr>
+        <td>Grant Van Dyken</td>
+        <td>00:21:43</td>
+        <td>1st in Y 5K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>Lincoln Young</td>
+        <td>00:22:08</td>
+        <td>2nd in Y 5K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>Abby McBroom</td>
+        <td>00:23:33</td>
+        <td>3rd in Y 5K</td>
+      </tr><tr>
+      </tr><tr>
+        <td>Jayden McGowen</td>
+        <td>00:29:02</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Grace Aamot</td>
+        <td>00:31:27</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Tyler Veltkamp</td>
+        <td>00:32:29</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Emily Veltkamp</td>
+        <td>00:34:27</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Jaden Johnson</td>
+        <td>00:36:44</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Lexi Cornforth</td>
+        <td>00:39:06</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Shelby Guenther</td>
+        <td>00:41:16</td>
+        <td></td>
+      </tr><tr>
+  </tr></tbody></table>
+  <h3>5K Family</h3>
+  <table class="table table-bordered">
+    <tbody><tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Notes</th>
+      </tr>
+      <tr>
+        <td>Peter Nichols</td>
+        <td>00:38:53</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Robin Cory</td>
+        <td>01:09:03</td>
+        <td></td>
+      </tr><tr>
+      </tr><tr>
+        <td>Carl Nichols</td>
+        <td>01:09:03</td>
+        <td></td>
+      </tr><tr>
+  </tr></tbody></table>
 </div>
 <zoe-footer></zoe-footer>

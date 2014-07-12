@@ -26,7 +26,7 @@ app.config([
     '$routeProvider',
     function($routeProvider) {
         $routeProvider.
-            when('/', {template: fs.readFileSync(__dirname + '/html/home.html', 'utf8')}).
+            when('/', {redirectTo: '/services/pregnancy'}).
             otherwise({redirectTo: '/'});
     }
 ]);
