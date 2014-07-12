@@ -36,10 +36,10 @@ module.exports = [
         bio: '/static' + __dirname + '/bios/kathy_webster.html'
     },
     {
-        name: 'Jackie Klompien',
+        name: 'Andy Curry',
         position: 'Project Development & Program Coordinator',
-        img: '/static' + __dirname + '/img/jackie_klompien.jpg',
-        bio: '/static' + __dirname + '/bios/jackie_klompien.html'
+        img: '/static' + __dirname + '/img/andy_curry.jpg',
+        bio: '/static' + __dirname + '/bios/andy_curry.html'
     },
     {
         name: 'Alyssa Bryant',
@@ -76,5 +76,11 @@ module.exports = [
         position: 'Patient Care',
         img: '/static' + __dirname + '/img/quinn_pruett.jpg',
         bio: '/static' + __dirname + '/bios/quinn_pruett.html'
+    },
+    {
+        name: 'Gabor Benda',
+        position: 'MD',
+        img: '/static' + __dirname + '/img/gabor_benda.jpg',
+        bio: '/static' + __dirname + '/bios/gabor_benda.html'
     }
 ];
