@@ -5,12 +5,11 @@
       <zoe-side-nav ng-controller="AboutSideNavController"></zoe-side-nav>
       <div class="row-fluid hidden-phone">
         <div class="span4" ng-repeat="member in members" style="margin: 0; padding: 4px;">
-          <a href="{{ member.href }}">
-            <img ng-src="{{ member.img }}"
-                 class="img-rounded"
-                 style="margin: 4px; cursor: pointer;"
-                 title="{{ member.name }} - {{ member.position }}">
-          </a>
+          <img ng-src="{{ member.img }}"
+               class="img-rounded"
+               style="margin: 4px; cursor: pointer;"
+               title="{{ member.name }} - {{ member.position }}"
+               ng-click="setMember(member)">
 	  <div style="font-size: 7px;" class="text-center">
 	    {{ member.name }}
 	  </div>

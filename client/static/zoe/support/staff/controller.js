@@ -1,28 +1,12 @@
 var fs = require('fs');
 
-var Controller = function(
-    $location,
-    $routeParams,
-    $scope
-) {
+var Controller = function($scope) {
     $scope.members = require('./members.js');
-    var membersMap = {};
-    $.each($scope.members, function(i, member) {
-        membersMap[member.key] = member;
-    });
-    if ($routeParams.key) {
-        $scope.member = membersMap[$routeParams.key];
-        if (!$scope.member) {
-            $location.path('/support/about/staff');
-        }
-    } else {
-        $scope.member = $scope.members[0];
-    }
+    $scope.member = $scope.members[0];
+    $scope.setMember = function(member) {
+        $scope.member = member;
+    };
 };
-Controller.$inject = [
-    '$location',
-    '$routeParams',
-    '$scope'
-];
+Controller.$inject = ['$scope'];
 
 module.exports = Controller;
