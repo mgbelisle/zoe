@@ -27,6 +27,7 @@ app.config([
     function($routeProvider) {
         $routeProvider.
             when('/', {redirectTo: '/services/pregnancy'}).
+            when('/dash', {redirectTo: '/support/dash'}).
             otherwise({redirectTo: '/'});
     }
 ]);
