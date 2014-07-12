@@ -1,86 +1,79 @@
-module.exports = [
+var members = [
     {
         name: 'Jeanne Brown',
         position: 'Executive Director',
-        img: '/static' + __dirname + '/img/jeanne_brown.jpg',
-        bio: '/static' + __dirname + '/bios/jeanne_brown.html'
+        id: 'jeanne_brown'
     },
     {
         name: 'Barbara Eckstein',
         position: 'FNP, BC, Nurse Manager',
-        img: '/static' + __dirname + '/img/barbara_eckstein.jpg',
-        bio: '/static' + __dirname + '/bios/barbara_eckstein.html'
+        id: 'barbara_eckstein'
     },
     {
         name: 'Cindy Nelson',
         position: 'Development Director',
-        img: '/static' + __dirname + '/img/cindy_nelson.jpg',
-        bio: '/static' + __dirname + '/bios/cindy_nelson.html'
+        id: 'cindy_nelson'
     },
     {
         name: 'Jane Phillips',
         position: 'RN',
-        img: '/static' + __dirname + '/img/jane_phillips.jpg',
-        bio: '/static' + __dirname + '/bios/jane_phillips.html'
+        id: 'jane_phillips'
     },
     {
         name: 'Robin Cory',
         position: 'RN',
-        img: '/static' + __dirname + '/img/robin_cory.jpg',
-        bio: '/static' + __dirname + '/bios/robin_cory.html'
+        id: 'robin_cory'
     },
     {
         name: 'Kathy Webster',
         position: 'Client Advocate, Volunteer Coordinator & Trainer',
-        img: '/static' + __dirname + '/img/kathy_webster.jpg',
-        bio: '/static' + __dirname + '/bios/kathy_webster.html'
+        id: 'kathy_webster'
     },
     {
         name: 'Andy Curry',
         position: 'Project Development & Program Coordinator',
-        img: '/static' + __dirname + '/img/andy_curry.jpg',
-        bio: '/static' + __dirname + '/bios/andy_curry.html'
+        id: 'andy_curry'
     },
     {
         name: 'Alyssa Bryant',
         position: 'Administration',
-        img: '/static' + __dirname + '/img/alyssa_bryant.jpg',
-        bio: '/static' + __dirname + '/bios/alyssa_bryant.html'
+        id: 'alyssa_bryant'
     },
     {
         name: 'Ann Knick',
         position: 'Patient Advocate and Reception',
-        img: '/static' + __dirname + '/img/ann_knick.jpg',
-        bio: '/static' + __dirname + '/bios/ann_knick.html'
+        id: 'ann_knick'
     },
     {
         name: 'Deanne Fisher',
         position: 'Volunteer, Client Advocate and Reception',
-        img: '/static' + __dirname + '/img/deanne_fisher.jpg',
-        bio: '/static' + __dirname + '/bios/deanne_fisher.html'
+        id: 'deanne_fisher'
     },
     {
         name: 'Mary Springer',
         position: 'Patient Care',
-        img: '/static' + __dirname + '/img/mary_springer.jpg',
-        bio: '/static' + __dirname + '/bios/mary_springer.html'
+        id: 'mary_springer'
     },
     {
         name: 'Lisa Doerksen',
         position: '',
-        img: '/static' + __dirname + '/img/lisa_doerksen.jpg',
-        bio: '/static' + __dirname + '/bios/lisa_doerksen.html'
+        id: 'lisa_doerksen'
     },
     {
         name: 'Quinn Pruett',
         position: 'Patient Care',
-        img: '/static' + __dirname + '/img/quinn_pruett.jpg',
-        bio: '/static' + __dirname + '/bios/quinn_pruett.html'
+        id: 'quinn_pruett'
     },
     {
         name: 'Gabor Benda',
         position: 'MD',
-        img: '/static' + __dirname + '/img/gabor_benda.jpg',
-        bio: '/static' + __dirname + '/bios/gabor_benda.html'
+        id: 'gabor_benda'
     }
 ];
+
+$.each(members, function(i, member) {
+    member.img = '/static' + __dirname + '/img/' + member.id + '.jpg';
+    member.bio = '/static' + __dirname + '/bios/' + member.id + '.html';
+});
+
+module.exports = members;
