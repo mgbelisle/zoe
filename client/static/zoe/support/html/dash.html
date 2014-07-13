@@ -1,0 +1,22 @@
+<zoe-header ng-controller="SupportHeaderController"></zoe-header>
+<div class="container-fluid ng-scope" id="dash-content">
+  <div class="row-fluid">
+    <img src="/static/zoe/img/dash.png" alt="dash.png" id="dash-img" class="img-rounded" style="display: block; margin: 0px auto; max-width: 50%;">
+  </div>
+  <div ng-repeat="division in results">
+    <h3>{{ division[0] }}</h3>
+    <table class="table table-bordered">
+      <tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Notes</th>
+      </tr>
+      <tr ng-repeat="row in division[1]">
+        <td>{{ row.name }}</td>
+        <td>{{ row.time }}</td>
+        <td>{{ row.notes }}</td>
+      </tr>      
+    </table>
+  </div>
+</div>
+<zoe-footer></zoe-footer>
