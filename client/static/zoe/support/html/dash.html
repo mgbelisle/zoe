@@ -3,18 +3,18 @@
   <div class="row-fluid">
     <img src="/static/zoe/img/dash.png" alt="dash.png" id="dash-img" class="img-rounded" style="display: block; margin: 0px auto; max-width: 50%;">
   </div>
-  <div ng-repeat="division in results">
-    <h3>{{ division[0] }}</h3>
+  <div ng-repeat="division in divisions">
+    <h3>{{ division.name }}</h3>
     <table class="table table-bordered">
       <tr>
         <th>Name</th>
         <th>Time</th>
         <th>Notes</th>
       </tr>
-      <tr ng-repeat="row in division[1]">
-        <td>{{ row.name }}</td>
-        <td>{{ row.time }}</td>
-        <td>{{ row.notes }}</td>
+      <tr ng-repeat="result in division.results">
+        <td>{{ result.name }}</td>
+        <td>{{ result.time | date:'HH:mm:ss.sss' }}</td>
+        <td>{{ result.notes }}</td>
       </tr>      
     </table>
   </div>
