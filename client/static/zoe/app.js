@@ -28,6 +28,7 @@ app.config([
         $routeProvider.
             when('/', {redirectTo: '/services/pregnancy'}).
             when('/dash', {redirectTo: '/support/dash'}).
+            when('/privacy', {template: fs.readFileSync(__dirname + '/html/privacy.html', 'utf8')}).
             otherwise({redirectTo: '/'});
     }
 ]);
