@@ -1,81 +1,90 @@
-$ = require('jquery');
+fs = require('fs');
 
 var members = [
     {
         name: 'Jeanne Brown',
         position: 'Executive Director',
-        key: 'jeanne_brown'
+        img: '/static/img/staff/jeanne_brown.jpg',
+        bio: fs.readFileSync(__dirname + '/bios/jeanne_brown.html', 'utf8')
     },
     {
         name: 'Barbara Eckstein',
         position: 'FNP, BC, Nurse Manager',
-        key: 'barbara_eckstein'
+        img: '/static/img/staff/barbara_eckstein.jpg',
+        bio: fs.readFileSync(__dirname + '/bios/barbara_eckstein.html', 'utf8')
     },
     {
         name: 'Cindy Nelson',
         position: 'Development Director',
-        key: 'cindy_nelson'
+        img: '/static/img/staff/cindy_nelson.jpg',
+        bio: fs.readFileSync(__dirname + '/bios/cindy_nelson.html', 'utf8')
     },
     {
         name: 'Jane Phillips',
         position: 'RN',
-        key: 'jane_phillips'
+        img: '/static/img/staff/jane_phillips.jpg',
+        bio: fs.readFileSync(__dirname + '/bios/jane_phillips.html', 'utf8')
     },
     {
         name: 'Robin Cory',
         position: 'RN',
-        key: 'robin_cory'
+        img: '/static/img/staff/robin_cory.jpg',
+        bio: fs.readFileSync(__dirname + '/bios/robin_cory.html', 'utf8')
     },
     {
         name: 'Kathy Webster',
         position: 'Client Advocate, Volunteer Coordinator & Trainer',
-        key: 'kathy_webster'
+        img: '/static/img/staff/kathy_webster.jpg',
+        bio: fs.readFileSync(__dirname + '/bios/kathy_webster.html', 'utf8')
     },
     {
         name: 'Andy Curry',
         position: 'Project Development & Program Coordinator',
-        key: 'andy_curry'
+        img: '/static/img/staff/andy_curry.jpg',
+        bio: fs.readFileSync(__dirname + '/bios/andy_curry.html', 'utf8')
     },
     {
         name: 'Alyssa Bryant',
         position: 'Administration',
-        key: 'alyssa_bryant'
+        img: '/static/img/staff/alyssa_bryant.jpg',
+        bio: fs.readFileSync(__dirname + '/bios/alyssa_bryant.html', 'utf8')
     },
     {
         name: 'Ann Knick',
         position: 'Patient Advocate and Reception',
-        key: 'ann_knick'
+        img: '/static/img/staff/ann_knick.jpg',
+        bio: fs.readFileSync(__dirname + '/bios/ann_knick.html', 'utf8')
     },
     {
         name: 'Deanne Fisher',
         position: 'Volunteer, Client Advocate and Reception',
-        key: 'deanne_fisher'
+        img: '/static/img/staff/deanne_fisher.jpg',
+        bio: fs.readFileSync(__dirname + '/bios/deanne_fisher.html', 'utf8')
     },
     {
         name: 'Mary Springer',
         position: 'Patient Care',
-        key: 'mary_springer'
+        img: '/static/img/staff/mary_springer.jpg',
+        bio: fs.readFileSync(__dirname + '/bios/mary_springer.html', 'utf8')
     },
     {
         name: 'Lisa Doerksen',
         position: '',
-        key: 'lisa_doerksen'
+        img: '/static/img/staff/lisa_doerksen.jpg',
+        bio: fs.readFileSync(__dirname + '/bios/lisa_doerksen.html', 'utf8')
     },
     {
         name: 'Quinn Pruett',
         position: 'Patient Care',
-        key: 'quinn_pruett'
+        img: '/static/img/staff/quinn_pruett.jpg'
+        // bio: fs.readFileSync(__dirname + '/bios/quinn_pruett.html', 'utf8') // No bio
     },
     {
         name: 'Gabor Benda',
         position: 'MD',
-        key: 'gabor_benda'
+        img: '/static/img/staff/gabor_benda.jpg'
+        // bio: fs.readFileSync(__dirname + '/bios/gabor_benda.html', 'utf8') // No bio
     }
 ];
-
-$.each(members, function(i, member) {
-    member.img = '/static/img/staff/' + member.key + '.jpg';
-    member.bio = '/static' + __dirname + '/bios/' + member.key + '.html';
-});
 
 module.exports = members;

@@ -33,7 +33,7 @@
           <h4>{{ member.name }} - {{ member.position }}</h4>
           <div class="row-fluid">
             <img ng-src="{{ member.img }}" class="img-rounded pull-left" style="width: 150px; margin: 0 16px 16px 0;">
-            <span ng-include="member.bio"></span>
+            <span ng-bind-html="member.bio"></span>
           </div>
         </div>
       </div>
