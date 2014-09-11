@@ -1,3 +1,5 @@
+$ = require('jquery');
+
 var members = [
     {
         name: 'Jeanne Brown',
@@ -72,7 +74,7 @@ var members = [
 ];
 
 $.each(members, function(i, member) {
-    member.img = '/static' + __dirname + '/img/' + member.key + '.jpg';
+    member.img = '/static/img/staff/' + member.key + '.jpg';
     member.bio = '/static' + __dirname + '/bios/' + member.key + '.html';
 });
 
