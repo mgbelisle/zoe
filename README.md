@@ -7,7 +7,6 @@ Tech Stack
 * Client
   * [AngularJS](http://angularjs.org/)
   * [Bootstrap](http://getbootstrap.com/)
-  * [Bower](http://bower.io/)
   * [Browserify](http://browserify.org/)
   * [Gulp](http://gulpjs.com/)
 * Server
@@ -20,6 +19,7 @@ Build
 Build the app by running `gulp` from the [./client/](./client/) directory.
 
 ```sh
+cd ./client
 npm install
 npm install -g gulp
 gulp
@@ -33,7 +33,7 @@ Deploy
 Deploy the app to GAE by running `goapp` from the [root](./) directory.
 
 ```sh
-goapp deploy
+goapp deploy ./app
 ```
 
 https://developers.google.com/appengine/docs/go/tools/uploadinganapp#Go_Uploading_the_app

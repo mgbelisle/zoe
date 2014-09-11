@@ -8,47 +8,50 @@ var source = require('vinyl-source-stream');
 var streamify = require('gulp-streamify');
 var uglify = require('gulp-uglify');
 
+var BUILD_DIR = '../app/static';
+
 gulp.task('jshint', function() {
     gulp.src(['./gulpfile.js',
-              './static/index.js',
-              './static/zoe/**/*.js'])
+              './src/**/*.js'])
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
 
-gulp.task('bower', function() {
-    return bower('./static/bower_components');
+gulp.task('build-html', function() {
+    return gulp.src([
+        './index.html',
+        './img/**/*',
+        './bootstrap/**/*'
+    ], {base: '.'})
+        .pipe(gulp.dest(BUILD_DIR));
 });
 
-gulp.task('build-js', ['bower'], function() {
-    browserify('./static/index.js')
-        .bundle() // {debug: true}
-        .pipe(source('build.js'))
-        .pipe(streamify(uglify()))
-        .pipe(gulp.dest('./static'));
-});
-
-gulp.task('build-css', ['bower'], function() {
+gulp.task('build-css', function() {
         gulp.src([
-            // './static/bower_components/bootstrap/dist/css/bootstrap.css', // TODO
-            './static/tmp/bootstrap/css/bootstrap.css', // TODO
-            './static/tmp/bootstrap/css/bootstrap-responsive.css', // TODO
-            './static/zoe/**/*.css'
+            './bootstrap/css/bootstrap.css', // TODO
+            './bootstrap/css/bootstrap-responsive.css', // TODO
+            './src/**/*.css'
         ])
         .pipe(minifyCSS({root: '.'}))
         .pipe(concat('build.css'))
-        .pipe(gulp.dest('./static'));
+        .pipe(gulp.dest(BUILD_DIR));
+});
+
+gulp.task('build-js', function() {
+    browserify('./src/main.js')
+        .bundle() // {debug: true}
+        .pipe(source('build.js'))
+        .pipe(streamify(uglify()))
+        .pipe(gulp.dest(BUILD_DIR));
 });
 
 gulp.task('watch', function() {
-    gulp.watch([
-        './static/index.*',
-        './static/zoe/**/*'
-    ], ['default']);
+    gulp.watch('./src/**/*', ['default']);
 });
 
 gulp.task('default', [
     'jshint',
-    'build-js',
-    'build-css'
+    'build-html',
+    'build-css',
+    'build-js'
 ]);

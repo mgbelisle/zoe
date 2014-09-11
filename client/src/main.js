@@ -1,5 +1,5 @@
 var angular = require('angular');
 
 angular.element(document).ready(function() {
-    angular.bootstrap(document, [require('./zoe/app.js')]);
+    angular.bootstrap(document, [require('./app.js')]);
 });

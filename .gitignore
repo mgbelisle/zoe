@@ -1,4 +1,2 @@
-*.py[cod]
-bower_components
-node_modules
-build.*
+client/node_modules
+app/static
