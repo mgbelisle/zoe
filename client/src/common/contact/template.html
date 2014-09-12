@@ -1,48 +1,35 @@
-<div class="well">
+<div class="well contact">
   <h4>Contact Us</h4>
   <p>We are open Mon-Thur 9am-5pm.</p>
-  <div class="accordion">
-    <div class="accordion-group">
-      <div class="accordion-heading">
-        <a class="accordion-toggle" data-toggle="collapse" data-target="#contact-phone">
-          <img src="/static/img/icons/phone.svg" alt="phone.svg" class="icon">
-          Phone
-        </a>
-      </div>
-      <div id="contact-phone" class="accordion-body collapse">
-        <div class="accordion-inner">
-          <p>Office (open Mon-Thur 9-5)</p>
-          <p><a href="tel:4065869444" class="btn btn-primary">406-586-9444</a></p>
-          <p>After Hours Call Line (open 24/7)</p>
-          <p><a href="tel:4065793317" class="btn btn-danger">406-579-3317</a></p>
-        </div>
-      </div>
+  <div class="accordion-heading">
+    <a class="accordion-toggle" data-toggle="collapse" data-target="#contact-phone">
+      <img src="/static/img/icons/phone.svg" alt="phone.svg" class="icon">
+      Phone
+    </a>
+  </div>
+  <div id="contact-phone" class="accordion-body collapse">
+    <div class="accordion-inner">
+      <p>Office (open Mon-Thur 9-5)</p>
+      <p><a href="tel:4065869444" class="btn btn-primary">406-586-9444</a></p>
+      <p>After Hours Call Line (open 24/7)</p>
+      <p><a href="tel:4065793317" class="btn btn-danger">406-579-3317</a></p>
     </div>
-    <div class="accordion-group" ng-if="showEmail">
-      <div class="accordion-heading">
-        <a class="accordion-toggle" data-toggle="collapse" data-target="#contact-email">
-          <img src="/static/img/icons/mail.svg" alt="mail.svg" class="icon">
-          Email
-        </a>
-      </div>
-      <div id="contact-email" class="accordion-body collapse">
-        <div class="accordion-inner">
-          <p><a href="mailto:appt@gotozoe.org" class="btn btn-primary">Send an email to appt@gotozoe.org &raquo;</a></p>
-        </div>
-      </div>
+  </div>
+  <div class="accordion-heading" ng-if="showEmail">
+    <a class="accordion-toggle" data-toggle="collapse" data-target="#contact-email">
+      <img src="/static/img/icons/mail.svg" alt="mail.svg" class="icon">
+      Email
+    </a>
+  </div>
+  <div id="contact-email" class="accordion-body collapse">
+    <div class="accordion-inner">
+      <p><a href="mailto:appt@gotozoe.org" class="btn btn-primary">appt@gotozoe.org</a></p>
     </div>
-    <div class="accordion-group">
-      <div class="accordion-heading">
-        <a class="accordion-toggle" data-toggle="collapse" data-target="#contact-in-person">
-          <img src="/static/img/icons/location.svg" alt="location.svg" class="icon">
-          In Person
-        </a>
-      </div>
-      <div id="contact-in-person" class="accordion-body collapse">
-        <div class="accordion-inner">
-          <zoe-map></zoe-map>
-        </div>
-      </div>
-    </div>
+  </div>
+  <div class="accordion-heading">
+    <a class="accordion-toggle" ng-href="{{ mapHref }}">
+      <img src="/static/img/icons/location.svg" alt="location.svg" class="icon">
+      In Person
+    </a>
   </div>
 </div>
