@@ -48,6 +48,10 @@ app.controller('ServicesHeaderController', [
                 text: 'Programs'
             },
             {
+                href: 'https://zoecare.nonprofiteasy.net/PublicPages/Event/Details.aspx?eid=21554',
+                text: 'Events'
+            },
+            {
                 href: '/support/',
                 text: 'Support Us'
             }
