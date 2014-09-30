@@ -7,6 +7,6 @@ import (
 
 var router = mux.NewRouter()
 
-func Init() {
+func init() {
 	http.Handle("/", router)
 }
