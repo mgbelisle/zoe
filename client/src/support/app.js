@@ -22,7 +22,11 @@ app.config([
             when('/support/help', {template: fs.readFileSync(__dirname + '/html/help.html', 'utf8')}).
             when('/support/stories', {redirectTo: '/support/stories/fiona'}).
             when('/support/stories/fiona', {template: fs.readFileSync(__dirname + '/html/stories_fiona.html', 'utf8')}).
-            when('/support/map', {template: fs.readFileSync(__dirname + '/html/map.html', 'utf8')});
+            when('/support/map', {template: fs.readFileSync(__dirname + '/html/map.html', 'utf8')}).
+            when('/support/events', {
+                template: fs.readFileSync(__dirname + '/html/events.html', 'utf8'),
+                controller: require('./events_controller.js')
+            });
     }
 ]);
 
@@ -48,6 +52,10 @@ app.controller('SupportHeaderController', [
             {
                 href: 'https://zoecare.nonprofiteasy.net/PublicPages/Donation/ViewAll.aspx?mid=306',
                 text: 'Programs'
+            },
+            {
+                href: '/support/events',
+                text: 'Events'
             }
         ];
     }

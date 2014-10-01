@@ -1,0 +1,4 @@
+cron:
+- description: Set events from NPE
+  url: /api/set_events
+  schedule: every 24 hours

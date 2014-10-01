@@ -44,11 +44,7 @@ app.controller('ServicesHeaderController', [
                 text: 'STD Testing'
             },
             {
-                href: 'https://zoecare.nonprofiteasy.net/PublicPages/Donation/ViewAll.aspx?mid=306',
-                text: 'Programs'
-            },
-            {
-                href: 'https://zoecare.nonprofiteasy.net/PublicPages/Event/Details.aspx?eid=21554',
+                href: '/support/events',
                 text: 'Events'
             },
             {
