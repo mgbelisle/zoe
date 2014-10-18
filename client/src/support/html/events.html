@@ -4,10 +4,14 @@
     <div class="hero-unit zoe-hero-support">
       <h2>Upcoming Events</h2>
     </div>
-    <div ng-repeat="event in events">
-      <img ng-if="event.image" ng-src="{{ event.image }}" alt="event image" class="hidden-phone img-rounded events-image">
-      <a ng-href="https://zoecare.nonprofiteasy.net/PublicPages/Event/Details.aspx?eid={{ event.id }}">{{ event.title }}</a>
-    </div>
+  </div>
+  <div class="row-fluid" ng-repeat="event in events">
+    <img ng-if="event.image" ng-src="{{ event.image }}" alt="event image" class="hidden-phone img-rounded events-image">
+    <a ng-href="https://zoecare.nonprofiteasy.net/PublicPages/Event/Details.aspx?eid={{ event.id }}" zoe-href>{{ event.title }}</a>
+    <a ng-if="event.address" ng-href="{{ mapURL(event) }}" zoe-href>
+      <img src="/static/img/icons/location.svg" alt="location.svg" class="icon">
+      {{ event.address }}
+    </a>
   </div>
 </div>
 <zoe-footer></zoe-footer>
