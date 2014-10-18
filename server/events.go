@@ -57,7 +57,7 @@ func (n *npeEvent) Event(c appengine.Context) *event {
 	return &event{
 		Key:      datastore.NewKey(c, eventKind, "", n.EventId, nil),
 		Title:    n.EventTitle,
-		Image: n.HostImageUrl,
+		Image:    n.HostImageUrl,
 		Start:    time.Time(n.StartDate),
 		End:      time.Time(n.EndDate),
 		Venue:    n.VenueTitle,
