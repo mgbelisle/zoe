@@ -45,7 +45,7 @@ gulp.task('build-js', function() {
         .pipe(gulp.dest(BUILD_DIR));
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', ['default'], function() {
     gulp.watch('./src/**/*', ['default']);
 });
 

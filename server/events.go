@@ -12,8 +12,9 @@ import (
 const eventKind = "Event"
 
 type event struct {
-	Key      *datastore.Key     `datastore:"-" json:"key"`
+	Key      *datastore.Key     `datastore:"-" json:"-"`
 	Title    string             `datastore:"title" json:"title"`
+	Image    string             `datastore:"image" json:"image"`
 	Start    time.Time          `datastore:"start" json:"start"`
 	End      time.Time          `datastore:"end" json:"end"`
 	Venue    string             `datastore:"venue" json:"venue"`
@@ -28,9 +29,14 @@ type event struct {
 func (e *event) MarshalJSON() ([]byte, error) {
 	type eventJSON struct {
 		event
+		ID       int64     `json:"id"`
 		Location []float64 `json:"location,omitempty"`
 	}
-	j := eventJSON{*e, nil}
+	j := eventJSON{
+		*e,
+		e.Key.IntID(),
+		nil,
+	}
 	if l := e.Location; l.Lat != 0 || l.Lng != 0 {
 		j.Location = []float64{l.Lat, l.Lng}
 	}
@@ -38,18 +44,20 @@ func (e *event) MarshalJSON() ([]byte, error) {
 }
 
 type npeEvent struct {
-	EventId    int64
-	EventTitle string
-	StartDate  npeTime
-	EndDate    npeTime
-	VenueTitle string
-	Address    *npeAddress
+	EventId      int64
+	EventTitle   string
+	HostImageUrl string
+	StartDate    npeTime
+	EndDate      npeTime
+	VenueTitle   string
+	Address      *npeAddress
 }
 
 func (n *npeEvent) Event(c appengine.Context) *event {
 	return &event{
 		Key:      datastore.NewKey(c, eventKind, "", n.EventId, nil),
 		Title:    n.EventTitle,
+		Image: n.HostImageUrl,
 		Start:    time.Time(n.StartDate),
 		End:      time.Time(n.EndDate),
 		Venue:    n.VenueTitle,
