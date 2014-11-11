@@ -10,6 +10,9 @@ var Controller = function(
             $scope.events = data;
         });
     $scope.mapURL = function(event) {
+        if (event.google_url) {
+            return event.google_url;
+        }
         var params = {
             q: event.address,
             z: '16',

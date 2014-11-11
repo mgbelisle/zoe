@@ -12,18 +12,20 @@ import (
 const eventKind = "Event"
 
 type event struct {
-	Key      *datastore.Key     `datastore:"-" json:"-"`
-	Title    string             `datastore:"title" json:"title"`
-	Image    string             `datastore:"image" json:"image"`
-	Start    time.Time          `datastore:"start" json:"start"`
-	End      time.Time          `datastore:"end" json:"end"`
-	Venue    string             `datastore:"venue" json:"venue"`
-	Address  string             `datastore:"address" json:"address"`
-	City     string             `datastore:"city" json:"city"`
-	State    string             `datastore:"state" json:"state"`
-	Zip      string             `datastore:"zip" json:"zip"`
-	Country  string             `datastore:"country" json:"country"`
-	Location appengine.GeoPoint `datastore:"location" json:"location"`
+	Key       *datastore.Key     `datastore:"-" json:"-"`
+	Title     string             `datastore:"title" json:"title"`
+	Image     string             `datastore:"image" json:"image"`
+	Start     time.Time          `datastore:"start" json:"start"`
+	End       time.Time          `datastore:"end" json:"end"`
+	Schedule  string             `datastore:"schedule" json:"schedule"`
+	Venue     string             `datastore:"venue" json:"venue"`
+	Address   string             `datastore:"address" json:"address"`
+	City      string             `datastore:"city" json:"city"`
+	State     string             `datastore:"state" json:"state"`
+	Zip       string             `datastore:"zip" json:"zip"`
+	Country   string             `datastore:"country" json:"country"`
+	Location  appengine.GeoPoint `datastore:"location" json:"location"`
+	GoogleURL string             `datastore:"google_url" json:"google_url"`
 }
 
 func (e *event) MarshalJSON() ([]byte, error) {
@@ -44,29 +46,33 @@ func (e *event) MarshalJSON() ([]byte, error) {
 }
 
 type npeEvent struct {
-	EventId      int64
-	EventTitle   string
-	HostImageUrl string
-	StartDate    npeTime
-	EndDate      npeTime
-	VenueTitle   string
-	Address      *npeAddress
+	EventId         int64
+	EventTitle      string
+	HostImageUrl    string
+	StartDate       npeTime
+	EndDate         npeTime
+	DisplaySchedule string
+	VenueTitle      string
+	Address         *npeAddress
+	GoogleUrl       string
 }
 
 func (n *npeEvent) Event(c appengine.Context) *event {
 	return &event{
-		Key:      datastore.NewKey(c, eventKind, "", n.EventId, nil),
-		Title:    n.EventTitle,
-		Image:    n.HostImageUrl,
-		Start:    time.Time(n.StartDate),
-		End:      time.Time(n.EndDate),
-		Venue:    n.VenueTitle,
-		Address:  strings.TrimSpace(n.Address.AddressLine1 + " " + n.Address.AddressLine2),
-		City:     n.Address.City,
-		State:    n.Address.State,
-		Zip:      n.Address.Zip,
-		Country:  n.Address.Country,
-		Location: appengine.GeoPoint{Lat: n.Address.Latitude, Lng: n.Address.Longitude},
+		Key:       datastore.NewKey(c, eventKind, "", n.EventId, nil),
+		Title:     n.EventTitle,
+		Image:     n.HostImageUrl,
+		Start:     time.Time(n.StartDate),
+		End:       time.Time(n.EndDate),
+		Schedule:  n.DisplaySchedule,
+		Venue:     n.VenueTitle,
+		Address:   strings.TrimSpace(n.Address.AddressLine1 + " " + n.Address.AddressLine2),
+		City:      n.Address.City,
+		State:     n.Address.State,
+		Zip:       n.Address.Zip,
+		Country:   n.Address.Country,
+		Location:  appengine.GeoPoint{Lat: n.Address.Latitude, Lng: n.Address.Longitude},
+		GoogleURL: n.GoogleUrl,
 	}
 }
 
@@ -84,7 +90,8 @@ func updateEvents(w http.ResponseWriter, r *http.Request) {
 	// Gets events from NPE and datastore concurrently
 	// From NPE
 	go func() {
-		body, err := npeGet(c, "/EventsConfiguration/GetEvents/?IsActive=true")
+		// body, err := npeGet(c, "/EventsConfiguration/GetEvents/?IsActive=true")
+		body, err := npeGet(c, "/EventsConfiguration/GetEvents/")
 		if err != nil {
 			errChan1 <- err
 			return
