@@ -26,7 +26,7 @@ app.config([
     '$routeProvider',
     function($routeProvider) {
         $routeProvider.
-            when('/', {controller: require('./home.js')}).
+            when('/', {template: '', controller: require('./home.js')}).
             when('/privacy', {template: fs.readFileSync(__dirname + '/privacy.html', 'utf8')}).
             otherwise({redirectTo: '/'});
     }
