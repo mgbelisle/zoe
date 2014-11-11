@@ -14,18 +14,18 @@ app.config([
     function($routeProvider) {
         $routeProvider.
             when('/support', {redirectTo: '/support/help'}).
-            when('/support/about', {template: fs.readFileSync(__dirname + '/html/about.html', 'utf8')}).
+            when('/support/about', {template: fs.readFileSync(__dirname + '/about.html', 'utf8')}).
             when('/support/about/staff', {
-                template: fs.readFileSync(__dirname + '/html/about_staff.html', 'utf8'),
+                template: fs.readFileSync(__dirname + '/about_staff.html', 'utf8'),
                 controller: require('./staff/controller.js')
             }).
-            when('/support/help', {template: fs.readFileSync(__dirname + '/html/help.html', 'utf8')}).
+            when('/support/help', {template: fs.readFileSync(__dirname + '/help.html', 'utf8')}).
             when('/support/stories', {redirectTo: '/support/stories/fiona'}).
-            when('/support/stories/fiona', {template: fs.readFileSync(__dirname + '/html/stories_fiona.html', 'utf8')}).
-            when('/support/map', {template: fs.readFileSync(__dirname + '/html/map.html', 'utf8')}).
+            when('/support/stories/fiona', {template: fs.readFileSync(__dirname + '/stories_fiona.html', 'utf8')}).
+            when('/support/map', {template: fs.readFileSync(__dirname + '/map.html', 'utf8')}).
             when('/support/events', {
-                template: fs.readFileSync(__dirname + '/html/events.html', 'utf8'),
-                controller: require('./events_controller.js')
+                template: fs.readFileSync(__dirname + '/events.html', 'utf8'),
+                controller: require('./events.js')
             });
     }
 ]);
