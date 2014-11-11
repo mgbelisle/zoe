@@ -1,3 +1,13 @@
-<zoe-header ng-controller="ServicesHeaderController"></zoe-header>
-Mobile
+<div class="container-fluid">
+  <div class="row-fluid">
+    <a href="/"><img src="/static/img/logo.png" alt="logo.png" style="max-width: 33%; margin: 12px 0px;"></a>
+  </div>
+  <div class="row-fluid">
+    <ul ng-controller="ServicesHeaderController" class="nav nav-tabs nav-stacked">
+      <li ng-repeat="item in navItems" class="text-center">
+        <a ng-href="{{ item.href }}">{{ item.text }} &raquo;</a>
+      </li>
+    </ul>
+  </div>
+</div>
 <zoe-footer></zoe-footer>
