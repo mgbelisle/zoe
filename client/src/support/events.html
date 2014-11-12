@@ -29,5 +29,8 @@
       <img ng-if="event.image" ng-src="{{ event.image }}" alt="event image" class="hidden-phone img-rounded events-image">
     </div>
   </div>
+  <div class="row-fluid" ng-show="!events.length">
+    <p>Sorry, no events are scheduled for the near future.  Please check back later.</p>
+  </div>
 </div>
 <zoe-footer></zoe-footer>
