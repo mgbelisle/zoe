@@ -90,8 +90,8 @@ func updateEvents(w http.ResponseWriter, r *http.Request) {
 	// Gets events from NPE and datastore concurrently
 	// From NPE
 	go func() {
-		body, err := npeGet(c, "/EventsConfiguration/GetEvents/?IsActive=true")
-		// body, err := npeGet(c, "/EventsConfiguration/GetEvents/")
+		// body, err := npeGet(c, "/EventsConfiguration/GetEvents/?IsActive=true")
+		body, err := npeGet(c, "/EventsConfiguration/GetEvents/")
 		if err != nil {
 			errChan1 <- err
 			return

@@ -7,7 +7,7 @@ var directive = function() {
             google.load('maps', '3', {
 	        other_params: $.param({key: 'AIzaSyA0jsk5irIPWBUSAcW2WHQqNxsoqtJy5sU', sensor: false}),
 	        callback : function() {
-	            var center = new google.maps.LatLng(45.663960, -111.055158);
+	            var center = new google.maps.LatLng(45.6636604, -111.0531489);
     	            var mapOptions = {
     		        center: center,
     		        zoom: 16,
