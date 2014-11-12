@@ -1,13 +1,25 @@
-<div class="container-fluid">
-  <div class="row-fluid">
-    <a href="/"><img src="/static/img/logo.png" alt="logo.png" style="max-width: 33%; margin: 12px 0px;"></a>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <a href="/" class="navbar-text"><img src="/static/img/logo.png" alt="logo.png" style="max-height: 32px;"></a>
+      <a href="/" class="navbar-text" style="padding-left: 16px;"> Pregnancy and STD testing</a>
+    </div>
   </div>
-  <div class="row-fluid">
+</div>
+<div class="container-fluid">
+  <div class="row-fluid text-center">
+    <a href="tel:4065869444" class="mobile-button-top pull-left"><img src="/static/img/icons/phone.svg" alt="phone.svg" class="icon"> Call us</a>
+    <a href="/services/map" class="mobile-button-top pull-right"><img src="/static/img/icons/location.svg" alt="location.svg" class="icon"> Come in</a>
+  </div>
+  <div class="row-fluid mobile-row">
     <ul ng-controller="ServicesHeaderController" class="nav nav-tabs nav-stacked">
       <li ng-repeat="item in navItems" class="text-center">
         <a ng-href="{{ item.href }}">{{ item.text }} &raquo;</a>
       </li>
     </ul>
+  </div>
+  <div class="row-fluid text-center">
+    <img src="/static/img/icons/calendar.svg" alt="calendar.svg" class="icon"> We are open Mon-Thur 9-5
   </div>
 </div>
 <zoe-footer></zoe-footer>
