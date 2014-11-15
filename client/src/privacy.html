@@ -54,12 +54,13 @@
   <p>You may request a return of your donation anytime within six months of the donation date, and
     it will be refunded in full.</p>
   <h4>Contacting Us</h4>
-  <p>If you have comments or questions about any of our policies or our website, please contact
-    us. For information about your donation, please contact us at 1-406-586-9444 during office
-    hours Mon.-Fri. (9am - 5pm PST).</p>
-  <p class="text-center">PREGNANCY CARING CENTER OF THE GALLATIN VALLEY<br />
-    1216 West Lincoln St. Ste C<br />
-    Bozeman, MT 59715<br />
-    Phone (406-586-9444)</p>
+  <p>If you have comments or questions about any of our policies or our website, please contact us. For information about your donation, please contact us at
+    <a ng-href="tel:{{ contactInfo.PHONE }}">{{ contactInfo.PHONE }}</a> during office hours {{ contactInfo.HOURS }}.</p>
+  <p class="text-center">
+    PREGNANCY CARING CENTER OF THE GALLATIN VALLEY<br />
+    {{ contactInfo.ADDRESS.STREET }}<br />
+    {{ contactInfo.ADDRESS.CITY }}, {{ contactInfo.ADDRESS.STATE }} {{ contactInfo.ADDRESS.ZIP }}<br />
+    Phone (<a ng-href="tel:{{ contactInfo.PHONE }}">{{ contactInfo.PHONE }}</a>)
+  </p>
 </div>
 <zoe-footer></zoe-footer>

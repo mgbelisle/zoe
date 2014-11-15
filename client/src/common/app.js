@@ -8,6 +8,8 @@ var app = angular.module(NAME, [
     'ngRoute'
 ]);
 
+app.constant('contactInfo', require('./contact/info.js'));
+
 // Directives
 app.directive('zoeFbShare', require('./fb_share_directive.js'));
 app.directive('zoeFooter', require('./footer/directive.js'));

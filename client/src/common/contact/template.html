@@ -1,6 +1,6 @@
 <div class="well accordion" id="contact-accordion">
   <h4>Contact Us</h4>
-  <p>We are open Mon-Thur 9-5</p>
+  <p>We are open {{ contactInfo.HOURS }}</p>
   <div class="accordion" id="contact-accordion">
     <div class="accordion-group">
       <div class="accordion-heading">
@@ -12,7 +12,7 @@
       <div id="contact-phone" class="accordion-body collapse">
         <div class="accordion-inner">
           <p>Office (open Mon-Thur 9-5)</p>
-          <p><a href="tel:4065869444" class="btn btn-primary">406-586-9444</a></p>
+          <p><a ng-href="tel:{{ contactInfo.PHONE }}" class="btn btn-primary">{{ contactInfo.PHONE }}</a></p>
           <p>After Hours Call Line (open 24/7)</p>
           <p><a href="tel:4065793317" class="btn btn-danger">406-579-3317</a></p>
         </div>
