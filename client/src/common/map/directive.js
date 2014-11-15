@@ -1,9 +1,12 @@
 var $ = require('jquery');
 var fs = require('fs');
 
-var directive = function() {
+var directive = function(
+    contactInfo
+) {
     return {
         link: function(scope, element, attrs) {
+            scope.contactInfo = contactInfo;
             google.load('maps', '3', {
 	        other_params: $.param({key: 'AIzaSyA0jsk5irIPWBUSAcW2WHQqNxsoqtJy5sU', sensor: false}),
 	        callback : function() {
@@ -30,5 +33,8 @@ var directive = function() {
         template: fs.readFileSync(__dirname + '/template.html', 'utf8')
     };
 };
+directive.$inject = [
+    'contactInfo'
+];
 
 module.exports = directive;

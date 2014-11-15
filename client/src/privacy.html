@@ -1,33 +1,31 @@
 <zoe-header ng-controller="HomeHeaderController"></zoe-header>
 <div class="container-fluid">
   <h3>Privacy, Shipping, Billing, Return Policy, Terms of Use, and Contact</h3>
-  <p>PREGNANCY CARING CENTER OF THE GALLATIN VALLEY is committed to maintaining your trust and
+  <p>{{ contactInfo.LEGAL_NAME }} is committed to maintaining your trust and
     confidence. The following online privacy policy is intended to protect and secure the
     personally identifiable information (any information by which you can be identified) you
     provide to us online.</p>
-  <p>In addition, PREGNANCY CARING CENTER OF THE GALLATIN VALLEY will not send you e-mail that you
+  <p>In addition, {{ contactInfo.LEGAL_NAME }} will not send you e-mail that you
     have not agreed to receive. We may periodically send you e-mail announcing news and event
     information. If you choose to supply your postal address in an online form, you may receive
     mailings from us as well.</p>
   <h4>No Sharing of Personal Information</h4>
-  <p>PREGNANCY CARING CENTER OF THE GALLATIN VALLEY never sells, rents, leases or exchanges your
-    personal information with other organizations. PREGNANCY CARING CENTER OF THE GALLATIN VALLEY
+  <p>{{ contactInfo.LEGAL_NAME }} never sells, rents, leases or exchanges your
+    personal information with other organizations. {{ contactInfo.LEGAL_NAME }}
     assures you that the identity of all who contact us through this Web site will be kept
-    confidential. PREGNANCY CARING CENTER OF THE GALLATIN VALLEY may occasionally send mailings on
-    behalf of other organizations or ministries when their interests align with PREGNANCY CARING
-    CENTER OF THE GALLATIN VALLEY.</p>
+    confidential. {{ contactInfo.LEGAL_NAME }} may occasionally send mailings on
+    behalf of other organizations or ministries when their interests align with {{ contactInfo.LEGAL_NAME }}.</p>
   <h4>Security</h4>
-  <p>PREGNANCY CARING CENTER OF THE GALLATIN VALLEY is committed to ensuring the security of your
+  <p>{{ contactInfo.LEGAL_NAME }} is committed to ensuring the security of your
     personal information.  To prevent unauthorized access, maintain data accuracy, and ensure the
     proper use of information, we have established and implemented appropriate physical, electronic
-    and managerial procedures to safeguard and secure the information we collect online. PREGNANCY
-    CARING CENTER OF THE GALLATIN VALLEY uses Internet Encryption Software, Secure Socket Layer
+    and managerial procedures to safeguard and secure the information we collect online.
+    {{ contactInfo.LEGAL_NAME }} uses Internet Encryption Software, Secure Socket Layer
     (SSL) Protocol when collecting or transferring sensitive data such as credit card
     information. Any information you enter is encrypted at your browser, sent over the public
     Internet in encrypted form, and then de-encrypted at our server. Once we receive your credit
-    card information, it is accessible only to a small number of trusted PREGNANCY CARING CENTER OF
-    THE GALLATIN VALLEY employees who have been specially trained in processing this
-    information.</p>
+    card information, it is accessible only to a small number of trusted {{ contactInfo.LEGAL_NAME }}
+    employees who have been specially trained in processing this information.</p>
   <h4>Cookies</h4>
   <p>From time to time, we may send a "cookie" to your computer. A cookie is a small piece of data
     that is sent to your browser from a Web server and stored on your computer's hard drive. A
@@ -55,12 +53,12 @@
     it will be refunded in full.</p>
   <h4>Contacting Us</h4>
   <p>If you have comments or questions about any of our policies or our website, please contact us. For information about your donation, please contact us at
-    <a ng-href="tel:{{ contactInfo.PHONE }}">{{ contactInfo.PHONE }}</a> during office hours {{ contactInfo.HOURS }}.</p>
+    <a ng-href="tel:{{ contactInfo.TEL }}">{{ contactInfo.TEL }}</a> during office hours {{ contactInfo.HOURS }}.</p>
   <p class="text-center">
-    PREGNANCY CARING CENTER OF THE GALLATIN VALLEY<br />
+    {{ contactInfo.LEGAL_NAME }}<br />
     {{ contactInfo.ADDRESS.STREET }}<br />
     {{ contactInfo.ADDRESS.CITY }}, {{ contactInfo.ADDRESS.STATE }} {{ contactInfo.ADDRESS.ZIP }}<br />
-    Phone (<a ng-href="tel:{{ contactInfo.PHONE }}">{{ contactInfo.PHONE }}</a>)
+    Phone (<a ng-href="tel:{{ contactInfo.TEL }}">{{ contactInfo.TEL }}</a>)
   </p>
 </div>
 <zoe-footer></zoe-footer>

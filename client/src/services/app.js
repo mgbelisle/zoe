@@ -14,7 +14,8 @@ app.config([
     function($routeProvider) {
         $routeProvider.
             when('/services', {template: fs.readFileSync(__dirname + '/home.html', 'utf8')}).
-            when('/services/mobile', {template: fs.readFileSync(__dirname + '/mobile.html', 'utf8')}).
+            when('/services/mobile', {template: fs.readFileSync(__dirname + '/mobile.html', 'utf8'),
+                                      controller: require('./mobile.js')}).
             when('/services/pregnancy', {template: fs.readFileSync(__dirname + '/pregnancy.html', 'utf8')}).
             when('/services/pregnancy/symptoms', {template: fs.readFileSync(__dirname + '/pregnancy_symptoms.html', 'utf8')}).
             when('/services/pregnancy/testing', {template: fs.readFileSync(__dirname + '/pregnancy_testing.html', 'utf8')}).

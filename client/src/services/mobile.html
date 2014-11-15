@@ -8,7 +8,7 @@
 </div>
 <div class="container-fluid">
   <div class="row-fluid text-center">
-    <a href="tel:4065869444" class="mobile-button-top pull-left"><img src="/static/img/icons/phone.svg" alt="phone.svg" class="icon"> Call us</a>
+    <a ng-href="tel:{{ contactInfo.TEL }}" class="mobile-button-top pull-left"><img src="/static/img/icons/phone.svg" alt="phone.svg" class="icon"> Call us</a>
     <a href="/services/map" class="mobile-button-top pull-right"><img src="/static/img/icons/location.svg" alt="location.svg" class="icon"> Come in</a>
   </div>
   <div class="row-fluid mobile-row">
@@ -19,7 +19,7 @@
     </ul>
   </div>
   <div class="row-fluid text-center">
-    <img src="/static/img/icons/calendar.svg" alt="calendar.svg" class="icon"> We are open Mon-Thur 9-5
+    <img src="/static/img/icons/calendar.svg" alt="calendar.svg" class="icon"> We are open {{ contactInfo.HOURS }}
   </div>
 </div>
 <zoe-footer></zoe-footer>

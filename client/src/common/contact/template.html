@@ -12,7 +12,7 @@
       <div id="contact-phone" class="accordion-body collapse">
         <div class="accordion-inner">
           <p>Office (open Mon-Thur 9-5)</p>
-          <p><a ng-href="tel:{{ contactInfo.PHONE }}" class="btn btn-primary">{{ contactInfo.PHONE }}</a></p>
+          <p><a ng-href="tel:{{ contactInfo.TEL }}" class="btn btn-primary">{{ contactInfo.TEL }}</a></p>
           <p>After Hours Call Line (open 24/7)</p>
           <p><a href="tel:4065793317" class="btn btn-danger">406-579-3317</a></p>
         </div>
@@ -27,7 +27,7 @@
       </div>
       <div id="contact-email" class="accordion-body collapse">
         <div class="accordion-inner">
-          <a href="mailto:appt@gotozoe.org" class="btn btn-primary">appt@gotozoe.org</a>
+          <a ng-href="mailto:{{ contactInfo.EMAIL }}" class="btn btn-primary">{{ contactInfo.EMAIL }}</a>
         </div>
       </div>
     </div>

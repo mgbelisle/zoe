@@ -1,7 +1,7 @@
 <div class="container-fluid">
-  <p class="text-center"><a href="https://maps.google.com/maps?q=Zoe+Women's+Services,+West+Lincoln+Street,+Bozeman,+MT&hl=en&sll=45.6636604,-111.0531489&z=16" zoe-href>1216 W. Lincoln St. C, Bozeman MT &raquo;</a></p>
+  <p class="text-center"><a ng-href="https://maps.google.com/maps?q=Zoe+Women's+Services,+West+Lincoln+Street,+Bozeman,+MT&hl=en&sll={{ contactInfo.ADDRESS.COORDS[0] }},{{ contactInfo.ADDRESS.COORDS[1] }}&z=16" zoe-href>{{ contactInfo.ADDRESS.STREET }} {{ contactInfo.ADDRESS.CITY }}, {{ contactInfo.ADDRESS.STATE }} &raquo;</a></p>
   <p>
     <div id="map-canvas"></div>
   </p>
-  <p class="text-center">Streamline Bus stop is only 2.5 miles away.  <a href="http://www.streamlinebus.com/routes-schedulesweekday-serviceweekday-service/weekday-service/" zoe-href>View Schedule</a></p>
+  <p class="text-center">Streamline Bus stop is only 2.5 blocks away.  <a href="http://www.streamlinebus.com/routes-schedulesweekday-serviceweekday-service/weekday-service/" zoe-href>View Schedule</a></p>
 </div>
