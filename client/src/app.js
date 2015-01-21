@@ -21,7 +21,7 @@ app.config([
     }
 ]);
 
-// Routes - Params are available by their biological taxonomy names
+// Routes
 app.config([
     '$routeProvider',
     function($routeProvider) {
