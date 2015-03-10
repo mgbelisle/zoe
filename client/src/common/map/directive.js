@@ -10,7 +10,7 @@ var directive = function(
             google.load('maps', '3', {
 	        other_params: $.param({key: 'AIzaSyA0jsk5irIPWBUSAcW2WHQqNxsoqtJy5sU', sensor: false}),
 	        callback : function() {
-	            var center = new google.maps.LatLng(45.6636604, -111.0531489);
+	            var center = new google.maps.LatLng(contactInfo.ADDRESS.COORDS[0], contactInfo.ADDRESS.COORDS[1]);
     	            var mapOptions = {
     		        center: center,
     		        zoom: 16,
@@ -21,11 +21,11 @@ var directive = function(
 		        position: center,
 		        map: map,
 	            });
-                    var busMarker = new google.maps.Marker({
-                        position: new google.maps.LatLng(45.665511, -111.047655),
-                        map: map,
-                        icon: '/static/img/icons/bus.png'
-                    });
+                    // var busMarker = new google.maps.Marker({
+                    //     position: new google.maps.LatLng(45.665511, -111.047655),
+                    //     map: map,
+                    //     icon: '/static/img/icons/bus.png'
+                    // });
 	        }
             });
         },

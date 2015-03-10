@@ -4,10 +4,10 @@ module.exports = {
     EMAIL: 'appt@gotozoe.org',
     HOURS: 'Mon-Thur 9-5',
     ADDRESS: {
-        STREET: '1216 W. Lincoln St. C',
+        STREET: '2251 W Kagy Blvd #2',
         CITY: 'Bozeman',
         STATE: 'MT',
-        ZIP: '59715',
-        COORDS: [45.6636604, -111.0531489],
+        ZIP: '59718',
+        COORDS: [45.6604727, -111.0671136],
     },
 };
