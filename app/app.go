@@ -1,5 +1,11 @@
 package app
 
-import _ "github.com/mgbelisle/zoe/server"
+import (
+	"net/http"
+	
+	"github.com/mgbelisle/zoe/server"
+)
 
-func init() {}
+func init() {
+	http.ListenAndServe("/", server.Routes())
+}

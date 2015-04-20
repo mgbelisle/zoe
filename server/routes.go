@@ -1,14 +1,17 @@
 package server
 
 import (
-	"github.com/gorilla/mux"
 	"net/http"
+
+	"github.com/mgbelisle/zoe/server/_deps/github.com/gorilla/mux"
 )
 
-var router = mux.NewRouter()
+// Routes is the routes for the app
+func Routes() http.Handler {
+	router := mux.NewRouter()
 
-func init() {
-	http.Handle("/", router)
 	router.HandleFunc("/api/events/", getEvents).Methods("GET")
 	router.HandleFunc("/cron/events/", updateEvents).Methods("GET")
+
+	return router
 }
