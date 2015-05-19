@@ -1,7 +1,7 @@
 module.exports = {
     LEGAL_NAME: 'Pregnancy Caring Center of the Gallatin Valley',
     TEL: '406-586-9444',
-    EMAIL: 'appt@gotozoe.org',
+    EMAIL: 'jeanne@gotozoe.org',
     HOURS: 'Mon-Thur 9-5',
     ADDRESS: {
         STREET: '2251 W Kagy Blvd #2',

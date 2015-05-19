@@ -38,24 +38,6 @@ var members = [
         bio: fs.readFileSync(__dirname + '/bios/kathy_webster.html', 'utf8')
     },
     {
-        name: 'Andy Curry',
-        position: 'Project Development & Program Coordinator',
-        img: '/static/img/staff/andy_curry.jpg',
-        bio: fs.readFileSync(__dirname + '/bios/andy_curry.html', 'utf8')
-    },
-    {
-        name: 'Alyssa Bryant',
-        position: 'Administration',
-        img: '/static/img/staff/alyssa_bryant.jpg',
-        bio: fs.readFileSync(__dirname + '/bios/alyssa_bryant.html', 'utf8')
-    },
-    {
-        name: 'Ann Knick',
-        position: 'Patient Advocate and Reception',
-        img: '/static/img/staff/ann_knick.jpg',
-        bio: fs.readFileSync(__dirname + '/bios/ann_knick.html', 'utf8')
-    },
-    {
         name: 'Deanne Fisher',
         position: 'Volunteer, Client Advocate and Reception',
         img: '/static/img/staff/deanne_fisher.jpg',
@@ -72,12 +54,6 @@ var members = [
         position: '',
         img: '/static/img/staff/lisa_doerksen.jpg',
         bio: fs.readFileSync(__dirname + '/bios/lisa_doerksen.html', 'utf8')
-    },
-    {
-        name: 'Quinn Pruett',
-        position: 'Patient Care',
-        img: '/static/img/staff/quinn_pruett.jpg'
-        // bio: fs.readFileSync(__dirname + '/bios/quinn_pruett.html', 'utf8') // No bio
     },
     {
         name: 'Gabor Benda',
