@@ -46,10 +46,6 @@ app.controller('SupportHeaderController', [
                 text: 'Ways to Help'
             },
             {
-                href: '/support/openhouse',
-                text: 'Open House'
-            },
-            {
                 href: '/support/stories',
                 text: 'Stories'
             },
