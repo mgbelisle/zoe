@@ -4,11 +4,6 @@ runtime: go
 api_version: go1
 
 handlers:
-- url: /api/.*
-  script: _go_app
-- url: /cron/.*
-  script: _go_app
-  login: admin
 - url: /static
   static_dir: static
 - url: /.*

@@ -1,4 +1,0 @@
-cron:
-- description: Update events from NPE
-  url: /cron/events/
-  schedule: every 24 hours
