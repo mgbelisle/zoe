@@ -8,7 +8,7 @@ var directive = function(
         link: function(scope, element, attrs) {
             scope.contactInfo = contactInfo;
             google.load('maps', '3', {
-	        other_params: $.param({key: 'AIzaSyA0jsk5irIPWBUSAcW2WHQqNxsoqtJy5sU', sensor: false}),
+	        other_params: $.param({key: 'AIzaSyDwJTKhAPFS8nH3hJQgu2h7o7CX9Bsk6-8', sensor: false}),
 	        callback : function() {
 	            var center = new google.maps.LatLng(contactInfo.ADDRESS.COORDS[0], contactInfo.ADDRESS.COORDS[1]);
     	            var mapOptions = {
